@@ -1,0 +1,10 @@
+﻿
+
+Using NBitcoin for implementation
+
+not sure if: alt coins (https://github.com/MetacoSA/NBitcoin/tree/master/NBitcoin.Altcoins)
+or if: duplicating btc network (https://github.com/MetacoSA/NBitcoin/tree/master/NBitcoin.TestFramework)
+
+also not sure if nbitcoin nuget or fresh compile should be used
+
+need to know if Open Asset Format requires a fresh implementation or if nbitcoin is enough
