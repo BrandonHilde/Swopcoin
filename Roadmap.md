@@ -1,3 +1,7 @@
+#### Diagram
+
+![image](https://github.com/BrandonHilde/Swopcoin/blob/testing_branch/swop.png)
+
 #### Swopcoin Service (gRPC using .NET core)
  
 
@@ -37,8 +41,6 @@ The messages will contain crypto transactions native to particular blockchains t
  
 
 Build a Swopcoin Wallet API that allows for the determination of the crypto balances in the wallet and allows for the initiation of exchange. It would also allow for the addition of crypto.
-
- 
 
  
 
