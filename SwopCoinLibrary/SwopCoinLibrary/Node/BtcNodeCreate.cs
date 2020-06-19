@@ -37,6 +37,13 @@ namespace SwopCoinLibrary.Node
             builder.ConfigParameters.Add("printtoconsole", "0");
         }
 
+        public void SetUpBuilder(NodeDownloadData data, Network net)
+        {
+            builder = NodeBuilder.Create(data, net);
+            builder.ConfigParameters.Add("printtoconsole", "0");
+        }
+
+
         public NodeIdentity GetByName(string name)
         {
             if (Nodes != null)
@@ -60,7 +67,7 @@ namespace SwopCoinLibrary.Node
 
                 if (Nodes.Count > 0)
                 {
-                    Nodes.First().Node.Generate(101); //miner generate blocks
+                    MineNetwork(Nodes.First(), 101); //miner generate blocks
 
                     for (int n = 1; n < Nodes.Count; n++)
                     {
@@ -102,7 +109,35 @@ namespace SwopCoinLibrary.Node
             return new TestResult { Status = "Failed" };
         }
 
-        public TestResult CreateNodeSet(int number, string root, string path)
+        public TestResult SendBitcoin(NodeIdentity Person, Money m, NodeIdentity SendTo)
+        {
+            Person.Client.SendToAddress(SendTo.MainAddress, m);
+
+            return null; // error handling will be added
+        }
+
+        public TestResult SendBitcoin(NodeIdentity Person, Money m, BitcoinAddress SendToAddress)
+        {
+            Person.Client.SendToAddress(SendToAddress, m);
+
+            return null; // error handling will be added
+        }
+
+        public TestResult MineNetwork(NodeIdentity Miner, int blocks)
+        {
+            Miner.Node.Generate(blocks);
+
+            return null; // error handling will be added
+        }
+
+        public TestResult SyncNodes(NodeIdentity BtcNode, NodeIdentity SyncNode)
+        {
+            BtcNode.Node.Sync(SyncNode.Node);
+
+            return null; // error handling will be added
+        }
+
+        public TestResult CreateNodeSet(int number, string root = "", string path = "")
         {
             if (builder == null) SetUpBuilder(root, path);
 
@@ -118,6 +153,36 @@ namespace SwopCoinLibrary.Node
 
             return new TestResult { Status = "Complete" };
         }
+
+        public void SimulateNetwork()
+        {
+            SetUpBuilder(NodeDownloadData.Bitcoin.v0_18_0, Network.RegTest);
+
+            CreateNodeSet(3);
+            AddAddresses();
+            StartNetwork();
+
+            NameNextNode("miner");
+            NameNextNode("alice");
+            NameNextNode("bob");
+
+            SendBitcoin(GetByName("miner"), Money.Coins(20m), GetByName("alice"));
+
+            MineNetwork(GetByName("miner"), 1);
+
+            SyncNodes(GetByName("alice"), GetByName("miner"));
+
+            Console.WriteLine($"Alice Balance: {GetByName("alice").Client.GetBalance()}");
+
+            SendBitcoin(GetByName("alice"), Money.Coins(1m), GetByName("bob"));
+            MineNetwork(GetByName("alice"), 1);
+            SyncNodes(GetByName("alice"), GetByName("bob"));
+
+            Console.WriteLine($"Alice Balance: {GetByName("alice").Client.GetBalance()}");
+            Console.WriteLine($"Bob Balance: {GetByName("bob").Client.GetBalance()}");
+
+        }
+
         public class TestResult
         {
             public string Status = string.Empty;

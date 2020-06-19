@@ -40,6 +40,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "NBitcoin.TestFramework": {
+              "target": "Package",
+              "version": "[2.0.8, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
