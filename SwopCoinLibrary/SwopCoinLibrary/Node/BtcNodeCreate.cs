@@ -31,16 +31,28 @@ namespace SwopCoinLibrary.Node
             }
         }
 
-        public void SetUpBuilder(string root, string path)
+        public ActionStatus SetUpBuilder(string root, string path)
         {
             builder = new NodeBuilder(root, path);
             builder.ConfigParameters.Add("printtoconsole", "0");
+
+            return new ActionStatus
+            {
+                Status = "Setup",
+                Success = true
+            };
         }
 
-        public void SetUpBuilder(NodeDownloadData data, Network net)
+        public ActionStatus SetUpBuilder(NodeDownloadData data, Network net)
         {
             builder = NodeBuilder.Create(data, net);
             builder.ConfigParameters.Add("printtoconsole", "0");
+
+            return new ActionStatus
+            {
+                Status = "Setup",
+                Success = true
+            };
         }
 
 
@@ -89,7 +101,7 @@ namespace SwopCoinLibrary.Node
             return outputs;
         }
 
-        public TestResult AddAddresses()
+        public ActionStatus AddAddresses()
         {
             if (Nodes != null)
             {
@@ -101,43 +113,63 @@ namespace SwopCoinLibrary.Node
 
                         ni.Addresses.Add(addr);
 
-                        return new TestResult { Status = "Address: " + addr.ToString() };
+                        return new ActionStatus { Status = "Address: " + addr.ToString() };
                     }
                 }
             }
 
-            return new TestResult { Status = "Failed" };
+            return new ActionStatus
+            {
+                Status = "Complete",
+                Success = true
+            };
         }
 
-        public TestResult SendBitcoin(NodeIdentity Person, Money m, NodeIdentity SendTo)
+        public ActionStatus SendBitcoin(NodeIdentity Person, Money m, NodeIdentity SendTo)
         {
             Person.Client.SendToAddress(SendTo.MainAddress, m);
 
-            return null; // error handling will be added
+            return new ActionStatus
+            {
+                Status = "Complete",
+                Success = true
+            };
         }
 
-        public TestResult SendBitcoin(NodeIdentity Person, Money m, BitcoinAddress SendToAddress)
+        public ActionStatus SendBitcoin(NodeIdentity Person, Money m, BitcoinAddress SendToAddress)
         {
             Person.Client.SendToAddress(SendToAddress, m);
 
-            return null; // error handling will be added
+            return new ActionStatus
+            {
+                Status = "Complete",
+                Success = true
+            };
         }
 
-        public TestResult MineNetwork(NodeIdentity Miner, int blocks)
+        public ActionStatus MineNetwork(NodeIdentity Miner, int blocks)
         {
             Miner.Node.Generate(blocks);
 
-            return null; // error handling will be added
+            return new ActionStatus
+            {
+                Status = "Complete",
+                Success = true
+            };
         }
 
-        public TestResult SyncNodes(NodeIdentity BtcNode, NodeIdentity SyncNode)
+        public ActionStatus SyncNodes(NodeIdentity BtcNode, NodeIdentity SyncNode)
         {
             BtcNode.Node.Sync(SyncNode.Node);
 
-            return null; // error handling will be added
+            return new ActionStatus
+            {
+                Status = "Complete",
+                Success = true
+            };
         }
 
-        public TestResult CreateNodeSet(int number, string root = "", string path = "")
+        public ActionStatus CreateNodeSet(int number, string root = "", string path = "")
         {
             if (builder == null) SetUpBuilder(root, path);
 
@@ -151,41 +183,146 @@ namespace SwopCoinLibrary.Node
                 });
             }
 
-            return new TestResult { Status = "Complete" };
+            return new ActionStatus 
+            { 
+                Status = "Complete",
+                Success = true
+            };
         }
 
-        public void SimulateNetwork()
+        public ActionStatus SimulateNetwork()
         {
             SetUpBuilder(NodeDownloadData.Bitcoin.v0_18_0, Network.RegTest);
 
-            CreateNodeSet(3);
-            AddAddresses();
-            StartNetwork();
+            string status = "";
 
-            NameNextNode("miner");
-            NameNextNode("alice");
-            NameNextNode("bob");
+            if (CreateNodeSet(3).Success)
+            {
+                status += "Created Nodes\r\n";
 
-            SendBitcoin(GetByName("miner"), Money.Coins(20m), GetByName("alice"));
+                if(AddAddresses().Success)
+                {
+                    status += "Created Addresses\r\n";
 
-            MineNetwork(GetByName("miner"), 1);
+                    List<uint256> list = StartNetwork();
 
-            SyncNodes(GetByName("alice"), GetByName("miner"));
+                    if (list != null)
+                    {
+                        if (list.Count > 1)
+                        {
+                            for (int i = 1; i < list.Count; i++)
+                            {
+                                if (list[i] != list[i - 1])
+                                {
+                                    return new ActionStatus
+                                    {
+                                        Status = "Network Failed To Start"
+                                    };
+                                }
+                            }
+                        }
+                    }
 
-            Console.WriteLine($"Alice Balance: {GetByName("alice").Client.GetBalance()}");
+                    status += "Network Started\r\n";
 
-            SendBitcoin(GetByName("alice"), Money.Coins(1m), GetByName("bob"));
-            MineNetwork(GetByName("alice"), 1);
-            SyncNodes(GetByName("alice"), GetByName("bob"));
+                    NameNextNode("miner");
+                    NameNextNode("alice");
+                    NameNextNode("bob");
 
-            Console.WriteLine($"Alice Balance: {GetByName("alice").Client.GetBalance()}");
-            Console.WriteLine($"Bob Balance: {GetByName("bob").Client.GetBalance()}");
+                    status += "Nodes Named\r\n";
 
+                    if (SendBitcoin(GetByName("miner"), Money.Coins(20m), GetByName("alice")).Success)
+                    {
+                        status += "Bitcoin Sent From Miner\r\n";
+                    }
+                    else
+                    {
+                        return new ActionStatus
+                        {
+                            Status = "Failed To Send BTC"
+                        };
+                    }
+
+                    if(MineNetwork(GetByName("miner"), 1).Success)
+                    {
+                        status += "Bitcoin Mined\r\n";
+                    }
+                    else
+                    {
+                        return new ActionStatus
+                        {
+                            Status = "Failed To Mine BTC"
+                        };
+                    }
+
+                    if(SyncNodes(GetByName("alice"), GetByName("miner")).Success)
+                    {
+                        status += "Alice Balance: " + GetByName("alice").Client.GetBalance().ToString();
+                    }
+                    else
+                    {
+                        return new ActionStatus
+                        {
+                            Status = "Failed To Sync BTC"
+                        };
+                    }
+
+                    if(SendBitcoin(GetByName("alice"), Money.Coins(1m), GetByName("bob")).Success)
+                    {
+                        status += "Bitcoin Sent From Alice\r\n";
+                    }
+                    else
+                    {
+                        return new ActionStatus
+                        {
+                            Status = "Failed To Send BTC"
+                        };
+                    }
+
+                    if (MineNetwork(GetByName("alice"), 1).Success)
+                    {
+                        status += "Bitcoin Mined\r\n";
+                    }
+                    else
+                    {
+                        return new ActionStatus
+                        {
+                            Status = "Failed To Mine BTC"
+                        };
+                    }
+
+                    if (SyncNodes(GetByName("alice"), GetByName("bob")).Success)
+                    {
+                        status += "Alice Balance: " + GetByName("alice").Client.GetBalance().ToString();
+                        status += "Bob Balance: " + GetByName("bob").Client.GetBalance().ToString();
+                    }
+                    else
+                    {
+                        return new ActionStatus
+                        {
+                            Status = "Failed To Sync BTC"
+                        };
+                    }
+                }
+
+                return new ActionStatus
+                {
+                    Status = status,
+                    Success = true
+                };
+            }
+
+            return new ActionStatus
+            {
+                Status = status,
+                Success = false
+            };
         }
 
-        public class TestResult
+        public class ActionStatus
         {
             public string Status = string.Empty;
+            public bool Success = false;
         }
 
         public class NodeIdentity
