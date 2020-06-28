@@ -1,0 +1,8 @@
+C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\SwopCoinLibrary\bin\Debug\netcoreapp3.1\SwopCoinLibrary.deps.json
+C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\SwopCoinLibrary\bin\Debug\netcoreapp3.1\SwopCoinLibrary.dll
+C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\SwopCoinLibrary\bin\Debug\netcoreapp3.1\SwopCoinLibrary.pdb
+C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\SwopCoinLibrary\obj\Debug\netcoreapp3.1\SwopCoinLibrary.csprojAssemblyReference.cache
+C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\SwopCoinLibrary\obj\Debug\netcoreapp3.1\SwopCoinLibrary.AssemblyInfoInputs.cache
+C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\SwopCoinLibrary\obj\Debug\netcoreapp3.1\SwopCoinLibrary.AssemblyInfo.cs
+C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\SwopCoinLibrary\obj\Debug\netcoreapp3.1\SwopCoinLibrary.dll
+C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\SwopCoinLibrary\obj\Debug\netcoreapp3.1\SwopCoinLibrary.pdb
