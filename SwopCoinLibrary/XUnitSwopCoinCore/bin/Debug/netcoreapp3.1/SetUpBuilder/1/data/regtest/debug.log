@@ -1,0 +1,2124 @@
+2020-06-22T02:58:42Z 
+
+
+
+
+2020-06-22T02:58:42Z Bitcoin Core version v0.18.0 (release build)
+2020-06-22T02:58:42Z Validating signatures for all blocks.
+2020-06-22T02:58:42Z Setting nMinimumChainWork=0000000000000000000000000000000000000000000000000000000000000000
+2020-06-22T02:58:42Z Using the 'sse4(1way),sse41(4way),avx2(8way)' SHA256 implementation
+2020-06-22T02:58:42Z Using RdSeed as additional entropy source
+2020-06-22T02:58:42Z Using RdRand as an additional entropy source
+2020-06-22T02:58:42Z Default data directory C:\Users\Brandon\AppData\Roaming\Bitcoin
+2020-06-22T02:58:42Z Using data directory C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\XUnitSwopCoinCore\bin\Debug\netcoreapp3.1\SetUpBuilder\1\data\regtest
+2020-06-22T02:58:42Z Config file: C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\XUnitSwopCoinCore\bin\Debug\netcoreapp3.1\SetUpBuilder\1\data\bitcoin.conf
+2020-06-22T02:58:42Z Using at most 125 automatic connections (2048 file descriptors available)
+2020-06-22T02:58:42Z Warning: relative datadir option 'SetUpBuilder\1\data' specified, which will be interpreted relative to the current working directory 'C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\XUnitSwopCoinCore\bin\Debug\netcoreapp3.1'. This is fragile, because if bitcoin is started in the future from a different location, it will be unable to locate the current data files. There could also be data loss if bitcoin is started while in a temporary directory.
+2020-06-22T02:58:42Z Using 16 MiB out of 32/2 requested for signature cache, able to store 524288 elements
+2020-06-22T02:58:42Z Using 16 MiB out of 32/2 requested for script execution cache, able to store 524288 elements
+2020-06-22T02:58:42Z Using 4 threads for script verification
+2020-06-22T02:58:42Z scheduler thread start
+2020-06-22T02:58:42Z libevent: getaddrinfo: nodename nor servname provided, or not known
+2020-06-22T02:58:42Z Binding RPC on address ::1 port 13337 failed.
+2020-06-22T02:58:42Z HTTP: creating work queue of depth 16
+2020-06-22T02:58:42Z No rpcpassword set - using random cookie authentication.
+2020-06-22T02:58:42Z Generated RPC authentication cookie C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\XUnitSwopCoinCore\bin\Debug\netcoreapp3.1\SetUpBuilder\1\data\regtest\.cookie
+2020-06-22T02:58:42Z HTTP: starting 4 worker threads
+2020-06-22T02:58:42Z Using wallet directory C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\XUnitSwopCoinCore\bin\Debug\netcoreapp3.1\SetUpBuilder\1\data\regtest\wallets
+2020-06-22T02:58:42Z init message: Verifying wallet(s)...
+2020-06-22T02:58:42Z Using BerkeleyDB version Berkeley DB 4.8.30: (April  9, 2010)
+2020-06-22T02:58:42Z Using wallet C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\XUnitSwopCoinCore\bin\Debug\netcoreapp3.1\SetUpBuilder\1\data\regtest\wallets
+2020-06-22T02:58:42Z BerkeleyEnvironment::Open: LogDir=C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\XUnitSwopCoinCore\bin\Debug\netcoreapp3.1\SetUpBuilder\1\data\regtest\wallets\database ErrorFile=C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\XUnitSwopCoinCore\bin\Debug\netcoreapp3.1\SetUpBuilder\1\data\regtest\wallets\db.log
+2020-06-22T02:58:42Z init message: Loading banlist...
+2020-06-22T02:58:42Z ERROR: DeserializeFileDB: Failed to open file C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\XUnitSwopCoinCore\bin\Debug\netcoreapp3.1\SetUpBuilder\1\data\regtest\banlist.dat
+2020-06-22T02:58:42Z Invalid or missing banlist.dat; recreating
+2020-06-22T02:58:42Z ThreadRPCServer incorrect password attempt from 127.0.0.1:53668
+2020-06-22T02:58:42Z Flushed 0 banned node ips/subnets to banlist.dat  115ms
+2020-06-22T02:58:42Z net: setting try another outbound peer=false
+2020-06-22T02:58:42Z Cache configuration:
+2020-06-22T02:58:42Z * Using 2.0 MiB for block index database
+2020-06-22T02:58:42Z * Using 56.0 MiB for transaction index database
+2020-06-22T02:58:42Z * Using 8.0 MiB for chain state database
+2020-06-22T02:58:42Z * Using 384.0 MiB for in-memory UTXO set (plus up to 286.1 MiB of unused mempool space)
+2020-06-22T02:58:42Z init message: Loading block index...
+2020-06-22T02:58:42Z Opening LevelDB in C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\XUnitSwopCoinCore\bin\Debug\netcoreapp3.1\SetUpBuilder\1\data\regtest\blocks\index
+2020-06-22T02:58:42Z Opened LevelDB successfully
+2020-06-22T02:58:42Z Using obfuscation key for C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\XUnitSwopCoinCore\bin\Debug\netcoreapp3.1\SetUpBuilder\1\data\regtest\blocks\index: 0000000000000000
+2020-06-22T02:58:42Z LoadBlockIndexDB: last block file = 0
+2020-06-22T02:58:42Z LoadBlockIndexDB: last block file info: CBlockFileInfo(blocks=0, size=0, heights=0...0, time=1970-01-01...1970-01-01)
+2020-06-22T02:58:42Z Checking all blk files are present...
+2020-06-22T02:58:42Z Initializing databases...
+2020-06-22T02:58:42Z Pre-allocating up to position 0x1000000 in blk00000.dat
+2020-06-22T02:58:42Z Opening LevelDB in C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\XUnitSwopCoinCore\bin\Debug\netcoreapp3.1\SetUpBuilder\1\data\regtest\chainstate
+2020-06-22T02:58:43Z Opened LevelDB successfully
+2020-06-22T02:58:43Z Wrote new obfuscate key for C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\XUnitSwopCoinCore\bin\Debug\netcoreapp3.1\SetUpBuilder\1\data\regtest\chainstate: c37b0b6074d20731
+2020-06-22T02:58:43Z Using obfuscation key for C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\XUnitSwopCoinCore\bin\Debug\netcoreapp3.1\SetUpBuilder\1\data\regtest\chainstate: c37b0b6074d20731
+2020-06-22T02:58:43Z init message: Rewinding blocks...
+2020-06-22T02:58:43Z  block index             934ms
+2020-06-22T02:58:43Z Opening LevelDB in C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\XUnitSwopCoinCore\bin\Debug\netcoreapp3.1\SetUpBuilder\1\data\regtest\indexes\txindex
+2020-06-22T02:58:43Z Opened LevelDB successfully
+2020-06-22T02:58:43Z Using obfuscation key for C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\XUnitSwopCoinCore\bin\Debug\netcoreapp3.1\SetUpBuilder\1\data\regtest\indexes\txindex: 0000000000000000
+2020-06-22T02:58:43Z init message: Loading wallet...
+2020-06-22T02:58:43Z BerkeleyEnvironment::Open: LogDir=C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\XUnitSwopCoinCore\bin\Debug\netcoreapp3.1\SetUpBuilder\1\data\regtest\wallets\database ErrorFile=C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\XUnitSwopCoinCore\bin\Debug\netcoreapp3.1\SetUpBuilder\1\data\regtest\wallets\db.log
+2020-06-22T02:58:43Z txindex thread start
+2020-06-22T02:58:43Z txindex is enabled
+2020-06-22T02:58:43Z txindex thread exit
+2020-06-22T02:58:44Z [default wallet] nFileVersion = 180000
+2020-06-22T02:58:44Z [default wallet] Keys: 0 plaintext, 0 encrypted, 0 w/ metadata, 0 total. Unknown wallet records: 0
+2020-06-22T02:58:44Z [default wallet] Performing wallet upgrade to 169900
+2020-06-22T02:58:45Z [default wallet] keypool added 20 keys (10 internal), size=20 (10 internal)
+2020-06-22T02:58:46Z [default wallet] Wallet completed loading in            2663ms
+2020-06-22T02:58:46Z [default wallet] setKeyPool.size() = 20
+2020-06-22T02:58:46Z [default wallet] mapWallet.size() = 0
+2020-06-22T02:58:46Z [default wallet] mapAddressBook.size() = 0
+2020-06-22T02:58:46Z UpdateTip: new best=0f9188f13cb7b2c71f2a335e3a4fc328bf5beb436012afca590b1a11466e2206 height=0 version=0x00000001 log2_work=1 tx=1 date='2011-02-02T23:16:42Z' progress=1.000000 cache=0.0MiB(0txo)
+2020-06-22T02:58:46Z Failed to open mempool file from disk. Continuing anyway.
+2020-06-22T02:58:46Z mapBlockIndex.size() = 1
+2020-06-22T02:58:46Z nBestHeight = 0
+2020-06-22T02:58:46Z torcontrol thread start
+2020-06-22T02:58:46Z Bound to [::]:10278
+2020-06-22T02:58:46Z Bound to 0.0.0.0:10278
+2020-06-22T02:58:46Z init message: Loading P2P addresses...
+2020-06-22T02:58:46Z ERROR: DeserializeFileDB: Failed to open file C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\XUnitSwopCoinCore\bin\Debug\netcoreapp3.1\SetUpBuilder\1\data\regtest\peers.dat
+2020-06-22T02:58:46Z Invalid or missing peers.dat; recreating
+2020-06-22T02:58:46Z Flushed 0 addresses to peers.dat  329ms
+2020-06-22T02:58:46Z init message: Starting network threads...
+2020-06-22T02:58:46Z net thread start
+2020-06-22T02:58:46Z dnsseed thread start
+2020-06-22T02:58:46Z Loading addresses from DNS seeds (could take a while)
+2020-06-22T02:58:46Z 0 addresses found from DNS seeds
+2020-06-22T02:58:46Z dnsseed thread exit
+2020-06-22T02:58:46Z addcon thread start
+2020-06-22T02:58:46Z init message: Done loading
+2020-06-22T02:58:46Z opencon thread start
+2020-06-22T02:58:46Z msghand thread start
+2020-06-22T02:58:49Z trying connection 127.0.0.1:10198 lastseen=0.0hrs
+2020-06-22T02:58:49Z Added connection peer=0
+2020-06-22T02:58:49Z sending version (102 bytes) peer=0
+2020-06-22T02:58:49Z send version message: version 70015, blocks=0, us=[::]:0, peer=0
+2020-06-22T02:58:49Z received: version (102 bytes) peer=0
+2020-06-22T02:58:49Z sending verack (0 bytes) peer=0
+2020-06-22T02:58:49Z sending getaddr (0 bytes) peer=0
+2020-06-22T02:58:49Z receive version message: /Satoshi:0.18.0/: version 70015, blocks=101, us=[::]:0, peer=0
+2020-06-22T02:58:49Z added time data, samples 2, offset +0 (+0 minutes)
+2020-06-22T02:58:49Z received: verack (0 bytes) peer=0
+2020-06-22T02:58:49Z New outbound peer connected: version: 70015, blocks=101, peer=0
+2020-06-22T02:58:49Z sending sendheaders (0 bytes) peer=0
+2020-06-22T02:58:49Z sending sendcmpct (9 bytes) peer=0
+2020-06-22T02:58:49Z sending sendcmpct (9 bytes) peer=0
+2020-06-22T02:58:49Z sending ping (8 bytes) peer=0
+2020-06-22T02:58:49Z initial getheaders (0) to peer=0 (startheight:101)
+2020-06-22T02:58:49Z sending getheaders (69 bytes) peer=0
+2020-06-22T02:58:49Z sending feefilter (8 bytes) peer=0
+2020-06-22T02:58:49Z received: sendheaders (0 bytes) peer=0
+2020-06-22T02:58:49Z received: sendcmpct (9 bytes) peer=0
+2020-06-22T02:58:49Z received: sendcmpct (9 bytes) peer=0
+2020-06-22T02:58:49Z received: ping (8 bytes) peer=0
+2020-06-22T02:58:49Z sending pong (8 bytes) peer=0
+2020-06-22T02:58:49Z received: getheaders (613 bytes) peer=0
+2020-06-22T02:58:49Z Ignoring getheaders from peer=0 because node is in initial block download
+2020-06-22T02:58:49Z received: feefilter (8 bytes) peer=0
+2020-06-22T02:58:49Z received: feefilter of 0.00001000 BTC/kB from peer=0
+2020-06-22T02:58:49Z received: pong (8 bytes) peer=0
+2020-06-22T02:58:49Z received: headers (8182 bytes) peer=0
+2020-06-22T02:58:49Z Requesting block 7a6b897d7a73ca036b185bc433e9cc18e880bb3d5c0818658cef5421c43edd49 (1) peer=0
+2020-06-22T02:58:49Z Requesting block 3ccf27e1a960ff2e28ad80313980be712944cdc8767c518638540baab9a9c103 (2) peer=0
+2020-06-22T02:58:49Z Requesting block 0b30b94ee1916800dbb1d45a3f2fc5f9339f89950fcb420dc468ef135bbc30a7 (3) peer=0
+2020-06-22T02:58:49Z Requesting block 00b3191095e42880149c252e5c33c7fed0e920fddc9e14f5cda1d99b9f1459d3 (4) peer=0
+2020-06-22T02:58:49Z Requesting block 7c200af15b5a47985e4a6725386813d65044559ac8f0621a6021bd0293c9cb6a (5) peer=0
+2020-06-22T02:58:49Z Requesting block 3a2ce8fdd72c2068245586749fd4cb4566d7a8af5b61565dd2583bbb613ab15b (6) peer=0
+2020-06-22T02:58:49Z Requesting block 4e7d3f528036fbbd87af8fd2168ceff9ac9656679d92d8ec7f20df8d7acb2682 (7) peer=0
+2020-06-22T02:58:49Z Requesting block 768ccdec4a75452777f73cccf92d776f87b973f326e4c6a2319d5fe62ac90758 (8) peer=0
+2020-06-22T02:58:49Z Requesting block 569c046ab13789803fa65f2cb179f110d05d039ab3337d53fc23f0404c22080d (9) peer=0
+2020-06-22T02:58:49Z Requesting block 69818f0ab03ab09718a4a53cbc187103c9a3dcc2e3baf6d3ad9d553509077b98 (10) peer=0
+2020-06-22T02:58:49Z Requesting block 01ca6f1c8bb3c9ee2ce3849f0e97c093b8d7d77d21848acb6b57dfae6dddbb4f (11) peer=0
+2020-06-22T02:58:49Z Requesting block 2d84d857bd812458956c64d6ca20bae73e939b94302e9760773940d6692c6f73 (12) peer=0
+2020-06-22T02:58:49Z Requesting block 3a2786ebee1625bb6b806beb5884c2af407547faf7c979f39d7898d17126c525 (13) peer=0
+2020-06-22T02:58:49Z Requesting block 00cc09f99711f0a1a716f6fbe733e32b1feb6200a5bc6aaeca73272dfc54acae (14) peer=0
+2020-06-22T02:58:49Z Requesting block 6382a3695d744c672498805592ce1563df74486dde67a896898ef5535e35459b (15) peer=0
+2020-06-22T02:58:49Z Requesting block 552e3a8899a1e4fbbcbe1802d2281de79dcf633f143d2866d3b0f6b390bb7ebf (16) peer=0
+2020-06-22T02:58:49Z sending getdata (577 bytes) peer=0
+2020-06-22T02:58:49Z received: block (250 bytes) peer=0
+2020-06-22T02:58:49Z received block 7a6b897d7a73ca036b185bc433e9cc18e880bb3d5c0818658cef5421c43edd49 peer=0
+2020-06-22T02:58:49Z Pre-allocating up to position 0x100000 in rev00000.dat
+2020-06-22T02:58:49Z Leaving InitialBlockDownload (latching to false)
+2020-06-22T02:58:49Z UpdateTip: new best=7a6b897d7a73ca036b185bc433e9cc18e880bb3d5c0818658cef5421c43edd49 height=1 version=0x20000000 log2_work=2 tx=2 date='2020-06-22T02:58:48Z' progress=1.000000 cache=0.0MiB(1txo)
+2020-06-22T02:58:49Z Requesting block 6be262a872b03d44de07f433e8b1235229f640360e79f19454b7e04826d35f38 (17) peer=0
+2020-06-22T02:58:49Z sending getdata (37 bytes) peer=0
+2020-06-22T02:58:49Z received: block (250 bytes) peer=0
+2020-06-22T02:58:49Z received block 3ccf27e1a960ff2e28ad80313980be712944cdc8767c518638540baab9a9c103 peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=3ccf27e1a960ff2e28ad80313980be712944cdc8767c518638540baab9a9c103 height=2 version=0x20000000 log2_work=2.5849625 tx=3 date='2020-06-22T02:58:49Z' progress=1.000000 cache=0.0MiB(2txo)
+2020-06-22T02:58:49Z Requesting block 5d1b2a2466fd854905aab08aa31b4a1e9a3209c70ae154411abca35cf1f0015f (18) peer=0
+2020-06-22T02:58:49Z sending getdata (37 bytes) peer=0
+2020-06-22T02:58:49Z received: block (250 bytes) peer=0
+2020-06-22T02:58:49Z received block 0b30b94ee1916800dbb1d45a3f2fc5f9339f89950fcb420dc468ef135bbc30a7 peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=0b30b94ee1916800dbb1d45a3f2fc5f9339f89950fcb420dc468ef135bbc30a7 height=3 version=0x20000000 log2_work=3 tx=4 date='2020-06-22T02:58:49Z' progress=1.000000 cache=0.0MiB(3txo)
+2020-06-22T02:58:49Z Requesting block 00734c296b3949541b551b6e595cf5c1a569bd3c9155d0250bef459a6761106f (19) peer=0
+2020-06-22T02:58:49Z sending getdata (37 bytes) peer=0
+2020-06-22T02:58:49Z received: block (250 bytes) peer=0
+2020-06-22T02:58:49Z received block 00b3191095e42880149c252e5c33c7fed0e920fddc9e14f5cda1d99b9f1459d3 peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=00b3191095e42880149c252e5c33c7fed0e920fddc9e14f5cda1d99b9f1459d3 height=4 version=0x20000000 log2_work=3.3219281 tx=5 date='2020-06-22T02:58:50Z' progress=1.000000 cache=0.0MiB(4txo)
+2020-06-22T02:58:49Z Requesting block 6f8222bcaeec9e2bf13721967f6635020ed019ca6e61b75ae3b4b414e28b6334 (20) peer=0
+2020-06-22T02:58:49Z sending getdata (37 bytes) peer=0
+2020-06-22T02:58:49Z received: block (250 bytes) peer=0
+2020-06-22T02:58:49Z received block 7c200af15b5a47985e4a6725386813d65044559ac8f0621a6021bd0293c9cb6a peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=7c200af15b5a47985e4a6725386813d65044559ac8f0621a6021bd0293c9cb6a height=5 version=0x20000000 log2_work=3.5849625 tx=6 date='2020-06-22T02:58:50Z' progress=1.000000 cache=0.0MiB(5txo)
+2020-06-22T02:58:49Z Requesting block 6ffc791a5773bd16ec4eb08b1820b42acd44944617c1d7ebafe6c54a5645a0a8 (21) peer=0
+2020-06-22T02:58:49Z sending getdata (37 bytes) peer=0
+2020-06-22T02:58:49Z received: block (250 bytes) peer=0
+2020-06-22T02:58:49Z received block 3a2ce8fdd72c2068245586749fd4cb4566d7a8af5b61565dd2583bbb613ab15b peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=3a2ce8fdd72c2068245586749fd4cb4566d7a8af5b61565dd2583bbb613ab15b height=6 version=0x20000000 log2_work=3.8073549 tx=7 date='2020-06-22T02:58:50Z' progress=1.000000 cache=0.0MiB(6txo)
+2020-06-22T02:58:49Z Requesting block 4f57a7c5bf3a7e12e5be87dc444af4b15cedad26818e691a9630b72c37c97970 (22) peer=0
+2020-06-22T02:58:49Z sending getdata (37 bytes) peer=0
+2020-06-22T02:58:49Z received: block (250 bytes) peer=0
+2020-06-22T02:58:49Z received block 4e7d3f528036fbbd87af8fd2168ceff9ac9656679d92d8ec7f20df8d7acb2682 peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=4e7d3f528036fbbd87af8fd2168ceff9ac9656679d92d8ec7f20df8d7acb2682 height=7 version=0x20000000 log2_work=4 tx=8 date='2020-06-22T02:58:50Z' progress=1.000000 cache=0.0MiB(7txo)
+2020-06-22T02:58:49Z Requesting block 19450759c1e7c4725e8252edafb5c7764400cbd22695ebdfb93ace131c46b2e8 (23) peer=0
+2020-06-22T02:58:49Z sending getdata (37 bytes) peer=0
+2020-06-22T02:58:49Z received: block (250 bytes) peer=0
+2020-06-22T02:58:49Z received block 768ccdec4a75452777f73cccf92d776f87b973f326e4c6a2319d5fe62ac90758 peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=768ccdec4a75452777f73cccf92d776f87b973f326e4c6a2319d5fe62ac90758 height=8 version=0x20000000 log2_work=4.169925 tx=9 date='2020-06-22T02:58:51Z' progress=1.000000 cache=0.0MiB(8txo)
+2020-06-22T02:58:49Z Requesting block 2f0fb5cbd473b4a3a3386cd09643e4eb0c00852037807bf34bfbbb3eb1f30f9d (24) peer=0
+2020-06-22T02:58:49Z sending getdata (37 bytes) peer=0
+2020-06-22T02:58:49Z received: block (250 bytes) peer=0
+2020-06-22T02:58:49Z received block 569c046ab13789803fa65f2cb179f110d05d039ab3337d53fc23f0404c22080d peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=569c046ab13789803fa65f2cb179f110d05d039ab3337d53fc23f0404c22080d height=9 version=0x20000000 log2_work=4.3219281 tx=10 date='2020-06-22T02:58:51Z' progress=1.000000 cache=0.0MiB(9txo)
+2020-06-22T02:58:49Z Requesting block 0d06e974eac7174670751972867fb9b1419505d9047231835e3a0e2388694bdc (25) peer=0
+2020-06-22T02:58:49Z sending getdata (37 bytes) peer=0
+2020-06-22T02:58:49Z received: block (250 bytes) peer=0
+2020-06-22T02:58:49Z received block 69818f0ab03ab09718a4a53cbc187103c9a3dcc2e3baf6d3ad9d553509077b98 peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=69818f0ab03ab09718a4a53cbc187103c9a3dcc2e3baf6d3ad9d553509077b98 height=10 version=0x20000000 log2_work=4.4594316 tx=11 date='2020-06-22T02:58:51Z' progress=1.000000 cache=0.0MiB(10txo)
+2020-06-22T02:58:49Z Requesting block 0bcb4bb996c2b975b06388e2365a97db1a5815adf587eeaef8b2db56f7e45395 (26) peer=0
+2020-06-22T02:58:49Z sending getdata (37 bytes) peer=0
+2020-06-22T02:58:49Z received: block (250 bytes) peer=0
+2020-06-22T02:58:49Z received block 01ca6f1c8bb3c9ee2ce3849f0e97c093b8d7d77d21848acb6b57dfae6dddbb4f peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=01ca6f1c8bb3c9ee2ce3849f0e97c093b8d7d77d21848acb6b57dfae6dddbb4f height=11 version=0x20000000 log2_work=4.5849625 tx=12 date='2020-06-22T02:58:51Z' progress=1.000000 cache=0.0MiB(11txo)
+2020-06-22T02:58:49Z Requesting block 05017ee2edd92e2e055478605939b2a9e41eeff453c49ab3aa97e34bec07e6bc (27) peer=0
+2020-06-22T02:58:49Z sending getdata (37 bytes) peer=0
+2020-06-22T02:58:49Z received: block (250 bytes) peer=0
+2020-06-22T02:58:49Z received block 2d84d857bd812458956c64d6ca20bae73e939b94302e9760773940d6692c6f73 peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=2d84d857bd812458956c64d6ca20bae73e939b94302e9760773940d6692c6f73 height=12 version=0x20000000 log2_work=4.7004397 tx=13 date='2020-06-22T02:58:51Z' progress=1.000000 cache=0.0MiB(12txo)
+2020-06-22T02:58:49Z Requesting block 0212bbb4e5f2c29af24bf85438c7c9313e478533c3eaeb9ab60ff86591bc1553 (28) peer=0
+2020-06-22T02:58:49Z sending getdata (37 bytes) peer=0
+2020-06-22T02:58:49Z received: block (250 bytes) peer=0
+2020-06-22T02:58:49Z received block 3a2786ebee1625bb6b806beb5884c2af407547faf7c979f39d7898d17126c525 peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=3a2786ebee1625bb6b806beb5884c2af407547faf7c979f39d7898d17126c525 height=13 version=0x20000000 log2_work=4.8073549 tx=14 date='2020-06-22T02:58:51Z' progress=1.000000 cache=0.0MiB(13txo)
+2020-06-22T02:58:49Z Requesting block 5d3334ba4e7443f088ff2527fbb1cc4a82c7f172b96eaf22d02bc9407c4146fe (29) peer=0
+2020-06-22T02:58:49Z sending getdata (37 bytes) peer=0
+2020-06-22T02:58:49Z received: block (250 bytes) peer=0
+2020-06-22T02:58:49Z received block 00cc09f99711f0a1a716f6fbe733e32b1feb6200a5bc6aaeca73272dfc54acae peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=00cc09f99711f0a1a716f6fbe733e32b1feb6200a5bc6aaeca73272dfc54acae height=14 version=0x20000000 log2_work=4.9068906 tx=15 date='2020-06-22T02:58:52Z' progress=1.000000 cache=0.0MiB(14txo)
+2020-06-22T02:58:49Z Requesting block 2f15f925a18f0e43b8fdd4bf99b84a2e2746d4c4626a95a9697cc9b2741faba8 (30) peer=0
+2020-06-22T02:58:49Z sending getdata (37 bytes) peer=0
+2020-06-22T02:58:49Z received: block (250 bytes) peer=0
+2020-06-22T02:58:49Z received block 6382a3695d744c672498805592ce1563df74486dde67a896898ef5535e35459b peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=6382a3695d744c672498805592ce1563df74486dde67a896898ef5535e35459b height=15 version=0x20000000 log2_work=5 tx=16 date='2020-06-22T02:58:52Z' progress=1.000000 cache=0.0MiB(15txo)
+2020-06-22T02:58:49Z received: block (250 bytes) peer=0
+2020-06-22T02:58:49Z received block 552e3a8899a1e4fbbcbe1802d2281de79dcf633f143d2866d3b0f6b390bb7ebf peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=552e3a8899a1e4fbbcbe1802d2281de79dcf633f143d2866d3b0f6b390bb7ebf height=16 version=0x20000000 log2_work=5.0874628 tx=17 date='2020-06-22T02:58:52Z' progress=1.000000 cache=0.0MiB(16txo)
+2020-06-22T02:58:49Z Requesting block 01d5db99bad5532d5c8f352f0c116cc3fbd9f9ac3759440baebcb874b3beef97 (31) peer=0
+2020-06-22T02:58:49Z Requesting block 482b19d5b93653d4878469c192071af5e628a8c947f4272a5052b2990cd933d9 (32) peer=0
+2020-06-22T02:58:49Z sending getdata (73 bytes) peer=0
+2020-06-22T02:58:49Z received: block (251 bytes) peer=0
+2020-06-22T02:58:49Z received block 6be262a872b03d44de07f433e8b1235229f640360e79f19454b7e04826d35f38 peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=6be262a872b03d44de07f433e8b1235229f640360e79f19454b7e04826d35f38 height=17 version=0x20000000 log2_work=5.169925 tx=18 date='2020-06-22T02:58:52Z' progress=1.000000 cache=0.0MiB(17txo)
+2020-06-22T02:58:49Z Requesting block 3996b429d0e923ff4284f836deb9febd22f21f69a9b6408874cc0eac2cb3fd66 (33) peer=0
+2020-06-22T02:58:49Z sending getdata (37 bytes) peer=0
+2020-06-22T02:58:49Z received: block (251 bytes) peer=0
+2020-06-22T02:58:49Z received block 5d1b2a2466fd854905aab08aa31b4a1e9a3209c70ae154411abca35cf1f0015f peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=5d1b2a2466fd854905aab08aa31b4a1e9a3209c70ae154411abca35cf1f0015f height=18 version=0x20000000 log2_work=5.2479275 tx=19 date='2020-06-22T02:58:52Z' progress=1.000000 cache=0.0MiB(18txo)
+2020-06-22T02:58:49Z Requesting block 43507355489e48156f9eda0876c3856fd74af116f6d9229ad26de92ea18a50d5 (34) peer=0
+2020-06-22T02:58:49Z sending getdata (37 bytes) peer=0
+2020-06-22T02:58:49Z received: block (251 bytes) peer=0
+2020-06-22T02:58:49Z received block 00734c296b3949541b551b6e595cf5c1a569bd3c9155d0250bef459a6761106f peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=00734c296b3949541b551b6e595cf5c1a569bd3c9155d0250bef459a6761106f height=19 version=0x20000000 log2_work=5.3219281 tx=20 date='2020-06-22T02:58:52Z' progress=1.000000 cache=0.0MiB(19txo)
+2020-06-22T02:58:49Z received: block (251 bytes) peer=0
+2020-06-22T02:58:49Z received block 6f8222bcaeec9e2bf13721967f6635020ed019ca6e61b75ae3b4b414e28b6334 peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=6f8222bcaeec9e2bf13721967f6635020ed019ca6e61b75ae3b4b414e28b6334 height=20 version=0x20000000 log2_work=5.3923174 tx=21 date='2020-06-22T02:58:53Z' progress=1.000000 cache=0.0MiB(20txo)
+2020-06-22T02:58:49Z Requesting block 6730b64eeb3cc39da9d49c002549a9b1dfca23be33308c5011d5f22c0523c56a (35) peer=0
+2020-06-22T02:58:49Z Requesting block 7ab152bd7d41c493f5e7b79fc8aae00ab5626871661b7d7ba263c85c107b1256 (36) peer=0
+2020-06-22T02:58:49Z sending getdata (73 bytes) peer=0
+2020-06-22T02:58:49Z received: block (251 bytes) peer=0
+2020-06-22T02:58:49Z received block 6ffc791a5773bd16ec4eb08b1820b42acd44944617c1d7ebafe6c54a5645a0a8 peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=6ffc791a5773bd16ec4eb08b1820b42acd44944617c1d7ebafe6c54a5645a0a8 height=21 version=0x20000000 log2_work=5.4594316 tx=22 date='2020-06-22T02:58:53Z' progress=1.000000 cache=0.0MiB(21txo)
+2020-06-22T02:58:49Z received: block (251 bytes) peer=0
+2020-06-22T02:58:49Z received block 4f57a7c5bf3a7e12e5be87dc444af4b15cedad26818e691a9630b72c37c97970 peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=4f57a7c5bf3a7e12e5be87dc444af4b15cedad26818e691a9630b72c37c97970 height=22 version=0x20000000 log2_work=5.523562 tx=23 date='2020-06-22T02:58:53Z' progress=1.000000 cache=0.0MiB(22txo)
+2020-06-22T02:58:49Z received: block (251 bytes) peer=0
+2020-06-22T02:58:49Z received block 19450759c1e7c4725e8252edafb5c7764400cbd22695ebdfb93ace131c46b2e8 peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=19450759c1e7c4725e8252edafb5c7764400cbd22695ebdfb93ace131c46b2e8 height=23 version=0x20000000 log2_work=5.5849625 tx=24 date='2020-06-22T02:58:53Z' progress=1.000000 cache=0.0MiB(23txo)
+2020-06-22T02:58:49Z received: block (251 bytes) peer=0
+2020-06-22T02:58:49Z received block 2f0fb5cbd473b4a3a3386cd09643e4eb0c00852037807bf34bfbbb3eb1f30f9d peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=2f0fb5cbd473b4a3a3386cd09643e4eb0c00852037807bf34bfbbb3eb1f30f9d height=24 version=0x20000000 log2_work=5.6438562 tx=25 date='2020-06-22T02:58:53Z' progress=1.000000 cache=0.0MiB(24txo)
+2020-06-22T02:58:49Z received: block (251 bytes) peer=0
+2020-06-22T02:58:49Z received block 0d06e974eac7174670751972867fb9b1419505d9047231835e3a0e2388694bdc peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=0d06e974eac7174670751972867fb9b1419505d9047231835e3a0e2388694bdc height=25 version=0x20000000 log2_work=5.7004397 tx=26 date='2020-06-22T02:58:53Z' progress=1.000000 cache=0.0MiB(25txo)
+2020-06-22T02:58:49Z received: block (251 bytes) peer=0
+2020-06-22T02:58:49Z received block 0bcb4bb996c2b975b06388e2365a97db1a5815adf587eeaef8b2db56f7e45395 peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=0bcb4bb996c2b975b06388e2365a97db1a5815adf587eeaef8b2db56f7e45395 height=26 version=0x20000000 log2_work=5.7548875 tx=27 date='2020-06-22T02:58:54Z' progress=1.000000 cache=0.0MiB(26txo)
+2020-06-22T02:58:49Z received: block (251 bytes) peer=0
+2020-06-22T02:58:49Z received block 05017ee2edd92e2e055478605939b2a9e41eeff453c49ab3aa97e34bec07e6bc peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=05017ee2edd92e2e055478605939b2a9e41eeff453c49ab3aa97e34bec07e6bc height=27 version=0x20000000 log2_work=5.8073549 tx=28 date='2020-06-22T02:58:54Z' progress=1.000000 cache=0.0MiB(27txo)
+2020-06-22T02:58:49Z Requesting block 0bff66dd25e280af563e44884e4e4fb1fa6a5b6e1fbc5c5e429712c064e531fe (37) peer=0
+2020-06-22T02:58:49Z Requesting block 4757afff3355df061fd4ca601e12ff9901a58ba557de5f70a708346b42860695 (38) peer=0
+2020-06-22T02:58:49Z Requesting block 397b92d360eddce64421916c5c03691752e231d58b252430b44723910e3e40ec (39) peer=0
+2020-06-22T02:58:49Z Requesting block 7eb40573f632df6dc73ec5dc24947fec5870a6dee16a9b03c91bf68043949096 (40) peer=0
+2020-06-22T02:58:49Z Requesting block 07a8ad5675babce79b7e4fbd9cb2fc7476a4dd29c18ff4a7b560baca029e5fa8 (41) peer=0
+2020-06-22T02:58:49Z Requesting block 5eb1a7f5cbf534191ced0f30c39789bd7fd5826da9e4e997c1102c67c063a8c4 (42) peer=0
+2020-06-22T02:58:49Z Requesting block 4a644df1ed4ef15fb5200d1a8baeda0b9f17600e6535d055a0f0bdb3e60f4adb (43) peer=0
+2020-06-22T02:58:49Z sending getdata (253 bytes) peer=0
+2020-06-22T02:58:49Z received: block (251 bytes) peer=0
+2020-06-22T02:58:49Z received block 0212bbb4e5f2c29af24bf85438c7c9313e478533c3eaeb9ab60ff86591bc1553 peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=0212bbb4e5f2c29af24bf85438c7c9313e478533c3eaeb9ab60ff86591bc1553 height=28 version=0x20000000 log2_work=5.857981 tx=29 date='2020-06-22T02:58:54Z' progress=1.000000 cache=0.0MiB(28txo)
+2020-06-22T02:58:49Z Requesting block 2ac36edd6fd22596b3dc686b9c9e796d4793fd18d0dc6ce5925fadb33b0a10e0 (44) peer=0
+2020-06-22T02:58:49Z sending getdata (37 bytes) peer=0
+2020-06-22T02:58:49Z received: block (251 bytes) peer=0
+2020-06-22T02:58:49Z received block 5d3334ba4e7443f088ff2527fbb1cc4a82c7f172b96eaf22d02bc9407c4146fe peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=5d3334ba4e7443f088ff2527fbb1cc4a82c7f172b96eaf22d02bc9407c4146fe height=29 version=0x20000000 log2_work=5.9068906 tx=30 date='2020-06-22T02:58:54Z' progress=1.000000 cache=0.0MiB(29txo)
+2020-06-22T02:58:49Z received: block (251 bytes) peer=0
+2020-06-22T02:58:49Z received block 2f15f925a18f0e43b8fdd4bf99b84a2e2746d4c4626a95a9697cc9b2741faba8 peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=2f15f925a18f0e43b8fdd4bf99b84a2e2746d4c4626a95a9697cc9b2741faba8 height=30 version=0x20000000 log2_work=5.9541963 tx=31 date='2020-06-22T02:58:54Z' progress=1.000000 cache=0.0MiB(30txo)
+2020-06-22T02:58:49Z Requesting block 7e7cdf1c00047b670a496d996aa13e67fd2f22b70fe8e655fa57348179e38e30 (45) peer=0
+2020-06-22T02:58:49Z Requesting block 027e71cdebfbb4157efafb56998420695305cd3275b350e79dccee55af01f524 (46) peer=0
+2020-06-22T02:58:49Z sending getdata (73 bytes) peer=0
+2020-06-22T02:58:49Z received: block (251 bytes) peer=0
+2020-06-22T02:58:49Z received block 01d5db99bad5532d5c8f352f0c116cc3fbd9f9ac3759440baebcb874b3beef97 peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=01d5db99bad5532d5c8f352f0c116cc3fbd9f9ac3759440baebcb874b3beef97 height=31 version=0x20000000 log2_work=6 tx=32 date='2020-06-22T02:58:54Z' progress=1.000000 cache=0.0MiB(31txo)
+2020-06-22T02:58:49Z received: block (251 bytes) peer=0
+2020-06-22T02:58:49Z received block 482b19d5b93653d4878469c192071af5e628a8c947f4272a5052b2990cd933d9 peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=482b19d5b93653d4878469c192071af5e628a8c947f4272a5052b2990cd933d9 height=32 version=0x20000000 log2_work=6.0443941 tx=33 date='2020-06-22T02:58:55Z' progress=1.000000 cache=0.0MiB(32txo)
+2020-06-22T02:58:49Z received: block (251 bytes) peer=0
+2020-06-22T02:58:49Z received block 3996b429d0e923ff4284f836deb9febd22f21f69a9b6408874cc0eac2cb3fd66 peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=3996b429d0e923ff4284f836deb9febd22f21f69a9b6408874cc0eac2cb3fd66 height=33 version=0x20000000 log2_work=6.0874628 tx=34 date='2020-06-22T02:58:55Z' progress=1.000000 cache=0.0MiB(33txo)
+2020-06-22T02:58:49Z received: block (251 bytes) peer=0
+2020-06-22T02:58:49Z received block 43507355489e48156f9eda0876c3856fd74af116f6d9229ad26de92ea18a50d5 peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=43507355489e48156f9eda0876c3856fd74af116f6d9229ad26de92ea18a50d5 height=34 version=0x20000000 log2_work=6.129283 tx=35 date='2020-06-22T02:58:55Z' progress=1.000000 cache=0.0MiB(34txo)
+2020-06-22T02:58:49Z Requesting block 193c25c890615b9675103ba0e5d686ee48cfad93742e12e0a73d25f28340e8b0 (47) peer=0
+2020-06-22T02:58:49Z Requesting block 10223f2a100b96d8a46224ffcfe02ef8f05160aad080e04fd65bbfd8ce29aa56 (48) peer=0
+2020-06-22T02:58:49Z Requesting block 29883f555cccab7bb91b595de34df7a6567598f52c97545ae2a16f845361729e (49) peer=0
+2020-06-22T02:58:49Z Requesting block 0ee5111d31ca564ad60192e1117e98a3a782f3cc22fcab44633a709475545056 (50) peer=0
+2020-06-22T02:58:49Z sending getdata (145 bytes) peer=0
+2020-06-22T02:58:49Z received: block (251 bytes) peer=0
+2020-06-22T02:58:49Z received block 6730b64eeb3cc39da9d49c002549a9b1dfca23be33308c5011d5f22c0523c56a peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=6730b64eeb3cc39da9d49c002549a9b1dfca23be33308c5011d5f22c0523c56a height=35 version=0x20000000 log2_work=6.169925 tx=36 date='2020-06-22T02:58:55Z' progress=1.000000 cache=0.0MiB(35txo)
+2020-06-22T02:58:49Z received: block (251 bytes) peer=0
+2020-06-22T02:58:49Z received block 7ab152bd7d41c493f5e7b79fc8aae00ab5626871661b7d7ba263c85c107b1256 peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=7ab152bd7d41c493f5e7b79fc8aae00ab5626871661b7d7ba263c85c107b1256 height=36 version=0x20000000 log2_work=6.2094534 tx=37 date='2020-06-22T02:58:55Z' progress=1.000000 cache=0.0MiB(36txo)
+2020-06-22T02:58:49Z Requesting block 7960289362f8fa23c46a1dfc0adf86078e49c1c0841c17e1c5fddf8379a5443f (51) peer=0
+2020-06-22T02:58:49Z Requesting block 286171cf81cd5a4a7a2ec738d2525f983ccca266f4e8381e2971018334e278ea (52) peer=0
+2020-06-22T02:58:49Z sending getdata (73 bytes) peer=0
+2020-06-22T02:58:49Z received: block (251 bytes) peer=0
+2020-06-22T02:58:49Z received block 0bff66dd25e280af563e44884e4e4fb1fa6a5b6e1fbc5c5e429712c064e531fe peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=0bff66dd25e280af563e44884e4e4fb1fa6a5b6e1fbc5c5e429712c064e531fe height=37 version=0x20000000 log2_work=6.2479275 tx=38 date='2020-06-22T02:58:55Z' progress=1.000000 cache=0.0MiB(37txo)
+2020-06-22T02:58:49Z received: block (251 bytes) peer=0
+2020-06-22T02:58:49Z received block 4757afff3355df061fd4ca601e12ff9901a58ba557de5f70a708346b42860695 peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=4757afff3355df061fd4ca601e12ff9901a58ba557de5f70a708346b42860695 height=38 version=0x20000000 log2_work=6.2854022 tx=39 date='2020-06-22T02:58:56Z' progress=1.000000 cache=0.0MiB(38txo)
+2020-06-22T02:58:49Z received: block (251 bytes) peer=0
+2020-06-22T02:58:49Z received block 397b92d360eddce64421916c5c03691752e231d58b252430b44723910e3e40ec peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=397b92d360eddce64421916c5c03691752e231d58b252430b44723910e3e40ec height=39 version=0x20000000 log2_work=6.3219281 tx=40 date='2020-06-22T02:58:56Z' progress=1.000000 cache=0.0MiB(39txo)
+2020-06-22T02:58:49Z Requesting block 74e3e1e7ebb492c71db0a3d763d303cc67e72028e2c5e64821bf987b25cbb107 (53) peer=0
+2020-06-22T02:58:49Z Requesting block 11269b22135c6f9b7e1e772e375ffbcb18cac38cb6009d14db9f921ba48d50f9 (54) peer=0
+2020-06-22T02:58:49Z Requesting block 76991ef9edbcdc75e8da3139f15dc133e9660a52fa7b84d79c9b56013d22f177 (55) peer=0
+2020-06-22T02:58:49Z sending getdata (109 bytes) peer=0
+2020-06-22T02:58:49Z received: block (251 bytes) peer=0
+2020-06-22T02:58:49Z received block 7eb40573f632df6dc73ec5dc24947fec5870a6dee16a9b03c91bf68043949096 peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=7eb40573f632df6dc73ec5dc24947fec5870a6dee16a9b03c91bf68043949096 height=40 version=0x20000000 log2_work=6.357552 tx=41 date='2020-06-22T02:58:56Z' progress=1.000000 cache=0.0MiB(40txo)
+2020-06-22T02:58:49Z received: block (251 bytes) peer=0
+2020-06-22T02:58:49Z received block 07a8ad5675babce79b7e4fbd9cb2fc7476a4dd29c18ff4a7b560baca029e5fa8 peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=07a8ad5675babce79b7e4fbd9cb2fc7476a4dd29c18ff4a7b560baca029e5fa8 height=41 version=0x20000000 log2_work=6.3923174 tx=42 date='2020-06-22T02:58:56Z' progress=1.000000 cache=0.0MiB(41txo)
+2020-06-22T02:58:49Z received: block (251 bytes) peer=0
+2020-06-22T02:58:49Z received block 5eb1a7f5cbf534191ced0f30c39789bd7fd5826da9e4e997c1102c67c063a8c4 peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=5eb1a7f5cbf534191ced0f30c39789bd7fd5826da9e4e997c1102c67c063a8c4 height=42 version=0x20000000 log2_work=6.4262648 tx=43 date='2020-06-22T02:58:56Z' progress=1.000000 cache=0.0MiB(42txo)
+2020-06-22T02:58:49Z Requesting block 5144b7dce0c35d97d5ba381220f5a29d45e24da622c84205cc7ad8004a82437d (56) peer=0
+2020-06-22T02:58:49Z Requesting block 416527978bbdd60e39b6e3d85b384ad520cc240b6b0ca2d6bb52b1b9db2b5cec (57) peer=0
+2020-06-22T02:58:49Z Requesting block 5656de33c7873e975dcb81a1d43dacf67ac9684a01c939e12687919c96221386 (58) peer=0
+2020-06-22T02:58:49Z sending getdata (109 bytes) peer=0
+2020-06-22T02:58:49Z received: block (251 bytes) peer=0
+2020-06-22T02:58:49Z received block 4a644df1ed4ef15fb5200d1a8baeda0b9f17600e6535d055a0f0bdb3e60f4adb peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=4a644df1ed4ef15fb5200d1a8baeda0b9f17600e6535d055a0f0bdb3e60f4adb height=43 version=0x20000000 log2_work=6.4594316 tx=44 date='2020-06-22T02:58:56Z' progress=1.000000 cache=0.0MiB(43txo)
+2020-06-22T02:58:49Z Requesting block 4f5190bb16be30007efa6bd54cb8583b3a5420200a27b328f437fc1a1d29f061 (59) peer=0
+2020-06-22T02:58:49Z sending getdata (37 bytes) peer=0
+2020-06-22T02:58:49Z received: block (251 bytes) peer=0
+2020-06-22T02:58:49Z received block 2ac36edd6fd22596b3dc686b9c9e796d4793fd18d0dc6ce5925fadb33b0a10e0 peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=2ac36edd6fd22596b3dc686b9c9e796d4793fd18d0dc6ce5925fadb33b0a10e0 height=44 version=0x20000000 log2_work=6.4918531 tx=45 date='2020-06-22T02:58:57Z' progress=1.000000 cache=0.0MiB(44txo)
+2020-06-22T02:58:49Z Requesting block 3517588d9b44e9010aafb20ee37303d41e3098394148d0fcd1bee58f5e6681bd (60) peer=0
+2020-06-22T02:58:49Z sending getdata (37 bytes) peer=0
+2020-06-22T02:58:49Z received: block (251 bytes) peer=0
+2020-06-22T02:58:49Z received block 7e7cdf1c00047b670a496d996aa13e67fd2f22b70fe8e655fa57348179e38e30 peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=7e7cdf1c00047b670a496d996aa13e67fd2f22b70fe8e655fa57348179e38e30 height=45 version=0x20000000 log2_work=6.523562 tx=46 date='2020-06-22T02:58:57Z' progress=1.000000 cache=0.0MiB(45txo)
+2020-06-22T02:58:49Z received: block (251 bytes) peer=0
+2020-06-22T02:58:49Z received block 027e71cdebfbb4157efafb56998420695305cd3275b350e79dccee55af01f524 peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=027e71cdebfbb4157efafb56998420695305cd3275b350e79dccee55af01f524 height=46 version=0x20000000 log2_work=6.5545889 tx=47 date='2020-06-22T02:58:57Z' progress=1.000000 cache=0.0MiB(46txo)
+2020-06-22T02:58:49Z received: block (251 bytes) peer=0
+2020-06-22T02:58:49Z received block 193c25c890615b9675103ba0e5d686ee48cfad93742e12e0a73d25f28340e8b0 peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=193c25c890615b9675103ba0e5d686ee48cfad93742e12e0a73d25f28340e8b0 height=47 version=0x20000000 log2_work=6.5849625 tx=48 date='2020-06-22T02:58:57Z' progress=1.000000 cache=0.0MiB(47txo)
+2020-06-22T02:58:49Z received: block (251 bytes) peer=0
+2020-06-22T02:58:49Z received block 10223f2a100b96d8a46224ffcfe02ef8f05160aad080e04fd65bbfd8ce29aa56 peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=10223f2a100b96d8a46224ffcfe02ef8f05160aad080e04fd65bbfd8ce29aa56 height=48 version=0x20000000 log2_work=6.6147098 tx=49 date='2020-06-22T02:58:57Z' progress=1.000000 cache=0.0MiB(48txo)
+2020-06-22T02:58:49Z received: block (251 bytes) peer=0
+2020-06-22T02:58:49Z received block 29883f555cccab7bb91b595de34df7a6567598f52c97545ae2a16f845361729e peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=29883f555cccab7bb91b595de34df7a6567598f52c97545ae2a16f845361729e height=49 version=0x20000000 log2_work=6.6438562 tx=50 date='2020-06-22T02:58:57Z' progress=1.000000 cache=0.0MiB(49txo)
+2020-06-22T02:58:49Z Requesting block 158728e0409ff131c519ef76419147913039a6ceb3eee75d5ebc16d412947342 (61) peer=0
+2020-06-22T02:58:49Z Requesting block 3ac4ad34500715f2e73af7f3407a038f930c204e047445719663fda3d4431058 (62) peer=0
+2020-06-22T02:58:49Z Requesting block 2d6dd07ffcfc241a5e899b3f23ef53fc8345f694d1b563c9a797048c7c9ccbb9 (63) peer=0
+2020-06-22T02:58:49Z Requesting block 711a5967eac028984fa4243243a05dbcd39fc9e63617336b53ee11f8eb365b83 (64) peer=0
+2020-06-22T02:58:49Z Requesting block 4981482a07561f241e849bd81eeffc2db104a682316654089937cdfd90e605be (65) peer=0
+2020-06-22T02:58:49Z sending getdata (181 bytes) peer=0
+2020-06-22T02:58:49Z received: block (251 bytes) peer=0
+2020-06-22T02:58:49Z received block 0ee5111d31ca564ad60192e1117e98a3a782f3cc22fcab44633a709475545056 peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=0ee5111d31ca564ad60192e1117e98a3a782f3cc22fcab44633a709475545056 height=50 version=0x20000000 log2_work=6.6724253 tx=51 date='2020-06-22T02:58:58Z' progress=1.000000 cache=0.0MiB(50txo)
+2020-06-22T02:58:49Z received: block (251 bytes) peer=0
+2020-06-22T02:58:49Z received block 7960289362f8fa23c46a1dfc0adf86078e49c1c0841c17e1c5fddf8379a5443f peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=7960289362f8fa23c46a1dfc0adf86078e49c1c0841c17e1c5fddf8379a5443f height=51 version=0x20000000 log2_work=6.7004397 tx=52 date='2020-06-22T02:58:58Z' progress=1.000000 cache=0.0MiB(51txo)
+2020-06-22T02:58:49Z Requesting block 148f3d28ce1c6a25e71853148fac6eccbf50363b256dc42e185f538c5b7103df (66) peer=0
+2020-06-22T02:58:49Z Requesting block 3f7df4d516d7b9e12f5bdba5d60381ed17605a59449ad0434e8f6ea9804c5055 (67) peer=0
+2020-06-22T02:58:49Z sending getdata (73 bytes) peer=0
+2020-06-22T02:58:49Z received: block (251 bytes) peer=0
+2020-06-22T02:58:49Z received block 286171cf81cd5a4a7a2ec738d2525f983ccca266f4e8381e2971018334e278ea peer=0
+2020-06-22T02:58:49Z UpdateTip: new best=286171cf81cd5a4a7a2ec738d2525f983ccca266f4e8381e2971018334e278ea height=52 version=0x20000000 log2_work=6.7279205 tx=53 date='2020-06-22T02:58:58Z' progress=1.000000 cache=0.0MiB(52txo)
+2020-06-22T02:58:49Z received: block (251 bytes) peer=0
+2020-06-22T02:58:49Z received block 74e3e1e7ebb492c71db0a3d763d303cc67e72028e2c5e64821bf987b25cbb107 peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=74e3e1e7ebb492c71db0a3d763d303cc67e72028e2c5e64821bf987b25cbb107 height=53 version=0x20000000 log2_work=6.7548875 tx=54 date='2020-06-22T02:58:58Z' progress=1.000000 cache=0.0MiB(53txo)
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 11269b22135c6f9b7e1e772e375ffbcb18cac38cb6009d14db9f921ba48d50f9 peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=11269b22135c6f9b7e1e772e375ffbcb18cac38cb6009d14db9f921ba48d50f9 height=54 version=0x20000000 log2_work=6.7813597 tx=55 date='2020-06-22T02:58:58Z' progress=1.000000 cache=0.0MiB(54txo)
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 76991ef9edbcdc75e8da3139f15dc133e9660a52fa7b84d79c9b56013d22f177 peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=76991ef9edbcdc75e8da3139f15dc133e9660a52fa7b84d79c9b56013d22f177 height=55 version=0x20000000 log2_work=6.8073549 tx=56 date='2020-06-22T02:58:58Z' progress=1.000000 cache=0.0MiB(55txo)
+2020-06-22T02:58:50Z Requesting block 7a8ffc4c49cf451020f8e992eddadb33584d5f3f8a5bd2b1994b935ac03c9513 (68) peer=0
+2020-06-22T02:58:50Z Requesting block 3517a31d28cce1226ee5f7a668d695b7eb114aaacda4cb83fe700ce4dac9673c (69) peer=0
+2020-06-22T02:58:50Z Requesting block 1ac77b2f13deb64484b3075dd06f6a9ade07646dfc318eaadb7ab0048d102510 (70) peer=0
+2020-06-22T02:58:50Z Requesting block 1d5b35c09ede8bd2e1a28e5b85c83bb5d0d30dc06699d1d146758f08d99ec37d (71) peer=0
+2020-06-22T02:58:50Z sending getdata (145 bytes) peer=0
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 5144b7dce0c35d97d5ba381220f5a29d45e24da622c84205cc7ad8004a82437d peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=5144b7dce0c35d97d5ba381220f5a29d45e24da622c84205cc7ad8004a82437d height=56 version=0x20000000 log2_work=6.83289 tx=57 date='2020-06-22T02:58:59Z' progress=1.000000 cache=0.0MiB(56txo)
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 416527978bbdd60e39b6e3d85b384ad520cc240b6b0ca2d6bb52b1b9db2b5cec peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=416527978bbdd60e39b6e3d85b384ad520cc240b6b0ca2d6bb52b1b9db2b5cec height=57 version=0x20000000 log2_work=6.857981 tx=58 date='2020-06-22T02:58:59Z' progress=1.000000 cache=0.0MiB(57txo)
+2020-06-22T02:58:50Z Requesting block 59c742cb3837052eb213cebf8d0492acf49c8d9ef8405f5bd14955feb6c70984 (72) peer=0
+2020-06-22T02:58:50Z Requesting block 33a5124411eac833e6f286dbb503f539ecc48c3344ff98475ea24928736108da (73) peer=0
+2020-06-22T02:58:50Z sending getdata (73 bytes) peer=0
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 5656de33c7873e975dcb81a1d43dacf67ac9684a01c939e12687919c96221386 peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=5656de33c7873e975dcb81a1d43dacf67ac9684a01c939e12687919c96221386 height=58 version=0x20000000 log2_work=6.882643 tx=59 date='2020-06-22T02:58:59Z' progress=1.000000 cache=0.0MiB(58txo)
+2020-06-22T02:58:50Z Requesting block 7ec7f823164f8a29436accbb79bdf2de63c3706e58037def3d78ebf3c783ac3c (74) peer=0
+2020-06-22T02:58:50Z sending getdata (37 bytes) peer=0
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 4f5190bb16be30007efa6bd54cb8583b3a5420200a27b328f437fc1a1d29f061 peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=4f5190bb16be30007efa6bd54cb8583b3a5420200a27b328f437fc1a1d29f061 height=59 version=0x20000000 log2_work=6.9068906 tx=60 date='2020-06-22T02:58:59Z' progress=1.000000 cache=0.0MiB(59txo)
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 3517588d9b44e9010aafb20ee37303d41e3098394148d0fcd1bee58f5e6681bd peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=3517588d9b44e9010aafb20ee37303d41e3098394148d0fcd1bee58f5e6681bd height=60 version=0x20000000 log2_work=6.9307373 tx=61 date='2020-06-22T02:58:59Z' progress=1.000000 cache=0.0MiB(60txo)
+2020-06-22T02:58:50Z Requesting block 415cc809edeb54a8dde67b233a15c3a61624c257c279c856f29bbecb388e28f7 (75) peer=0
+2020-06-22T02:58:50Z Requesting block 6f88018dd7b20c8c500d3e049e24a460b8641f0932a39df4403938a775ca9385 (76) peer=0
+2020-06-22T02:58:50Z sending getdata (73 bytes) peer=0
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 158728e0409ff131c519ef76419147913039a6ceb3eee75d5ebc16d412947342 peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=158728e0409ff131c519ef76419147913039a6ceb3eee75d5ebc16d412947342 height=61 version=0x20000000 log2_work=6.9541963 tx=62 date='2020-06-22T02:58:59Z' progress=1.000000 cache=0.0MiB(61txo)
+2020-06-22T02:58:50Z Requesting block 3f52372b5f2f9758d56e6858363879dcb9c7b925f4d814a0d2c30baa37fc3902 (77) peer=0
+2020-06-22T02:58:50Z sending getdata (37 bytes) peer=0
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 3ac4ad34500715f2e73af7f3407a038f930c204e047445719663fda3d4431058 peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=3ac4ad34500715f2e73af7f3407a038f930c204e047445719663fda3d4431058 height=62 version=0x20000000 log2_work=6.9772799 tx=63 date='2020-06-22T02:59:00Z' progress=1.000000 cache=0.0MiB(62txo)
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 2d6dd07ffcfc241a5e899b3f23ef53fc8345f694d1b563c9a797048c7c9ccbb9 peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=2d6dd07ffcfc241a5e899b3f23ef53fc8345f694d1b563c9a797048c7c9ccbb9 height=63 version=0x20000000 log2_work=7 tx=64 date='2020-06-22T02:59:00Z' progress=1.000000 cache=0.0MiB(63txo)
+2020-06-22T02:58:50Z Requesting block 7dcd66b7b0ed3a3df77a889f975536574fbb7034d4794ca2a3357d2ecaf78739 (78) peer=0
+2020-06-22T02:58:50Z Requesting block 20d4f0d751525015889a753bd654fa51317960798f6c3b91ca23762c3d71d222 (79) peer=0
+2020-06-22T02:58:50Z sending getdata (73 bytes) peer=0
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 711a5967eac028984fa4243243a05dbcd39fc9e63617336b53ee11f8eb365b83 peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=711a5967eac028984fa4243243a05dbcd39fc9e63617336b53ee11f8eb365b83 height=64 version=0x20000000 log2_work=7.0223678 tx=65 date='2020-06-22T02:59:00Z' progress=1.000000 cache=0.0MiB(64txo)
+2020-06-22T02:58:50Z Requesting block 315824c0a8c4c2c29ceb5fcf7add88fa632f540f99c15000a348b9ca06e8b00a (80) peer=0
+2020-06-22T02:58:50Z sending getdata (37 bytes) peer=0
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 4981482a07561f241e849bd81eeffc2db104a682316654089937cdfd90e605be peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=4981482a07561f241e849bd81eeffc2db104a682316654089937cdfd90e605be height=65 version=0x20000000 log2_work=7.0443941 tx=66 date='2020-06-22T02:59:00Z' progress=1.000000 cache=0.0MiB(65txo)
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 148f3d28ce1c6a25e71853148fac6eccbf50363b256dc42e185f538c5b7103df peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=148f3d28ce1c6a25e71853148fac6eccbf50363b256dc42e185f538c5b7103df height=66 version=0x20000000 log2_work=7.0660892 tx=67 date='2020-06-22T02:59:00Z' progress=1.000000 cache=0.0MiB(66txo)
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 3f7df4d516d7b9e12f5bdba5d60381ed17605a59449ad0434e8f6ea9804c5055 peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=3f7df4d516d7b9e12f5bdba5d60381ed17605a59449ad0434e8f6ea9804c5055 height=67 version=0x20000000 log2_work=7.0874628 tx=68 date='2020-06-22T02:59:00Z' progress=1.000000 cache=0.0MiB(67txo)
+2020-06-22T02:58:50Z Requesting block 305c1f72baf59273618d0f7ada887ba0adb6acfb4bdd20ecfb63a8157ace8456 (81) peer=0
+2020-06-22T02:58:50Z Requesting block 1ca4bb5b26654568414d6b7bedb8096f476bb8ebc903b006284f42fa78c01184 (82) peer=0
+2020-06-22T02:58:50Z Requesting block 3766806a294a730fe1395576acfb1c7a0d6a8cdf435924f6c172f724912e1a34 (83) peer=0
+2020-06-22T02:58:50Z sending getdata (109 bytes) peer=0
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 7a8ffc4c49cf451020f8e992eddadb33584d5f3f8a5bd2b1994b935ac03c9513 peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=7a8ffc4c49cf451020f8e992eddadb33584d5f3f8a5bd2b1994b935ac03c9513 height=68 version=0x20000000 log2_work=7.1085245 tx=69 date='2020-06-22T02:59:01Z' progress=1.000000 cache=0.0MiB(68txo)
+2020-06-22T02:58:50Z Requesting block 69519cdf179f7a03144dbfeeebe8152f955ff703ca21e8a6c270ae6e1aec1a4a (84) peer=0
+2020-06-22T02:58:50Z sending getdata (37 bytes) peer=0
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 3517a31d28cce1226ee5f7a668d695b7eb114aaacda4cb83fe700ce4dac9673c peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=3517a31d28cce1226ee5f7a668d695b7eb114aaacda4cb83fe700ce4dac9673c height=69 version=0x20000000 log2_work=7.129283 tx=70 date='2020-06-22T02:59:01Z' progress=1.000000 cache=0.0MiB(69txo)
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 1ac77b2f13deb64484b3075dd06f6a9ade07646dfc318eaadb7ab0048d102510 peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=1ac77b2f13deb64484b3075dd06f6a9ade07646dfc318eaadb7ab0048d102510 height=70 version=0x20000000 log2_work=7.1497471 tx=71 date='2020-06-22T02:59:01Z' progress=1.000000 cache=0.0MiB(70txo)
+2020-06-22T02:58:50Z Requesting block 0be5e6ff176c0a3541b2960d2b293544ca557535a5233aa4c8aef43ad243de8f (85) peer=0
+2020-06-22T02:58:50Z Requesting block 1703c8abd96a91d602941a681ce92708b0a6439895f72a02dbda30d55aa822a1 (86) peer=0
+2020-06-22T02:58:50Z sending getdata (73 bytes) peer=0
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 1d5b35c09ede8bd2e1a28e5b85c83bb5d0d30dc06699d1d146758f08d99ec37d peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=1d5b35c09ede8bd2e1a28e5b85c83bb5d0d30dc06699d1d146758f08d99ec37d height=71 version=0x20000000 log2_work=7.169925 tx=72 date='2020-06-22T02:59:01Z' progress=1.000000 cache=0.0MiB(71txo)
+2020-06-22T02:58:50Z Requesting block 3dfa0b2f67d45d64841ceb6cca2689589610d556a1f39ab2ff4e39bdede476e9 (87) peer=0
+2020-06-22T02:58:50Z sending getdata (37 bytes) peer=0
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 59c742cb3837052eb213cebf8d0492acf49c8d9ef8405f5bd14955feb6c70984 peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=59c742cb3837052eb213cebf8d0492acf49c8d9ef8405f5bd14955feb6c70984 height=72 version=0x20000000 log2_work=7.1898246 tx=73 date='2020-06-22T02:59:01Z' progress=1.000000 cache=0.0MiB(72txo)
+2020-06-22T02:58:50Z Requesting block 750688d453fd5617b8a4edc69d3eadb3c9c1fcf70872da48546a8b657ef43d78 (88) peer=0
+2020-06-22T02:58:50Z sending getdata (37 bytes) peer=0
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 33a5124411eac833e6f286dbb503f539ecc48c3344ff98475ea24928736108da peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=33a5124411eac833e6f286dbb503f539ecc48c3344ff98475ea24928736108da height=73 version=0x20000000 log2_work=7.2094534 tx=74 date='2020-06-22T02:59:01Z' progress=1.000000 cache=0.0MiB(73txo)
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 7ec7f823164f8a29436accbb79bdf2de63c3706e58037def3d78ebf3c783ac3c peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=7ec7f823164f8a29436accbb79bdf2de63c3706e58037def3d78ebf3c783ac3c height=74 version=0x20000000 log2_work=7.2288187 tx=75 date='2020-06-22T02:59:02Z' progress=1.000000 cache=0.0MiB(74txo)
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 415cc809edeb54a8dde67b233a15c3a61624c257c279c856f29bbecb388e28f7 peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=415cc809edeb54a8dde67b233a15c3a61624c257c279c856f29bbecb388e28f7 height=75 version=0x20000000 log2_work=7.2479275 tx=76 date='2020-06-22T02:59:02Z' progress=1.000000 cache=0.0MiB(75txo)
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 6f88018dd7b20c8c500d3e049e24a460b8641f0932a39df4403938a775ca9385 peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=6f88018dd7b20c8c500d3e049e24a460b8641f0932a39df4403938a775ca9385 height=76 version=0x20000000 log2_work=7.2667865 tx=77 date='2020-06-22T02:59:02Z' progress=1.000000 cache=0.0MiB(76txo)
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 3f52372b5f2f9758d56e6858363879dcb9c7b925f4d814a0d2c30baa37fc3902 peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=3f52372b5f2f9758d56e6858363879dcb9c7b925f4d814a0d2c30baa37fc3902 height=77 version=0x20000000 log2_work=7.2854022 tx=78 date='2020-06-22T02:59:02Z' progress=1.000000 cache=0.0MiB(77txo)
+2020-06-22T02:58:50Z Requesting block 518304f3dec898b497f534bf31772f68daf90a236b6508555ebb90f031eaabfc (89) peer=0
+2020-06-22T02:58:50Z Requesting block 5d81904b08020926dc5cce57390f916be2b1aa0e2da9082e70f0cbad51bf9952 (90) peer=0
+2020-06-22T02:58:50Z Requesting block 71f458b128f758a1146eeba23cb721f7b8deb435671fbce03d4a2a85d09513ed (91) peer=0
+2020-06-22T02:58:50Z Requesting block 029785fb138af729b7bf9572b8f4184290522a8147adcf67d15c8a28d5863764 (92) peer=0
+2020-06-22T02:58:50Z Requesting block 6226dc9b605a3c77355d8110a2b648dd6c249e1583cdfeec6712a2f2ab9b0db5 (93) peer=0
+2020-06-22T02:58:50Z sending getdata (181 bytes) peer=0
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 7dcd66b7b0ed3a3df77a889f975536574fbb7034d4794ca2a3357d2ecaf78739 peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=7dcd66b7b0ed3a3df77a889f975536574fbb7034d4794ca2a3357d2ecaf78739 height=78 version=0x20000000 log2_work=7.3037807 tx=79 date='2020-06-22T02:59:02Z' progress=1.000000 cache=0.0MiB(78txo)
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 20d4f0d751525015889a753bd654fa51317960798f6c3b91ca23762c3d71d222 peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=20d4f0d751525015889a753bd654fa51317960798f6c3b91ca23762c3d71d222 height=79 version=0x20000000 log2_work=7.3219281 tx=80 date='2020-06-22T02:59:02Z' progress=1.000000 cache=0.0MiB(79txo)
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 315824c0a8c4c2c29ceb5fcf7add88fa632f540f99c15000a348b9ca06e8b00a peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=315824c0a8c4c2c29ceb5fcf7add88fa632f540f99c15000a348b9ca06e8b00a height=80 version=0x20000000 log2_work=7.33985 tx=81 date='2020-06-22T02:59:03Z' progress=1.000000 cache=0.0MiB(80txo)
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 305c1f72baf59273618d0f7ada887ba0adb6acfb4bdd20ecfb63a8157ace8456 peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=305c1f72baf59273618d0f7ada887ba0adb6acfb4bdd20ecfb63a8157ace8456 height=81 version=0x20000000 log2_work=7.357552 tx=82 date='2020-06-22T02:59:03Z' progress=1.000000 cache=0.0MiB(81txo)
+2020-06-22T02:58:50Z Requesting block 4219125d352fb859fd26257f1826120e565a19e0642047a3241a54959de242e8 (94) peer=0
+2020-06-22T02:58:50Z Requesting block 567911147cc4641c1d57aa6144f296593b5fab47741762a43315f1f0d7bb5090 (95) peer=0
+2020-06-22T02:58:50Z Requesting block 0467b9d656ff658530d10f665d4df8d53ae429c7107799b0ab9c827e86cd13cc (96) peer=0
+2020-06-22T02:58:50Z Requesting block 0e8c9daf77ac53b9fa82a429d837b566110f1c48194353335a8e7bb4de3b66e7 (97) peer=0
+2020-06-22T02:58:50Z sending getdata (145 bytes) peer=0
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 1ca4bb5b26654568414d6b7bedb8096f476bb8ebc903b006284f42fa78c01184 peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=1ca4bb5b26654568414d6b7bedb8096f476bb8ebc903b006284f42fa78c01184 height=82 version=0x20000000 log2_work=7.3750394 tx=83 date='2020-06-22T02:59:03Z' progress=1.000000 cache=0.0MiB(82txo)
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 3766806a294a730fe1395576acfb1c7a0d6a8cdf435924f6c172f724912e1a34 peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=3766806a294a730fe1395576acfb1c7a0d6a8cdf435924f6c172f724912e1a34 height=83 version=0x20000000 log2_work=7.3923174 tx=84 date='2020-06-22T02:59:03Z' progress=1.000000 cache=0.0MiB(83txo)
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 69519cdf179f7a03144dbfeeebe8152f955ff703ca21e8a6c270ae6e1aec1a4a peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=69519cdf179f7a03144dbfeeebe8152f955ff703ca21e8a6c270ae6e1aec1a4a height=84 version=0x20000000 log2_work=7.4093909 tx=85 date='2020-06-22T02:59:03Z' progress=1.000000 cache=0.0MiB(84txo)
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 0be5e6ff176c0a3541b2960d2b293544ca557535a5233aa4c8aef43ad243de8f peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=0be5e6ff176c0a3541b2960d2b293544ca557535a5233aa4c8aef43ad243de8f height=85 version=0x20000000 log2_work=7.4262648 tx=86 date='2020-06-22T02:59:03Z' progress=1.000000 cache=0.0MiB(85txo)
+2020-06-22T02:58:50Z Requesting block 7a597c9eb1311f7e99d5f853267670a2b619731670d5a44c4e3de4960241a99f (98) peer=0
+2020-06-22T02:58:50Z Requesting block 0cebccddb5743728aef4b6429b6454b89dd058e83df11563be8bb158acb9397c (99) peer=0
+2020-06-22T02:58:50Z Requesting block 309959bb5fa7cf3594b7d6054852d331cbe54f674a973586583cd47fbd87dd88 (100) peer=0
+2020-06-22T02:58:50Z Requesting block 0a6470d39b32497d232a50cb206278976b9d162c43f5dfab5d246f8f603c0384 (101) peer=0
+2020-06-22T02:58:50Z sending getdata (145 bytes) peer=0
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 1703c8abd96a91d602941a681ce92708b0a6439895f72a02dbda30d55aa822a1 peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=1703c8abd96a91d602941a681ce92708b0a6439895f72a02dbda30d55aa822a1 height=86 version=0x20000000 log2_work=7.4429435 tx=87 date='2020-06-22T02:59:04Z' progress=1.000000 cache=0.0MiB(86txo)
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 3dfa0b2f67d45d64841ceb6cca2689589610d556a1f39ab2ff4e39bdede476e9 peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=3dfa0b2f67d45d64841ceb6cca2689589610d556a1f39ab2ff4e39bdede476e9 height=87 version=0x20000000 log2_work=7.4594316 tx=88 date='2020-06-22T02:59:04Z' progress=1.000000 cache=0.0MiB(87txo)
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 750688d453fd5617b8a4edc69d3eadb3c9c1fcf70872da48546a8b657ef43d78 peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=750688d453fd5617b8a4edc69d3eadb3c9c1fcf70872da48546a8b657ef43d78 height=88 version=0x20000000 log2_work=7.4757334 tx=89 date='2020-06-22T02:59:04Z' progress=1.000000 cache=0.0MiB(88txo)
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 518304f3dec898b497f534bf31772f68daf90a236b6508555ebb90f031eaabfc peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=518304f3dec898b497f534bf31772f68daf90a236b6508555ebb90f031eaabfc height=89 version=0x20000000 log2_work=7.4918531 tx=90 date='2020-06-22T02:59:04Z' progress=1.000000 cache=0.0MiB(89txo)
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 5d81904b08020926dc5cce57390f916be2b1aa0e2da9082e70f0cbad51bf9952 peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=5d81904b08020926dc5cce57390f916be2b1aa0e2da9082e70f0cbad51bf9952 height=90 version=0x20000000 log2_work=7.5077946 tx=91 date='2020-06-22T02:59:04Z' progress=1.000000 cache=0.0MiB(90txo)
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 71f458b128f758a1146eeba23cb721f7b8deb435671fbce03d4a2a85d09513ed peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=71f458b128f758a1146eeba23cb721f7b8deb435671fbce03d4a2a85d09513ed height=91 version=0x20000000 log2_work=7.523562 tx=92 date='2020-06-22T02:59:04Z' progress=1.000000 cache=0.0MiB(91txo)
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 029785fb138af729b7bf9572b8f4184290522a8147adcf67d15c8a28d5863764 peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=029785fb138af729b7bf9572b8f4184290522a8147adcf67d15c8a28d5863764 height=92 version=0x20000000 log2_work=7.5391588 tx=93 date='2020-06-22T02:59:05Z' progress=1.000000 cache=0.0MiB(92txo)
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 6226dc9b605a3c77355d8110a2b648dd6c249e1583cdfeec6712a2f2ab9b0db5 peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=6226dc9b605a3c77355d8110a2b648dd6c249e1583cdfeec6712a2f2ab9b0db5 height=93 version=0x20000000 log2_work=7.5545889 tx=94 date='2020-06-22T02:59:05Z' progress=1.000000 cache=0.0MiB(93txo)
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 4219125d352fb859fd26257f1826120e565a19e0642047a3241a54959de242e8 peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=4219125d352fb859fd26257f1826120e565a19e0642047a3241a54959de242e8 height=94 version=0x20000000 log2_work=7.5698556 tx=95 date='2020-06-22T02:59:05Z' progress=1.000000 cache=0.0MiB(94txo)
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 567911147cc4641c1d57aa6144f296593b5fab47741762a43315f1f0d7bb5090 peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=567911147cc4641c1d57aa6144f296593b5fab47741762a43315f1f0d7bb5090 height=95 version=0x20000000 log2_work=7.5849625 tx=96 date='2020-06-22T02:59:05Z' progress=1.000000 cache=0.0MiB(95txo)
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 0467b9d656ff658530d10f665d4df8d53ae429c7107799b0ab9c827e86cd13cc peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=0467b9d656ff658530d10f665d4df8d53ae429c7107799b0ab9c827e86cd13cc height=96 version=0x20000000 log2_work=7.5999128 tx=97 date='2020-06-22T02:59:05Z' progress=1.000000 cache=0.0MiB(96txo)
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 0e8c9daf77ac53b9fa82a429d837b566110f1c48194353335a8e7bb4de3b66e7 peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=0e8c9daf77ac53b9fa82a429d837b566110f1c48194353335a8e7bb4de3b66e7 height=97 version=0x20000000 log2_work=7.6147098 tx=98 date='2020-06-22T02:59:05Z' progress=1.000000 cache=0.0MiB(97txo)
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 7a597c9eb1311f7e99d5f853267670a2b619731670d5a44c4e3de4960241a99f peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=7a597c9eb1311f7e99d5f853267670a2b619731670d5a44c4e3de4960241a99f height=98 version=0x20000000 log2_work=7.6293566 tx=99 date='2020-06-22T02:59:06Z' progress=1.000000 cache=0.0MiB(98txo)
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 0cebccddb5743728aef4b6429b6454b89dd058e83df11563be8bb158acb9397c peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=0cebccddb5743728aef4b6429b6454b89dd058e83df11563be8bb158acb9397c height=99 version=0x20000000 log2_work=7.6438562 tx=100 date='2020-06-22T02:59:06Z' progress=1.000000 cache=0.0MiB(99txo)
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 309959bb5fa7cf3594b7d6054852d331cbe54f674a973586583cd47fbd87dd88 peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=309959bb5fa7cf3594b7d6054852d331cbe54f674a973586583cd47fbd87dd88 height=100 version=0x20000000 log2_work=7.6582115 tx=101 date='2020-06-22T02:59:06Z' progress=1.000000 cache=0.0MiB(100txo)
+2020-06-22T02:58:50Z received: block (251 bytes) peer=0
+2020-06-22T02:58:50Z received block 0a6470d39b32497d232a50cb206278976b9d162c43f5dfab5d246f8f603c0384 peer=0
+2020-06-22T02:58:50Z sending sendcmpct (9 bytes) peer=0
+2020-06-22T02:58:50Z UpdateTip: new best=0a6470d39b32497d232a50cb206278976b9d162c43f5dfab5d246f8f603c0384 height=101 version=0x20000000 log2_work=7.6724253 tx=102 date='2020-06-22T02:59:06Z' progress=1.000000 cache=0.0MiB(101txo)
+2020-06-22T02:59:47Z Adding fixed seed nodes as DNS doesn't seem to be available.
+2020-06-22T03:00:49Z received: ping (8 bytes) peer=0
+2020-06-22T03:00:49Z sending pong (8 bytes) peer=0
+2020-06-22T03:00:49Z sending ping (8 bytes) peer=0
+2020-06-22T03:00:49Z received: pong (8 bytes) peer=0
+2020-06-22T03:00:49Z pong peer=0: Timing mishap, 3dfa6d82f6d9c2b9 expected, 3dfa6d82f6d9c2b9 received, 8 bytes
+2020-06-22T03:02:49Z received: ping (8 bytes) peer=0
+2020-06-22T03:02:49Z sending pong (8 bytes) peer=0
+2020-06-22T03:02:49Z sending ping (8 bytes) peer=0
+2020-06-22T03:02:49Z received: pong (8 bytes) peer=0
+2020-06-22T03:02:49Z pong peer=0: Timing mishap, beac67e8b5909682 expected, beac67e8b5909682 received, 8 bytes
+2020-06-22T03:04:49Z sending ping (8 bytes) peer=0
+2020-06-22T03:04:49Z received: pong (8 bytes) peer=0
+2020-06-22T03:04:49Z pong peer=0: Timing mishap, 59417850985903a6 expected, 59417850985903a6 received, 8 bytes
+2020-06-22T03:04:49Z received: ping (8 bytes) peer=0
+2020-06-22T03:04:49Z sending pong (8 bytes) peer=0
+2020-06-22T03:06:49Z sending ping (8 bytes) peer=0
+2020-06-22T03:06:49Z received: ping (8 bytes) peer=0
+2020-06-22T03:06:49Z sending pong (8 bytes) peer=0
+2020-06-22T03:06:49Z received: pong (8 bytes) peer=0
+2020-06-22T03:06:49Z pong peer=0: Timing mishap, 6fb79b07ea833558 expected, 6fb79b07ea833558 received, 8 bytes
+2020-06-22T03:08:49Z sending ping (8 bytes) peer=0
+2020-06-22T03:08:49Z received: pong (8 bytes) peer=0
+2020-06-22T03:08:49Z pong peer=0: Timing mishap, 6ba8f25a7eef77fb expected, 6ba8f25a7eef77fb received, 8 bytes
+2020-06-22T03:08:49Z received: ping (8 bytes) peer=0
+2020-06-22T03:08:49Z sending pong (8 bytes) peer=0
+2020-06-22T03:10:49Z sending ping (8 bytes) peer=0
+2020-06-22T03:10:49Z received: ping (8 bytes) peer=0
+2020-06-22T03:10:49Z sending pong (8 bytes) peer=0
+2020-06-22T03:10:49Z received: pong (8 bytes) peer=0
+2020-06-22T03:10:49Z pong peer=0: Timing mishap, b8aea8fb5ed73ffb expected, b8aea8fb5ed73ffb received, 8 bytes
+2020-06-22T03:12:49Z sending ping (8 bytes) peer=0
+2020-06-22T03:12:49Z received: ping (8 bytes) peer=0
+2020-06-22T03:12:49Z sending pong (8 bytes) peer=0
+2020-06-22T03:12:49Z received: pong (8 bytes) peer=0
+2020-06-22T03:12:49Z pong peer=0: Timing mishap, aa4a318e649adc3d expected, aa4a318e649adc3d received, 8 bytes
+2020-06-22T03:13:46Z Flushed 0 addresses to peers.dat  59ms
+2020-06-22T03:14:49Z sending ping (8 bytes) peer=0
+2020-06-22T03:14:49Z received: ping (8 bytes) peer=0
+2020-06-22T03:14:49Z sending pong (8 bytes) peer=0
+2020-06-22T03:14:49Z received: pong (8 bytes) peer=0
+2020-06-22T03:14:49Z pong peer=0: Timing mishap, d8ce91885d501022 expected, d8ce91885d501022 received, 8 bytes
+2020-06-22T03:16:49Z sending ping (8 bytes) peer=0
+2020-06-22T03:16:49Z received: pong (8 bytes) peer=0
+2020-06-22T03:16:49Z pong peer=0: Timing mishap, 8cb9f6fa596758e2 expected, 8cb9f6fa596758e2 received, 8 bytes
+2020-06-22T03:16:49Z received: ping (8 bytes) peer=0
+2020-06-22T03:16:49Z sending pong (8 bytes) peer=0
+2020-06-22T03:18:49Z sending ping (8 bytes) peer=0
+2020-06-22T03:18:49Z received: ping (8 bytes) peer=0
+2020-06-22T03:18:49Z sending pong (8 bytes) peer=0
+2020-06-22T03:18:49Z received: pong (8 bytes) peer=0
+2020-06-22T03:18:49Z pong peer=0: Timing mishap, 59f9f027e674fc65 expected, 59f9f027e674fc65 received, 8 bytes
+2020-06-22T03:20:49Z sending ping (8 bytes) peer=0
+2020-06-22T03:20:49Z received: ping (8 bytes) peer=0
+2020-06-22T03:20:49Z sending pong (8 bytes) peer=0
+2020-06-22T03:20:49Z received: pong (8 bytes) peer=0
+2020-06-22T03:20:49Z pong peer=0: Timing mishap, a180d4c325c017c expected, a180d4c325c017c received, 8 bytes
+2020-06-22T03:22:49Z sending ping (8 bytes) peer=0
+2020-06-22T03:22:49Z received: ping (8 bytes) peer=0
+2020-06-22T03:22:49Z sending pong (8 bytes) peer=0
+2020-06-22T03:22:49Z received: pong (8 bytes) peer=0
+2020-06-22T03:22:49Z pong peer=0: Timing mishap, e883bf6d3b816574 expected, e883bf6d3b816574 received, 8 bytes
+2020-06-22T03:24:49Z sending ping (8 bytes) peer=0
+2020-06-22T03:24:49Z received: ping (8 bytes) peer=0
+2020-06-22T03:24:49Z sending pong (8 bytes) peer=0
+2020-06-22T03:24:49Z received: pong (8 bytes) peer=0
+2020-06-22T03:24:49Z pong peer=0: Timing mishap, 8cd7cd782bf3287d expected, 8cd7cd782bf3287d received, 8 bytes
+2020-06-22T03:26:49Z sending ping (8 bytes) peer=0
+2020-06-22T03:26:49Z received: ping (8 bytes) peer=0
+2020-06-22T03:26:49Z sending pong (8 bytes) peer=0
+2020-06-22T03:26:49Z received: pong (8 bytes) peer=0
+2020-06-22T03:26:49Z pong peer=0: Timing mishap, 9d433f31b62541a0 expected, 9d433f31b62541a0 received, 8 bytes
+2020-06-22T03:28:47Z Flushed 0 addresses to peers.dat  79ms
+2020-06-22T03:28:49Z sending ping (8 bytes) peer=0
+2020-06-22T03:28:49Z received: ping (8 bytes) peer=0
+2020-06-22T03:28:49Z sending pong (8 bytes) peer=0
+2020-06-22T03:28:49Z received: pong (8 bytes) peer=0
+2020-06-22T03:28:49Z pong peer=0: Timing mishap, 27135d5b248b9d03 expected, 27135d5b248b9d03 received, 8 bytes
+2020-06-22T03:30:50Z sending ping (8 bytes) peer=0
+2020-06-22T03:30:50Z received: ping (8 bytes) peer=0
+2020-06-22T03:30:50Z sending pong (8 bytes) peer=0
+2020-06-22T03:30:50Z received: pong (8 bytes) peer=0
+2020-06-22T03:30:50Z pong peer=0: Timing mishap, 17b583b112154cf expected, 17b583b112154cf received, 8 bytes
+2020-06-22T03:30:57Z Potential stale tip detected, will try using extra outbound peer (last tip update: 1927 seconds ago)
+2020-06-22T03:30:57Z net: setting try another outbound peer=true
+2020-06-22T03:32:50Z sending ping (8 bytes) peer=0
+2020-06-22T03:32:50Z received: ping (8 bytes) peer=0
+2020-06-22T03:32:50Z sending pong (8 bytes) peer=0
+2020-06-22T03:32:50Z received: pong (8 bytes) peer=0
+2020-06-22T03:32:50Z pong peer=0: Timing mishap, 4e7eb43088e74855 expected, 4e7eb43088e74855 received, 8 bytes
+2020-06-22T03:34:50Z sending ping (8 bytes) peer=0
+2020-06-22T03:34:50Z received: ping (8 bytes) peer=0
+2020-06-22T03:34:50Z sending pong (8 bytes) peer=0
+2020-06-22T03:34:50Z received: pong (8 bytes) peer=0
+2020-06-22T03:34:50Z pong peer=0: Timing mishap, 1a5616991a47fdd5 expected, 1a5616991a47fdd5 received, 8 bytes
+2020-06-22T03:36:50Z sending ping (8 bytes) peer=0
+2020-06-22T03:36:50Z received: ping (8 bytes) peer=0
+2020-06-22T03:36:50Z sending pong (8 bytes) peer=0
+2020-06-22T03:36:50Z received: pong (8 bytes) peer=0
+2020-06-22T03:36:50Z pong peer=0: Timing mishap, ea1df3b4f39a81bb expected, ea1df3b4f39a81bb received, 8 bytes
+2020-06-22T03:38:50Z sending ping (8 bytes) peer=0
+2020-06-22T03:38:50Z received: ping (8 bytes) peer=0
+2020-06-22T03:38:50Z sending pong (8 bytes) peer=0
+2020-06-22T03:38:50Z received: pong (8 bytes) peer=0
+2020-06-22T03:38:50Z pong peer=0: Timing mishap, d2a4978e6684cd61 expected, d2a4978e6684cd61 received, 8 bytes
+2020-06-22T03:40:50Z sending ping (8 bytes) peer=0
+2020-06-22T03:40:50Z received: pong (8 bytes) peer=0
+2020-06-22T03:40:50Z pong peer=0: Timing mishap, 1ab8065afba72ad6 expected, 1ab8065afba72ad6 received, 8 bytes
+2020-06-22T03:40:50Z received: ping (8 bytes) peer=0
+2020-06-22T03:40:50Z sending pong (8 bytes) peer=0
+2020-06-22T03:41:27Z Potential stale tip detected, will try using extra outbound peer (last tip update: 2557 seconds ago)
+2020-06-22T03:41:27Z net: setting try another outbound peer=true
+2020-06-22T03:42:50Z sending ping (8 bytes) peer=0
+2020-06-22T03:42:50Z received: ping (8 bytes) peer=0
+2020-06-22T03:42:50Z sending pong (8 bytes) peer=0
+2020-06-22T03:42:50Z received: pong (8 bytes) peer=0
+2020-06-22T03:42:50Z pong peer=0: Timing mishap, 89a79fcc20d99cb2 expected, 89a79fcc20d99cb2 received, 8 bytes
+2020-06-22T03:43:47Z Flushed 0 addresses to peers.dat  71ms
+2020-06-22T03:44:50Z sending ping (8 bytes) peer=0
+2020-06-22T03:44:50Z received: ping (8 bytes) peer=0
+2020-06-22T03:44:50Z sending pong (8 bytes) peer=0
+2020-06-22T03:44:50Z received: pong (8 bytes) peer=0
+2020-06-22T03:44:50Z pong peer=0: Timing mishap, cc2eaefa9d4a9bde expected, cc2eaefa9d4a9bde received, 8 bytes
+2020-06-22T03:46:50Z sending ping (8 bytes) peer=0
+2020-06-22T03:46:50Z received: pong (8 bytes) peer=0
+2020-06-22T03:46:50Z pong peer=0: Timing mishap, b56b4e7c375a7bd0 expected, b56b4e7c375a7bd0 received, 8 bytes
+2020-06-22T03:46:50Z received: ping (8 bytes) peer=0
+2020-06-22T03:46:50Z sending pong (8 bytes) peer=0
+2020-06-22T03:48:50Z sending ping (8 bytes) peer=0
+2020-06-22T03:48:50Z received: ping (8 bytes) peer=0
+2020-06-22T03:48:50Z sending pong (8 bytes) peer=0
+2020-06-22T03:48:50Z received: pong (8 bytes) peer=0
+2020-06-22T03:48:50Z pong peer=0: Timing mishap, 11c10019c2f0ae75 expected, 11c10019c2f0ae75 received, 8 bytes
+2020-06-22T03:50:50Z sending ping (8 bytes) peer=0
+2020-06-22T03:50:50Z received: ping (8 bytes) peer=0
+2020-06-22T03:50:50Z sending pong (8 bytes) peer=0
+2020-06-22T03:50:50Z received: pong (8 bytes) peer=0
+2020-06-22T03:50:50Z pong peer=0: Timing mishap, 8635bce2f90cbf69 expected, 8635bce2f90cbf69 received, 8 bytes
+2020-06-22T03:51:57Z Potential stale tip detected, will try using extra outbound peer (last tip update: 3187 seconds ago)
+2020-06-22T03:51:57Z net: setting try another outbound peer=true
+2020-06-22T03:52:50Z sending ping (8 bytes) peer=0
+2020-06-22T03:52:50Z received: ping (8 bytes) peer=0
+2020-06-22T03:52:50Z sending pong (8 bytes) peer=0
+2020-06-22T03:52:50Z received: pong (8 bytes) peer=0
+2020-06-22T03:52:50Z pong peer=0: Timing mishap, fe95deed141382f3 expected, fe95deed141382f3 received, 8 bytes
+2020-06-22T03:54:50Z sending ping (8 bytes) peer=0
+2020-06-22T03:54:50Z received: ping (8 bytes) peer=0
+2020-06-22T03:54:50Z sending pong (8 bytes) peer=0
+2020-06-22T03:54:50Z received: pong (8 bytes) peer=0
+2020-06-22T03:54:50Z pong peer=0: Timing mishap, 49e82340faddbc75 expected, 49e82340faddbc75 received, 8 bytes
+2020-06-22T03:56:50Z sending ping (8 bytes) peer=0
+2020-06-22T03:56:50Z received: ping (8 bytes) peer=0
+2020-06-22T03:56:50Z sending pong (8 bytes) peer=0
+2020-06-22T03:56:50Z received: pong (8 bytes) peer=0
+2020-06-22T03:56:50Z pong peer=0: Timing mishap, 558576c2901fd694 expected, 558576c2901fd694 received, 8 bytes
+2020-06-22T03:58:47Z Flushed 0 addresses to peers.dat  37ms
+2020-06-22T03:58:50Z sending ping (8 bytes) peer=0
+2020-06-22T03:58:50Z received: ping (8 bytes) peer=0
+2020-06-22T03:58:50Z sending pong (8 bytes) peer=0
+2020-06-22T03:58:50Z received: pong (8 bytes) peer=0
+2020-06-22T03:58:50Z pong peer=0: Timing mishap, 216f3d0dea58899e expected, 216f3d0dea58899e received, 8 bytes
+2020-06-22T04:00:50Z sending ping (8 bytes) peer=0
+2020-06-22T04:00:50Z received: ping (8 bytes) peer=0
+2020-06-22T04:00:50Z sending pong (8 bytes) peer=0
+2020-06-22T04:00:50Z received: pong (8 bytes) peer=0
+2020-06-22T04:00:50Z pong peer=0: Timing mishap, 81364a46008ac8cf expected, 81364a46008ac8cf received, 8 bytes
+2020-06-22T04:02:27Z Potential stale tip detected, will try using extra outbound peer (last tip update: 3817 seconds ago)
+2020-06-22T04:02:27Z net: setting try another outbound peer=true
+2020-06-22T04:02:50Z sending ping (8 bytes) peer=0
+2020-06-22T04:02:50Z received: ping (8 bytes) peer=0
+2020-06-22T04:02:50Z sending pong (8 bytes) peer=0
+2020-06-22T04:02:50Z received: pong (8 bytes) peer=0
+2020-06-22T04:02:50Z pong peer=0: Timing mishap, b63b1207dca2b52d expected, b63b1207dca2b52d received, 8 bytes
+2020-06-22T04:04:50Z sending ping (8 bytes) peer=0
+2020-06-22T04:04:50Z received: ping (8 bytes) peer=0
+2020-06-22T04:04:50Z sending pong (8 bytes) peer=0
+2020-06-22T04:04:50Z received: pong (8 bytes) peer=0
+2020-06-22T04:04:50Z pong peer=0: Timing mishap, 84b5c721b608c116 expected, 84b5c721b608c116 received, 8 bytes
+2020-06-22T04:06:50Z sending ping (8 bytes) peer=0
+2020-06-22T04:06:50Z received: ping (8 bytes) peer=0
+2020-06-22T04:06:50Z sending pong (8 bytes) peer=0
+2020-06-22T04:06:50Z received: pong (8 bytes) peer=0
+2020-06-22T04:06:50Z pong peer=0: Timing mishap, aaacda8932be234c expected, aaacda8932be234c received, 8 bytes
+2020-06-22T04:08:50Z sending ping (8 bytes) peer=0
+2020-06-22T04:08:50Z received: ping (8 bytes) peer=0
+2020-06-22T04:08:50Z sending pong (8 bytes) peer=0
+2020-06-22T04:08:50Z received: pong (8 bytes) peer=0
+2020-06-22T04:08:50Z pong peer=0: Timing mishap, 3b7b400c03c46036 expected, 3b7b400c03c46036 received, 8 bytes
+2020-06-22T04:10:50Z sending ping (8 bytes) peer=0
+2020-06-22T04:10:50Z received: ping (8 bytes) peer=0
+2020-06-22T04:10:50Z sending pong (8 bytes) peer=0
+2020-06-22T04:10:50Z received: pong (8 bytes) peer=0
+2020-06-22T04:10:50Z pong peer=0: Timing mishap, 43b1d23335694e8f expected, 43b1d23335694e8f received, 8 bytes
+2020-06-22T04:12:50Z sending ping (8 bytes) peer=0
+2020-06-22T04:12:50Z received: ping (8 bytes) peer=0
+2020-06-22T04:12:50Z sending pong (8 bytes) peer=0
+2020-06-22T04:12:50Z received: pong (8 bytes) peer=0
+2020-06-22T04:12:50Z pong peer=0: Timing mishap, fb412902d3d54b21 expected, fb412902d3d54b21 received, 8 bytes
+2020-06-22T04:12:57Z Potential stale tip detected, will try using extra outbound peer (last tip update: 4447 seconds ago)
+2020-06-22T04:12:57Z net: setting try another outbound peer=true
+2020-06-22T04:13:47Z Flushed 0 addresses to peers.dat  185ms
+2020-06-22T04:14:50Z sending ping (8 bytes) peer=0
+2020-06-22T04:14:50Z received: ping (8 bytes) peer=0
+2020-06-22T04:14:50Z sending pong (8 bytes) peer=0
+2020-06-22T04:14:50Z received: pong (8 bytes) peer=0
+2020-06-22T04:14:50Z pong peer=0: Timing mishap, 216cc3e1a516e7e4 expected, 216cc3e1a516e7e4 received, 8 bytes
+2020-06-22T04:16:50Z sending ping (8 bytes) peer=0
+2020-06-22T04:16:50Z received: ping (8 bytes) peer=0
+2020-06-22T04:16:50Z sending pong (8 bytes) peer=0
+2020-06-22T04:16:50Z received: pong (8 bytes) peer=0
+2020-06-22T04:16:50Z pong peer=0: Timing mishap, ea774a67517a3125 expected, ea774a67517a3125 received, 8 bytes
+2020-06-22T04:18:50Z sending ping (8 bytes) peer=0
+2020-06-22T04:18:50Z received: ping (8 bytes) peer=0
+2020-06-22T04:18:50Z sending pong (8 bytes) peer=0
+2020-06-22T04:18:50Z received: pong (8 bytes) peer=0
+2020-06-22T04:18:50Z pong peer=0: Timing mishap, 79c75a3d19ac8810 expected, 79c75a3d19ac8810 received, 8 bytes
+2020-06-22T04:20:50Z sending ping (8 bytes) peer=0
+2020-06-22T04:20:50Z received: ping (8 bytes) peer=0
+2020-06-22T04:20:50Z sending pong (8 bytes) peer=0
+2020-06-22T04:20:50Z received: pong (8 bytes) peer=0
+2020-06-22T04:20:50Z pong peer=0: Timing mishap, 3c5cd2aee57adea5 expected, 3c5cd2aee57adea5 received, 8 bytes
+2020-06-22T04:22:50Z sending ping (8 bytes) peer=0
+2020-06-22T04:22:50Z received: ping (8 bytes) peer=0
+2020-06-22T04:22:50Z sending pong (8 bytes) peer=0
+2020-06-22T04:22:50Z received: pong (8 bytes) peer=0
+2020-06-22T04:22:50Z pong peer=0: Timing mishap, 53ee3ad05174031f expected, 53ee3ad05174031f received, 8 bytes
+2020-06-22T04:23:27Z Potential stale tip detected, will try using extra outbound peer (last tip update: 5077 seconds ago)
+2020-06-22T04:23:27Z net: setting try another outbound peer=true
+2020-06-22T04:24:51Z received: ping (8 bytes) peer=0
+2020-06-22T04:24:51Z sending pong (8 bytes) peer=0
+2020-06-22T04:24:51Z sending ping (8 bytes) peer=0
+2020-06-22T04:24:51Z received: pong (8 bytes) peer=0
+2020-06-22T04:24:51Z pong peer=0: Timing mishap, 4066e19d31aea39 expected, 4066e19d31aea39 received, 8 bytes
+2020-06-22T04:26:51Z sending ping (8 bytes) peer=0
+2020-06-22T04:26:51Z received: ping (8 bytes) peer=0
+2020-06-22T04:26:51Z sending pong (8 bytes) peer=0
+2020-06-22T04:26:51Z received: pong (8 bytes) peer=0
+2020-06-22T04:26:51Z pong peer=0: Timing mishap, be52af9702e34ec8 expected, be52af9702e34ec8 received, 8 bytes
+2020-06-22T04:28:47Z Flushed 0 addresses to peers.dat  248ms
+2020-06-22T04:28:51Z sending ping (8 bytes) peer=0
+2020-06-22T04:28:51Z received: ping (8 bytes) peer=0
+2020-06-22T04:28:51Z sending pong (8 bytes) peer=0
+2020-06-22T04:28:51Z received: pong (8 bytes) peer=0
+2020-06-22T04:28:51Z pong peer=0: Timing mishap, a87445fce900b03b expected, a87445fce900b03b received, 8 bytes
+2020-06-22T04:30:51Z sending ping (8 bytes) peer=0
+2020-06-22T04:30:51Z received: pong (8 bytes) peer=0
+2020-06-22T04:30:51Z pong peer=0: Timing mishap, d51c188dbb592a7a expected, d51c188dbb592a7a received, 8 bytes
+2020-06-22T04:30:51Z received: ping (8 bytes) peer=0
+2020-06-22T04:30:51Z sending pong (8 bytes) peer=0
+2020-06-22T04:32:51Z sending ping (8 bytes) peer=0
+2020-06-22T04:32:51Z received: ping (8 bytes) peer=0
+2020-06-22T04:32:51Z sending pong (8 bytes) peer=0
+2020-06-22T04:32:51Z received: pong (8 bytes) peer=0
+2020-06-22T04:32:51Z pong peer=0: Timing mishap, de71c5421bd85adb expected, de71c5421bd85adb received, 8 bytes
+2020-06-22T04:33:57Z Potential stale tip detected, will try using extra outbound peer (last tip update: 5707 seconds ago)
+2020-06-22T04:33:57Z net: setting try another outbound peer=true
+2020-06-22T04:34:51Z sending ping (8 bytes) peer=0
+2020-06-22T04:34:51Z received: ping (8 bytes) peer=0
+2020-06-22T04:34:51Z sending pong (8 bytes) peer=0
+2020-06-22T04:34:51Z received: pong (8 bytes) peer=0
+2020-06-22T04:34:51Z pong peer=0: Timing mishap, 8a9f99ecbf101828 expected, 8a9f99ecbf101828 received, 8 bytes
+2020-06-22T04:36:51Z sending ping (8 bytes) peer=0
+2020-06-22T04:36:51Z received: ping (8 bytes) peer=0
+2020-06-22T04:36:51Z sending pong (8 bytes) peer=0
+2020-06-22T04:36:51Z received: pong (8 bytes) peer=0
+2020-06-22T04:36:51Z pong peer=0: Timing mishap, c60a752deada27d1 expected, c60a752deada27d1 received, 8 bytes
+2020-06-22T04:38:51Z sending ping (8 bytes) peer=0
+2020-06-22T04:38:51Z received: ping (8 bytes) peer=0
+2020-06-22T04:38:51Z sending pong (8 bytes) peer=0
+2020-06-22T04:38:51Z received: pong (8 bytes) peer=0
+2020-06-22T04:38:51Z pong peer=0: Timing mishap, 11a9d9fec10ffece expected, 11a9d9fec10ffece received, 8 bytes
+2020-06-22T04:40:51Z sending ping (8 bytes) peer=0
+2020-06-22T04:40:51Z received: pong (8 bytes) peer=0
+2020-06-22T04:40:51Z pong peer=0: Timing mishap, 95b43176f583098 expected, 95b43176f583098 received, 8 bytes
+2020-06-22T04:40:51Z received: ping (8 bytes) peer=0
+2020-06-22T04:40:51Z sending pong (8 bytes) peer=0
+2020-06-22T04:42:51Z sending ping (8 bytes) peer=0
+2020-06-22T04:42:51Z received: ping (8 bytes) peer=0
+2020-06-22T04:42:51Z sending pong (8 bytes) peer=0
+2020-06-22T04:42:51Z received: pong (8 bytes) peer=0
+2020-06-22T04:42:51Z pong peer=0: Timing mishap, 5bc2860d72835907 expected, 5bc2860d72835907 received, 8 bytes
+2020-06-22T04:43:47Z Flushed 0 addresses to peers.dat  79ms
+2020-06-22T04:44:27Z Potential stale tip detected, will try using extra outbound peer (last tip update: 6337 seconds ago)
+2020-06-22T04:44:27Z net: setting try another outbound peer=true
+2020-06-22T04:44:51Z sending ping (8 bytes) peer=0
+2020-06-22T04:44:51Z received: ping (8 bytes) peer=0
+2020-06-22T04:44:51Z sending pong (8 bytes) peer=0
+2020-06-22T04:44:51Z received: pong (8 bytes) peer=0
+2020-06-22T04:44:51Z pong peer=0: Timing mishap, 4388ce91c7d42d42 expected, 4388ce91c7d42d42 received, 8 bytes
+2020-06-22T04:46:51Z sending ping (8 bytes) peer=0
+2020-06-22T04:46:51Z received: ping (8 bytes) peer=0
+2020-06-22T04:46:51Z sending pong (8 bytes) peer=0
+2020-06-22T04:46:51Z received: pong (8 bytes) peer=0
+2020-06-22T04:46:51Z pong peer=0: Timing mishap, 5e7c4d31ba181950 expected, 5e7c4d31ba181950 received, 8 bytes
+2020-06-22T04:48:51Z sending ping (8 bytes) peer=0
+2020-06-22T04:48:51Z received: ping (8 bytes) peer=0
+2020-06-22T04:48:51Z sending pong (8 bytes) peer=0
+2020-06-22T04:48:51Z received: pong (8 bytes) peer=0
+2020-06-22T04:48:51Z pong peer=0: Timing mishap, fdf2f0a6ba5514a6 expected, fdf2f0a6ba5514a6 received, 8 bytes
+2020-06-22T04:50:51Z received: ping (8 bytes) peer=0
+2020-06-22T04:50:51Z sending pong (8 bytes) peer=0
+2020-06-22T04:50:51Z sending ping (8 bytes) peer=0
+2020-06-22T04:50:51Z received: pong (8 bytes) peer=0
+2020-06-22T04:50:51Z pong peer=0: Timing mishap, 21fd1fea17339f43 expected, 21fd1fea17339f43 received, 8 bytes
+2020-06-22T04:52:51Z sending ping (8 bytes) peer=0
+2020-06-22T04:52:51Z received: ping (8 bytes) peer=0
+2020-06-22T04:52:51Z sending pong (8 bytes) peer=0
+2020-06-22T04:52:51Z received: pong (8 bytes) peer=0
+2020-06-22T04:52:51Z pong peer=0: Timing mishap, 23db289a2f388e76 expected, 23db289a2f388e76 received, 8 bytes
+2020-06-22T04:54:51Z sending ping (8 bytes) peer=0
+2020-06-22T04:54:51Z received: ping (8 bytes) peer=0
+2020-06-22T04:54:51Z sending pong (8 bytes) peer=0
+2020-06-22T04:54:51Z received: pong (8 bytes) peer=0
+2020-06-22T04:54:51Z pong peer=0: Timing mishap, afe0dfbe10071539 expected, afe0dfbe10071539 received, 8 bytes
+2020-06-22T04:54:57Z Potential stale tip detected, will try using extra outbound peer (last tip update: 6967 seconds ago)
+2020-06-22T04:54:57Z net: setting try another outbound peer=true
+2020-06-22T04:56:51Z sending ping (8 bytes) peer=0
+2020-06-22T04:56:51Z received: ping (8 bytes) peer=0
+2020-06-22T04:56:51Z sending pong (8 bytes) peer=0
+2020-06-22T04:56:51Z received: pong (8 bytes) peer=0
+2020-06-22T04:56:51Z pong peer=0: Timing mishap, d88882b9380f5ec3 expected, d88882b9380f5ec3 received, 8 bytes
+2020-06-22T04:58:48Z Flushed 0 addresses to peers.dat  418ms
+2020-06-22T04:58:51Z sending ping (8 bytes) peer=0
+2020-06-22T04:58:51Z received: ping (8 bytes) peer=0
+2020-06-22T04:58:51Z sending pong (8 bytes) peer=0
+2020-06-22T04:58:51Z received: pong (8 bytes) peer=0
+2020-06-22T04:58:51Z pong peer=0: Timing mishap, 1bc47ebc5f45865 expected, 1bc47ebc5f45865 received, 8 bytes
+2020-06-22T05:00:51Z sending ping (8 bytes) peer=0
+2020-06-22T05:00:51Z received: ping (8 bytes) peer=0
+2020-06-22T05:00:51Z sending pong (8 bytes) peer=0
+2020-06-22T05:00:51Z received: pong (8 bytes) peer=0
+2020-06-22T05:00:51Z pong peer=0: Timing mishap, 4e21d06d099ded9e expected, 4e21d06d099ded9e received, 8 bytes
+2020-06-22T05:02:51Z sending ping (8 bytes) peer=0
+2020-06-22T05:02:51Z received: ping (8 bytes) peer=0
+2020-06-22T05:02:51Z sending pong (8 bytes) peer=0
+2020-06-22T05:02:51Z received: pong (8 bytes) peer=0
+2020-06-22T05:02:51Z pong peer=0: Timing mishap, a00659f9a3b70a76 expected, a00659f9a3b70a76 received, 8 bytes
+2020-06-22T05:04:51Z sending ping (8 bytes) peer=0
+2020-06-22T05:04:51Z received: ping (8 bytes) peer=0
+2020-06-22T05:04:51Z sending pong (8 bytes) peer=0
+2020-06-22T05:04:51Z received: pong (8 bytes) peer=0
+2020-06-22T05:04:51Z pong peer=0: Timing mishap, ea3904afcfe46fa2 expected, ea3904afcfe46fa2 received, 8 bytes
+2020-06-22T05:05:27Z Potential stale tip detected, will try using extra outbound peer (last tip update: 7597 seconds ago)
+2020-06-22T05:05:27Z net: setting try another outbound peer=true
+2020-06-22T05:06:51Z sending ping (8 bytes) peer=0
+2020-06-22T05:06:51Z received: ping (8 bytes) peer=0
+2020-06-22T05:06:51Z sending pong (8 bytes) peer=0
+2020-06-22T05:06:51Z received: pong (8 bytes) peer=0
+2020-06-22T05:06:51Z pong peer=0: Timing mishap, e42d2e9cbc38ca2a expected, e42d2e9cbc38ca2a received, 8 bytes
+2020-06-22T05:08:51Z sending ping (8 bytes) peer=0
+2020-06-22T05:08:51Z received: ping (8 bytes) peer=0
+2020-06-22T05:08:51Z sending pong (8 bytes) peer=0
+2020-06-22T05:08:51Z received: pong (8 bytes) peer=0
+2020-06-22T05:08:51Z pong peer=0: Timing mishap, 901e6e61c914f4ca expected, 901e6e61c914f4ca received, 8 bytes
+2020-06-22T05:10:51Z sending ping (8 bytes) peer=0
+2020-06-22T05:10:51Z received: ping (8 bytes) peer=0
+2020-06-22T05:10:51Z sending pong (8 bytes) peer=0
+2020-06-22T05:10:51Z received: pong (8 bytes) peer=0
+2020-06-22T05:10:51Z pong peer=0: Timing mishap, 3e65d39c98d7f773 expected, 3e65d39c98d7f773 received, 8 bytes
+2020-06-22T05:12:51Z sending ping (8 bytes) peer=0
+2020-06-22T05:12:51Z received: ping (8 bytes) peer=0
+2020-06-22T05:12:51Z sending pong (8 bytes) peer=0
+2020-06-22T05:12:51Z received: pong (8 bytes) peer=0
+2020-06-22T05:12:51Z pong peer=0: Timing mishap, 60b5d930d9a02b0c expected, 60b5d930d9a02b0c received, 8 bytes
+2020-06-22T05:13:48Z Flushed 0 addresses to peers.dat  227ms
+2020-06-22T05:14:51Z sending ping (8 bytes) peer=0
+2020-06-22T05:14:51Z received: ping (8 bytes) peer=0
+2020-06-22T05:14:51Z sending pong (8 bytes) peer=0
+2020-06-22T05:14:51Z received: pong (8 bytes) peer=0
+2020-06-22T05:14:51Z pong peer=0: Timing mishap, a85ad9f3c5ffe0ca expected, a85ad9f3c5ffe0ca received, 8 bytes
+2020-06-22T05:15:57Z Potential stale tip detected, will try using extra outbound peer (last tip update: 8227 seconds ago)
+2020-06-22T05:15:57Z net: setting try another outbound peer=true
+2020-06-22T05:16:51Z sending ping (8 bytes) peer=0
+2020-06-22T05:16:51Z received: pong (8 bytes) peer=0
+2020-06-22T05:16:51Z pong peer=0: Timing mishap, 99e71e404b0a7f95 expected, 99e71e404b0a7f95 received, 8 bytes
+2020-06-22T05:16:51Z received: ping (8 bytes) peer=0
+2020-06-22T05:16:51Z sending pong (8 bytes) peer=0
+2020-06-22T05:18:52Z received: ping (8 bytes) peer=0
+2020-06-22T05:18:52Z sending pong (8 bytes) peer=0
+2020-06-22T05:18:52Z sending ping (8 bytes) peer=0
+2020-06-22T05:18:52Z received: pong (8 bytes) peer=0
+2020-06-22T05:18:52Z pong peer=0: Timing mishap, 416560553d1d8c40 expected, 416560553d1d8c40 received, 8 bytes
+2020-06-22T05:20:52Z sending ping (8 bytes) peer=0
+2020-06-22T05:20:52Z received: ping (8 bytes) peer=0
+2020-06-22T05:20:52Z sending pong (8 bytes) peer=0
+2020-06-22T05:20:52Z received: pong (8 bytes) peer=0
+2020-06-22T05:20:52Z pong peer=0: Timing mishap, 45b6e7b48d45f3b8 expected, 45b6e7b48d45f3b8 received, 8 bytes
+2020-06-22T05:22:52Z sending ping (8 bytes) peer=0
+2020-06-22T05:22:52Z received: ping (8 bytes) peer=0
+2020-06-22T05:22:52Z sending pong (8 bytes) peer=0
+2020-06-22T05:22:52Z received: pong (8 bytes) peer=0
+2020-06-22T05:22:52Z pong peer=0: Timing mishap, 3bc9fb26509b9da8 expected, 3bc9fb26509b9da8 received, 8 bytes
+2020-06-22T05:24:52Z sending ping (8 bytes) peer=0
+2020-06-22T05:24:52Z received: ping (8 bytes) peer=0
+2020-06-22T05:24:52Z sending pong (8 bytes) peer=0
+2020-06-22T05:24:52Z received: pong (8 bytes) peer=0
+2020-06-22T05:24:52Z pong peer=0: Timing mishap, ed339d49fc77fc2c expected, ed339d49fc77fc2c received, 8 bytes
+2020-06-22T05:26:27Z Potential stale tip detected, will try using extra outbound peer (last tip update: 8857 seconds ago)
+2020-06-22T05:26:27Z net: setting try another outbound peer=true
+2020-06-22T05:26:52Z sending ping (8 bytes) peer=0
+2020-06-22T05:26:52Z received: ping (8 bytes) peer=0
+2020-06-22T05:26:52Z sending pong (8 bytes) peer=0
+2020-06-22T05:26:52Z received: pong (8 bytes) peer=0
+2020-06-22T05:26:52Z pong peer=0: Timing mishap, 4bc6ae6498e0493c expected, 4bc6ae6498e0493c received, 8 bytes
+2020-06-22T05:28:48Z Flushed 0 addresses to peers.dat  102ms
+2020-06-22T05:28:52Z sending ping (8 bytes) peer=0
+2020-06-22T05:28:52Z received: ping (8 bytes) peer=0
+2020-06-22T05:28:52Z sending pong (8 bytes) peer=0
+2020-06-22T05:28:52Z received: pong (8 bytes) peer=0
+2020-06-22T05:28:52Z pong peer=0: Timing mishap, fd934be427d31256 expected, fd934be427d31256 received, 8 bytes
+2020-06-22T05:30:52Z sending ping (8 bytes) peer=0
+2020-06-22T05:30:52Z received: ping (8 bytes) peer=0
+2020-06-22T05:30:52Z sending pong (8 bytes) peer=0
+2020-06-22T05:30:52Z received: pong (8 bytes) peer=0
+2020-06-22T05:30:52Z pong peer=0: Timing mishap, 19b74a2ffc91a66e expected, 19b74a2ffc91a66e received, 8 bytes
+2020-06-22T05:32:52Z sending ping (8 bytes) peer=0
+2020-06-22T05:32:52Z received: ping (8 bytes) peer=0
+2020-06-22T05:32:52Z sending pong (8 bytes) peer=0
+2020-06-22T05:32:52Z received: pong (8 bytes) peer=0
+2020-06-22T05:32:52Z pong peer=0: Timing mishap, 3ecd6fda2612d084 expected, 3ecd6fda2612d084 received, 8 bytes
+2020-06-22T05:34:52Z sending ping (8 bytes) peer=0
+2020-06-22T05:34:52Z received: ping (8 bytes) peer=0
+2020-06-22T05:34:52Z sending pong (8 bytes) peer=0
+2020-06-22T05:34:52Z received: pong (8 bytes) peer=0
+2020-06-22T05:34:52Z pong peer=0: Timing mishap, 8671abe8ea701925 expected, 8671abe8ea701925 received, 8 bytes
+2020-06-22T05:36:52Z sending ping (8 bytes) peer=0
+2020-06-22T05:36:52Z received: ping (8 bytes) peer=0
+2020-06-22T05:36:52Z sending pong (8 bytes) peer=0
+2020-06-22T05:36:52Z received: pong (8 bytes) peer=0
+2020-06-22T05:36:52Z pong peer=0: Timing mishap, 80c74610528dda41 expected, 80c74610528dda41 received, 8 bytes
+2020-06-22T05:36:57Z Potential stale tip detected, will try using extra outbound peer (last tip update: 9487 seconds ago)
+2020-06-22T05:36:57Z net: setting try another outbound peer=true
+2020-06-22T05:38:52Z sending ping (8 bytes) peer=0
+2020-06-22T05:38:52Z received: ping (8 bytes) peer=0
+2020-06-22T05:38:52Z sending pong (8 bytes) peer=0
+2020-06-22T05:38:52Z received: pong (8 bytes) peer=0
+2020-06-22T05:38:52Z pong peer=0: Timing mishap, 8e5eb80dff2bef72 expected, 8e5eb80dff2bef72 received, 8 bytes
+2020-06-22T05:40:52Z sending ping (8 bytes) peer=0
+2020-06-22T05:40:52Z received: ping (8 bytes) peer=0
+2020-06-22T05:40:52Z sending pong (8 bytes) peer=0
+2020-06-22T05:40:52Z received: pong (8 bytes) peer=0
+2020-06-22T05:40:52Z pong peer=0: Timing mishap, eb63d05d2a0f83e expected, eb63d05d2a0f83e received, 8 bytes
+2020-06-22T05:42:52Z sending ping (8 bytes) peer=0
+2020-06-22T05:42:52Z received: ping (8 bytes) peer=0
+2020-06-22T05:42:52Z sending pong (8 bytes) peer=0
+2020-06-22T05:42:52Z received: pong (8 bytes) peer=0
+2020-06-22T05:42:52Z pong peer=0: Timing mishap, 7f7d22bc8d4468be expected, 7f7d22bc8d4468be received, 8 bytes
+2020-06-22T05:43:48Z Flushed 0 addresses to peers.dat  326ms
+2020-06-22T05:44:52Z sending ping (8 bytes) peer=0
+2020-06-22T05:44:52Z received: ping (8 bytes) peer=0
+2020-06-22T05:44:52Z sending pong (8 bytes) peer=0
+2020-06-22T05:44:52Z received: pong (8 bytes) peer=0
+2020-06-22T05:44:52Z pong peer=0: Timing mishap, f22a29e16e48a62c expected, f22a29e16e48a62c received, 8 bytes
+2020-06-22T05:46:52Z sending ping (8 bytes) peer=0
+2020-06-22T05:46:52Z received: ping (8 bytes) peer=0
+2020-06-22T05:46:52Z sending pong (8 bytes) peer=0
+2020-06-22T05:46:52Z received: pong (8 bytes) peer=0
+2020-06-22T05:46:52Z pong peer=0: Timing mishap, 715ffb11dddbd3f1 expected, 715ffb11dddbd3f1 received, 8 bytes
+2020-06-22T05:47:27Z Potential stale tip detected, will try using extra outbound peer (last tip update: 10117 seconds ago)
+2020-06-22T05:47:27Z net: setting try another outbound peer=true
+2020-06-22T05:48:52Z sending ping (8 bytes) peer=0
+2020-06-22T05:48:52Z received: ping (8 bytes) peer=0
+2020-06-22T05:48:52Z sending pong (8 bytes) peer=0
+2020-06-22T05:48:52Z received: pong (8 bytes) peer=0
+2020-06-22T05:48:52Z pong peer=0: Timing mishap, cbe6dbaa3f0de233 expected, cbe6dbaa3f0de233 received, 8 bytes
+2020-06-22T05:50:52Z sending ping (8 bytes) peer=0
+2020-06-22T05:50:52Z received: ping (8 bytes) peer=0
+2020-06-22T05:50:52Z sending pong (8 bytes) peer=0
+2020-06-22T05:50:52Z received: pong (8 bytes) peer=0
+2020-06-22T05:50:52Z pong peer=0: Timing mishap, dad933ea8e52fd16 expected, dad933ea8e52fd16 received, 8 bytes
+2020-06-22T05:52:52Z sending ping (8 bytes) peer=0
+2020-06-22T05:52:52Z received: ping (8 bytes) peer=0
+2020-06-22T05:52:52Z sending pong (8 bytes) peer=0
+2020-06-22T05:52:52Z received: pong (8 bytes) peer=0
+2020-06-22T05:52:52Z pong peer=0: Timing mishap, 992f7e61bb658349 expected, 992f7e61bb658349 received, 8 bytes
+2020-06-22T05:54:52Z sending ping (8 bytes) peer=0
+2020-06-22T05:54:52Z received: ping (8 bytes) peer=0
+2020-06-22T05:54:52Z sending pong (8 bytes) peer=0
+2020-06-22T05:54:52Z received: pong (8 bytes) peer=0
+2020-06-22T05:54:52Z pong peer=0: Timing mishap, d2f893bad622fa0d expected, d2f893bad622fa0d received, 8 bytes
+2020-06-22T05:56:52Z sending ping (8 bytes) peer=0
+2020-06-22T05:56:52Z received: ping (8 bytes) peer=0
+2020-06-22T05:56:52Z sending pong (8 bytes) peer=0
+2020-06-22T05:56:52Z received: pong (8 bytes) peer=0
+2020-06-22T05:56:52Z pong peer=0: Timing mishap, a2af6acbb998d9b3 expected, a2af6acbb998d9b3 received, 8 bytes
+2020-06-22T05:57:57Z Potential stale tip detected, will try using extra outbound peer (last tip update: 10747 seconds ago)
+2020-06-22T05:57:57Z net: setting try another outbound peer=true
+2020-06-22T05:58:49Z Flushed 0 addresses to peers.dat  516ms
+2020-06-22T05:58:52Z sending ping (8 bytes) peer=0
+2020-06-22T05:58:52Z received: ping (8 bytes) peer=0
+2020-06-22T05:58:52Z sending pong (8 bytes) peer=0
+2020-06-22T05:58:52Z received: pong (8 bytes) peer=0
+2020-06-22T05:58:52Z pong peer=0: Timing mishap, df8e09afa12214f expected, df8e09afa12214f received, 8 bytes
+2020-06-22T06:00:53Z sending ping (8 bytes) peer=0
+2020-06-22T06:00:53Z received: ping (8 bytes) peer=0
+2020-06-22T06:00:53Z sending pong (8 bytes) peer=0
+2020-06-22T06:00:53Z received: pong (8 bytes) peer=0
+2020-06-22T06:00:53Z pong peer=0: Timing mishap, 60d6e7162dec1bca expected, 60d6e7162dec1bca received, 8 bytes
+2020-06-22T06:02:53Z received: ping (8 bytes) peer=0
+2020-06-22T06:02:53Z sending pong (8 bytes) peer=0
+2020-06-22T06:02:53Z sending ping (8 bytes) peer=0
+2020-06-22T06:02:53Z received: pong (8 bytes) peer=0
+2020-06-22T06:02:53Z pong peer=0: Timing mishap, a55469a581bb9e96 expected, a55469a581bb9e96 received, 8 bytes
+2020-06-22T06:04:53Z sending ping (8 bytes) peer=0
+2020-06-22T06:04:53Z received: ping (8 bytes) peer=0
+2020-06-22T06:04:53Z sending pong (8 bytes) peer=0
+2020-06-22T06:04:53Z received: pong (8 bytes) peer=0
+2020-06-22T06:04:53Z pong peer=0: Timing mishap, 1cfd9b32b40c061b expected, 1cfd9b32b40c061b received, 8 bytes
+2020-06-22T06:06:53Z sending ping (8 bytes) peer=0
+2020-06-22T06:06:53Z received: ping (8 bytes) peer=0
+2020-06-22T06:06:53Z sending pong (8 bytes) peer=0
+2020-06-22T06:06:53Z received: pong (8 bytes) peer=0
+2020-06-22T06:06:53Z pong peer=0: Timing mishap, c2c79ad980f7c157 expected, c2c79ad980f7c157 received, 8 bytes
+2020-06-22T06:08:27Z Potential stale tip detected, will try using extra outbound peer (last tip update: 11377 seconds ago)
+2020-06-22T06:08:27Z net: setting try another outbound peer=true
+2020-06-22T06:08:53Z sending ping (8 bytes) peer=0
+2020-06-22T06:08:53Z received: ping (8 bytes) peer=0
+2020-06-22T06:08:53Z sending pong (8 bytes) peer=0
+2020-06-22T06:08:53Z received: pong (8 bytes) peer=0
+2020-06-22T06:08:53Z pong peer=0: Timing mishap, 8bbec9ac3cfc1f40 expected, 8bbec9ac3cfc1f40 received, 8 bytes
+2020-06-22T06:10:53Z sending ping (8 bytes) peer=0
+2020-06-22T06:10:53Z received: ping (8 bytes) peer=0
+2020-06-22T06:10:53Z sending pong (8 bytes) peer=0
+2020-06-22T06:10:53Z received: pong (8 bytes) peer=0
+2020-06-22T06:10:53Z pong peer=0: Timing mishap, 5998b76c662ba79a expected, 5998b76c662ba79a received, 8 bytes
+2020-06-22T06:12:53Z sending ping (8 bytes) peer=0
+2020-06-22T06:12:53Z received: ping (8 bytes) peer=0
+2020-06-22T06:12:53Z sending pong (8 bytes) peer=0
+2020-06-22T06:12:53Z received: pong (8 bytes) peer=0
+2020-06-22T06:12:53Z pong peer=0: Timing mishap, edceef2239007375 expected, edceef2239007375 received, 8 bytes
+2020-06-22T06:13:49Z Flushed 0 addresses to peers.dat  347ms
+2020-06-22T06:14:53Z sending ping (8 bytes) peer=0
+2020-06-22T06:14:53Z received: ping (8 bytes) peer=0
+2020-06-22T06:14:53Z sending pong (8 bytes) peer=0
+2020-06-22T06:14:53Z received: pong (8 bytes) peer=0
+2020-06-22T06:14:53Z pong peer=0: Timing mishap, 28afd26ae7b32954 expected, 28afd26ae7b32954 received, 8 bytes
+2020-06-22T06:16:53Z sending ping (8 bytes) peer=0
+2020-06-22T06:16:53Z received: ping (8 bytes) peer=0
+2020-06-22T06:16:53Z sending pong (8 bytes) peer=0
+2020-06-22T06:16:53Z received: pong (8 bytes) peer=0
+2020-06-22T06:16:53Z pong peer=0: Timing mishap, 76a08629bbafc3a5 expected, 76a08629bbafc3a5 received, 8 bytes
+2020-06-22T06:18:53Z sending ping (8 bytes) peer=0
+2020-06-22T06:18:53Z received: ping (8 bytes) peer=0
+2020-06-22T06:18:53Z sending pong (8 bytes) peer=0
+2020-06-22T06:18:53Z received: pong (8 bytes) peer=0
+2020-06-22T06:18:53Z pong peer=0: Timing mishap, 306e08172b0c0ad expected, 306e08172b0c0ad received, 8 bytes
+2020-06-22T06:18:57Z Potential stale tip detected, will try using extra outbound peer (last tip update: 12007 seconds ago)
+2020-06-22T06:18:57Z net: setting try another outbound peer=true
+2020-06-22T06:20:53Z sending ping (8 bytes) peer=0
+2020-06-22T06:20:53Z received: ping (8 bytes) peer=0
+2020-06-22T06:20:53Z sending pong (8 bytes) peer=0
+2020-06-22T06:20:53Z received: pong (8 bytes) peer=0
+2020-06-22T06:20:53Z pong peer=0: Timing mishap, d790b821b843e55d expected, d790b821b843e55d received, 8 bytes
+2020-06-22T06:22:53Z sending ping (8 bytes) peer=0
+2020-06-22T06:22:53Z received: ping (8 bytes) peer=0
+2020-06-22T06:22:53Z sending pong (8 bytes) peer=0
+2020-06-22T06:22:53Z received: pong (8 bytes) peer=0
+2020-06-22T06:22:53Z pong peer=0: Timing mishap, fb791003fa1a560e expected, fb791003fa1a560e received, 8 bytes
+2020-06-22T06:24:53Z sending ping (8 bytes) peer=0
+2020-06-22T06:24:53Z received: ping (8 bytes) peer=0
+2020-06-22T06:24:53Z sending pong (8 bytes) peer=0
+2020-06-22T06:24:53Z received: pong (8 bytes) peer=0
+2020-06-22T06:24:53Z pong peer=0: Timing mishap, 548b08956b75ea36 expected, 548b08956b75ea36 received, 8 bytes
+2020-06-22T06:26:53Z received: ping (8 bytes) peer=0
+2020-06-22T06:26:53Z sending pong (8 bytes) peer=0
+2020-06-22T06:26:53Z sending ping (8 bytes) peer=0
+2020-06-22T06:26:53Z received: pong (8 bytes) peer=0
+2020-06-22T06:26:53Z pong peer=0: Timing mishap, 41cd156e961d0c09 expected, 41cd156e961d0c09 received, 8 bytes
+2020-06-22T06:28:49Z Flushed 0 addresses to peers.dat  346ms
+2020-06-22T06:28:53Z sending ping (8 bytes) peer=0
+2020-06-22T06:28:53Z received: ping (8 bytes) peer=0
+2020-06-22T06:28:53Z sending pong (8 bytes) peer=0
+2020-06-22T06:28:53Z received: pong (8 bytes) peer=0
+2020-06-22T06:28:53Z pong peer=0: Timing mishap, db25cecf60a9c07a expected, db25cecf60a9c07a received, 8 bytes
+2020-06-22T06:29:27Z Potential stale tip detected, will try using extra outbound peer (last tip update: 12637 seconds ago)
+2020-06-22T06:29:27Z net: setting try another outbound peer=true
+2020-06-22T06:30:53Z sending ping (8 bytes) peer=0
+2020-06-22T06:30:53Z received: ping (8 bytes) peer=0
+2020-06-22T06:30:53Z sending pong (8 bytes) peer=0
+2020-06-22T06:30:53Z received: pong (8 bytes) peer=0
+2020-06-22T06:30:53Z pong peer=0: Timing mishap, ee5ce01d30f8f19 expected, ee5ce01d30f8f19 received, 8 bytes
+2020-06-22T06:32:53Z sending ping (8 bytes) peer=0
+2020-06-22T06:32:53Z received: ping (8 bytes) peer=0
+2020-06-22T06:32:53Z sending pong (8 bytes) peer=0
+2020-06-22T06:32:53Z received: pong (8 bytes) peer=0
+2020-06-22T06:32:53Z pong peer=0: Timing mishap, d7034ea90e0f5e2d expected, d7034ea90e0f5e2d received, 8 bytes
+2020-06-22T06:34:53Z sending ping (8 bytes) peer=0
+2020-06-22T06:34:53Z received: ping (8 bytes) peer=0
+2020-06-22T06:34:53Z sending pong (8 bytes) peer=0
+2020-06-22T06:34:53Z received: pong (8 bytes) peer=0
+2020-06-22T06:34:53Z pong peer=0: Timing mishap, 9d398f37af6d99cb expected, 9d398f37af6d99cb received, 8 bytes
+2020-06-22T06:36:53Z sending ping (8 bytes) peer=0
+2020-06-22T06:36:53Z received: pong (8 bytes) peer=0
+2020-06-22T06:36:53Z pong peer=0: Timing mishap, f5c5449b2a3b7031 expected, f5c5449b2a3b7031 received, 8 bytes
+2020-06-22T06:36:53Z received: ping (8 bytes) peer=0
+2020-06-22T06:36:53Z sending pong (8 bytes) peer=0
+2020-06-22T06:38:53Z sending ping (8 bytes) peer=0
+2020-06-22T06:38:53Z received: ping (8 bytes) peer=0
+2020-06-22T06:38:53Z sending pong (8 bytes) peer=0
+2020-06-22T06:38:53Z received: pong (8 bytes) peer=0
+2020-06-22T06:38:53Z pong peer=0: Timing mishap, 11fd42a86b0124e3 expected, 11fd42a86b0124e3 received, 8 bytes
+2020-06-22T06:39:57Z Potential stale tip detected, will try using extra outbound peer (last tip update: 13267 seconds ago)
+2020-06-22T06:39:57Z net: setting try another outbound peer=true
+2020-06-22T06:40:53Z sending ping (8 bytes) peer=0
+2020-06-22T06:40:53Z received: ping (8 bytes) peer=0
+2020-06-22T06:40:53Z sending pong (8 bytes) peer=0
+2020-06-22T06:40:53Z received: pong (8 bytes) peer=0
+2020-06-22T06:40:53Z pong peer=0: Timing mishap, 4672b151a66052f2 expected, 4672b151a66052f2 received, 8 bytes
+2020-06-22T06:42:53Z sending ping (8 bytes) peer=0
+2020-06-22T06:42:53Z received: ping (8 bytes) peer=0
+2020-06-22T06:42:53Z sending pong (8 bytes) peer=0
+2020-06-22T06:42:53Z received: pong (8 bytes) peer=0
+2020-06-22T06:42:53Z pong peer=0: Timing mishap, a8c8cd25f6215bc5 expected, a8c8cd25f6215bc5 received, 8 bytes
+2020-06-22T06:43:50Z Flushed 0 addresses to peers.dat  384ms
+2020-06-22T06:44:53Z sending ping (8 bytes) peer=0
+2020-06-22T06:44:53Z received: ping (8 bytes) peer=0
+2020-06-22T06:44:53Z sending pong (8 bytes) peer=0
+2020-06-22T06:44:53Z received: pong (8 bytes) peer=0
+2020-06-22T06:44:53Z pong peer=0: Timing mishap, ffbc2a2ab0238a10 expected, ffbc2a2ab0238a10 received, 8 bytes
+2020-06-22T06:46:53Z sending ping (8 bytes) peer=0
+2020-06-22T06:46:53Z received: ping (8 bytes) peer=0
+2020-06-22T06:46:53Z sending pong (8 bytes) peer=0
+2020-06-22T06:46:53Z received: pong (8 bytes) peer=0
+2020-06-22T06:46:53Z pong peer=0: Timing mishap, adc0f7f0b6db7535 expected, adc0f7f0b6db7535 received, 8 bytes
+2020-06-22T06:48:54Z sending ping (8 bytes) peer=0
+2020-06-22T06:48:54Z received: ping (8 bytes) peer=0
+2020-06-22T06:48:54Z sending pong (8 bytes) peer=0
+2020-06-22T06:48:54Z received: pong (8 bytes) peer=0
+2020-06-22T06:48:54Z pong peer=0: Timing mishap, 78a3a1bed0f4d786 expected, 78a3a1bed0f4d786 received, 8 bytes
+2020-06-22T06:50:27Z Potential stale tip detected, will try using extra outbound peer (last tip update: 13897 seconds ago)
+2020-06-22T06:50:27Z net: setting try another outbound peer=true
+2020-06-22T06:50:54Z sending ping (8 bytes) peer=0
+2020-06-22T06:50:54Z received: ping (8 bytes) peer=0
+2020-06-22T06:50:54Z sending pong (8 bytes) peer=0
+2020-06-22T06:50:54Z received: pong (8 bytes) peer=0
+2020-06-22T06:50:54Z pong peer=0: Timing mishap, 9ef9a5c85a184967 expected, 9ef9a5c85a184967 received, 8 bytes
+2020-06-22T06:52:54Z sending ping (8 bytes) peer=0
+2020-06-22T06:52:54Z received: ping (8 bytes) peer=0
+2020-06-22T06:52:54Z sending pong (8 bytes) peer=0
+2020-06-22T06:52:54Z received: pong (8 bytes) peer=0
+2020-06-22T06:52:54Z pong peer=0: Timing mishap, c11feb1221881bc7 expected, c11feb1221881bc7 received, 8 bytes
+2020-06-22T06:54:54Z sending ping (8 bytes) peer=0
+2020-06-22T06:54:54Z received: ping (8 bytes) peer=0
+2020-06-22T06:54:54Z sending pong (8 bytes) peer=0
+2020-06-22T06:54:54Z received: pong (8 bytes) peer=0
+2020-06-22T06:54:54Z pong peer=0: Timing mishap, 2d57b6923ea30c21 expected, 2d57b6923ea30c21 received, 8 bytes
+2020-06-22T06:56:54Z sending ping (8 bytes) peer=0
+2020-06-22T06:56:54Z received: ping (8 bytes) peer=0
+2020-06-22T06:56:54Z sending pong (8 bytes) peer=0
+2020-06-22T06:56:54Z received: pong (8 bytes) peer=0
+2020-06-22T06:56:54Z pong peer=0: Timing mishap, 254fa5b37aee1c59 expected, 254fa5b37aee1c59 received, 8 bytes
+2020-06-22T06:58:50Z Flushed 0 addresses to peers.dat  426ms
+2020-06-22T06:58:54Z sending ping (8 bytes) peer=0
+2020-06-22T06:58:54Z received: ping (8 bytes) peer=0
+2020-06-22T06:58:54Z sending pong (8 bytes) peer=0
+2020-06-22T06:58:54Z received: pong (8 bytes) peer=0
+2020-06-22T06:58:54Z pong peer=0: Timing mishap, 581c594ef61d3395 expected, 581c594ef61d3395 received, 8 bytes
+2020-06-22T07:00:54Z sending ping (8 bytes) peer=0
+2020-06-22T07:00:54Z received: ping (8 bytes) peer=0
+2020-06-22T07:00:54Z sending pong (8 bytes) peer=0
+2020-06-22T07:00:54Z received: pong (8 bytes) peer=0
+2020-06-22T07:00:54Z pong peer=0: Timing mishap, ce7b3652014771f9 expected, ce7b3652014771f9 received, 8 bytes
+2020-06-22T07:00:57Z Potential stale tip detected, will try using extra outbound peer (last tip update: 14527 seconds ago)
+2020-06-22T07:00:57Z net: setting try another outbound peer=true
+2020-06-22T07:02:54Z sending ping (8 bytes) peer=0
+2020-06-22T07:02:54Z received: ping (8 bytes) peer=0
+2020-06-22T07:02:54Z sending pong (8 bytes) peer=0
+2020-06-22T07:02:54Z received: pong (8 bytes) peer=0
+2020-06-22T07:02:54Z pong peer=0: Timing mishap, dc5f11e59b08bb5f expected, dc5f11e59b08bb5f received, 8 bytes
+2020-06-22T07:04:54Z sending ping (8 bytes) peer=0
+2020-06-22T07:04:54Z received: ping (8 bytes) peer=0
+2020-06-22T07:04:54Z sending pong (8 bytes) peer=0
+2020-06-22T07:04:54Z received: pong (8 bytes) peer=0
+2020-06-22T07:04:54Z pong peer=0: Timing mishap, c53376152112b4fd expected, c53376152112b4fd received, 8 bytes
+2020-06-22T07:06:54Z sending ping (8 bytes) peer=0
+2020-06-22T07:06:54Z received: ping (8 bytes) peer=0
+2020-06-22T07:06:54Z sending pong (8 bytes) peer=0
+2020-06-22T07:06:54Z received: pong (8 bytes) peer=0
+2020-06-22T07:06:54Z pong peer=0: Timing mishap, 618f926f283a8d4d expected, 618f926f283a8d4d received, 8 bytes
+2020-06-22T07:08:54Z sending ping (8 bytes) peer=0
+2020-06-22T07:08:54Z received: pong (8 bytes) peer=0
+2020-06-22T07:08:54Z pong peer=0: Timing mishap, 82f5caabe7583a3e expected, 82f5caabe7583a3e received, 8 bytes
+2020-06-22T07:08:54Z received: ping (8 bytes) peer=0
+2020-06-22T07:08:54Z sending pong (8 bytes) peer=0
+2020-06-22T07:10:54Z sending ping (8 bytes) peer=0
+2020-06-22T07:10:54Z received: ping (8 bytes) peer=0
+2020-06-22T07:10:54Z sending pong (8 bytes) peer=0
+2020-06-22T07:10:54Z received: pong (8 bytes) peer=0
+2020-06-22T07:10:54Z pong peer=0: Timing mishap, f2ea8f3a5096bcf0 expected, f2ea8f3a5096bcf0 received, 8 bytes
+2020-06-22T07:11:27Z Potential stale tip detected, will try using extra outbound peer (last tip update: 15157 seconds ago)
+2020-06-22T07:11:27Z net: setting try another outbound peer=true
+2020-06-22T07:12:54Z sending ping (8 bytes) peer=0
+2020-06-22T07:12:54Z received: ping (8 bytes) peer=0
+2020-06-22T07:12:54Z sending pong (8 bytes) peer=0
+2020-06-22T07:12:54Z received: pong (8 bytes) peer=0
+2020-06-22T07:12:54Z pong peer=0: Timing mishap, b3c11f439fa2445c expected, b3c11f439fa2445c received, 8 bytes
+2020-06-22T07:13:50Z Flushed 0 addresses to peers.dat  33ms
+2020-06-22T07:14:54Z sending ping (8 bytes) peer=0
+2020-06-22T07:14:54Z received: ping (8 bytes) peer=0
+2020-06-22T07:14:54Z sending pong (8 bytes) peer=0
+2020-06-22T07:14:54Z received: pong (8 bytes) peer=0
+2020-06-22T07:14:54Z pong peer=0: Timing mishap, a3092eedc99ca7e4 expected, a3092eedc99ca7e4 received, 8 bytes
+2020-06-22T07:16:54Z sending ping (8 bytes) peer=0
+2020-06-22T07:16:54Z received: ping (8 bytes) peer=0
+2020-06-22T07:16:54Z sending pong (8 bytes) peer=0
+2020-06-22T07:16:54Z received: pong (8 bytes) peer=0
+2020-06-22T07:16:54Z pong peer=0: Timing mishap, a27d1b9e0f6958f3 expected, a27d1b9e0f6958f3 received, 8 bytes
+2020-06-22T07:18:54Z sending ping (8 bytes) peer=0
+2020-06-22T07:18:54Z received: ping (8 bytes) peer=0
+2020-06-22T07:18:54Z sending pong (8 bytes) peer=0
+2020-06-22T07:18:54Z received: pong (8 bytes) peer=0
+2020-06-22T07:18:54Z pong peer=0: Timing mishap, acba0d0990eb1b64 expected, acba0d0990eb1b64 received, 8 bytes
+2020-06-22T07:20:54Z sending ping (8 bytes) peer=0
+2020-06-22T07:20:54Z received: pong (8 bytes) peer=0
+2020-06-22T07:20:54Z pong peer=0: Timing mishap, 7301546082b80e95 expected, 7301546082b80e95 received, 8 bytes
+2020-06-22T07:20:54Z received: ping (8 bytes) peer=0
+2020-06-22T07:20:54Z sending pong (8 bytes) peer=0
+2020-06-22T07:21:57Z Potential stale tip detected, will try using extra outbound peer (last tip update: 15787 seconds ago)
+2020-06-22T07:21:57Z net: setting try another outbound peer=true
+2020-06-22T07:22:54Z sending ping (8 bytes) peer=0
+2020-06-22T07:22:54Z received: pong (8 bytes) peer=0
+2020-06-22T07:22:54Z pong peer=0: Timing mishap, 3caf9559f6661658 expected, 3caf9559f6661658 received, 8 bytes
+2020-06-22T07:22:54Z received: ping (8 bytes) peer=0
+2020-06-22T07:22:54Z sending pong (8 bytes) peer=0
+2020-06-22T07:24:54Z received: ping (8 bytes) peer=0
+2020-06-22T07:24:54Z sending pong (8 bytes) peer=0
+2020-06-22T07:24:54Z sending ping (8 bytes) peer=0
+2020-06-22T07:24:54Z received: pong (8 bytes) peer=0
+2020-06-22T07:24:54Z pong peer=0: Timing mishap, 1fc459aae4b3208 expected, 1fc459aae4b3208 received, 8 bytes
+2020-06-22T07:26:54Z sending ping (8 bytes) peer=0
+2020-06-22T07:26:54Z received: ping (8 bytes) peer=0
+2020-06-22T07:26:54Z sending pong (8 bytes) peer=0
+2020-06-22T07:26:54Z received: pong (8 bytes) peer=0
+2020-06-22T07:26:54Z pong peer=0: Timing mishap, e0c47c4b7b41d0d0 expected, e0c47c4b7b41d0d0 received, 8 bytes
+2020-06-22T07:28:50Z Flushed 0 addresses to peers.dat  69ms
+2020-06-22T07:28:54Z sending ping (8 bytes) peer=0
+2020-06-22T07:28:54Z received: pong (8 bytes) peer=0
+2020-06-22T07:28:54Z pong peer=0: Timing mishap, 51a97805c5dd67b5 expected, 51a97805c5dd67b5 received, 8 bytes
+2020-06-22T07:28:54Z received: ping (8 bytes) peer=0
+2020-06-22T07:28:54Z sending pong (8 bytes) peer=0
+2020-06-22T07:30:54Z received: ping (8 bytes) peer=0
+2020-06-22T07:30:54Z sending pong (8 bytes) peer=0
+2020-06-22T07:30:54Z sending ping (8 bytes) peer=0
+2020-06-22T07:30:54Z received: pong (8 bytes) peer=0
+2020-06-22T07:30:54Z pong peer=0: Timing mishap, 230041b4caf197cf expected, 230041b4caf197cf received, 8 bytes
+2020-06-22T07:32:27Z Potential stale tip detected, will try using extra outbound peer (last tip update: 16417 seconds ago)
+2020-06-22T07:32:27Z net: setting try another outbound peer=true
+2020-06-22T07:32:54Z sending ping (8 bytes) peer=0
+2020-06-22T07:32:54Z received: ping (8 bytes) peer=0
+2020-06-22T07:32:54Z sending pong (8 bytes) peer=0
+2020-06-22T07:32:54Z received: pong (8 bytes) peer=0
+2020-06-22T07:32:54Z pong peer=0: Timing mishap, cc119af37e2d1680 expected, cc119af37e2d1680 received, 8 bytes
+2020-06-22T07:34:54Z sending ping (8 bytes) peer=0
+2020-06-22T07:34:54Z received: ping (8 bytes) peer=0
+2020-06-22T07:34:54Z sending pong (8 bytes) peer=0
+2020-06-22T07:34:54Z received: pong (8 bytes) peer=0
+2020-06-22T07:34:54Z pong peer=0: Timing mishap, 6ccd80f10a443abb expected, 6ccd80f10a443abb received, 8 bytes
+2020-06-22T07:36:55Z sending ping (8 bytes) peer=0
+2020-06-22T07:36:55Z received: ping (8 bytes) peer=0
+2020-06-22T07:36:55Z sending pong (8 bytes) peer=0
+2020-06-22T07:36:55Z received: pong (8 bytes) peer=0
+2020-06-22T07:36:55Z pong peer=0: Timing mishap, c43385010438e3a6 expected, c43385010438e3a6 received, 8 bytes
+2020-06-22T07:38:55Z sending ping (8 bytes) peer=0
+2020-06-22T07:38:55Z received: ping (8 bytes) peer=0
+2020-06-22T07:38:55Z sending pong (8 bytes) peer=0
+2020-06-22T07:38:55Z received: pong (8 bytes) peer=0
+2020-06-22T07:38:55Z pong peer=0: Timing mishap, d4d8682eeec3fef6 expected, d4d8682eeec3fef6 received, 8 bytes
+2020-06-22T07:40:55Z sending ping (8 bytes) peer=0
+2020-06-22T07:40:55Z received: ping (8 bytes) peer=0
+2020-06-22T07:40:55Z sending pong (8 bytes) peer=0
+2020-06-22T07:40:55Z received: pong (8 bytes) peer=0
+2020-06-22T07:40:55Z pong peer=0: Timing mishap, 8cd8d7387f18463a expected, 8cd8d7387f18463a received, 8 bytes
+2020-06-22T07:42:55Z sending ping (8 bytes) peer=0
+2020-06-22T07:42:55Z received: ping (8 bytes) peer=0
+2020-06-22T07:42:55Z sending pong (8 bytes) peer=0
+2020-06-22T07:42:55Z received: pong (8 bytes) peer=0
+2020-06-22T07:42:55Z pong peer=0: Timing mishap, cb9664c7af615c30 expected, cb9664c7af615c30 received, 8 bytes
+2020-06-22T07:42:57Z Potential stale tip detected, will try using extra outbound peer (last tip update: 17047 seconds ago)
+2020-06-22T07:42:57Z net: setting try another outbound peer=true
+2020-06-22T07:43:50Z Flushed 0 addresses to peers.dat  32ms
+2020-06-22T07:44:55Z sending ping (8 bytes) peer=0
+2020-06-22T07:44:55Z received: pong (8 bytes) peer=0
+2020-06-22T07:44:55Z pong peer=0: Timing mishap, c238768e18c154db expected, c238768e18c154db received, 8 bytes
+2020-06-22T07:44:55Z received: ping (8 bytes) peer=0
+2020-06-22T07:44:55Z sending pong (8 bytes) peer=0
+2020-06-22T07:46:55Z received: ping (8 bytes) peer=0
+2020-06-22T07:46:55Z sending pong (8 bytes) peer=0
+2020-06-22T07:46:55Z sending ping (8 bytes) peer=0
+2020-06-22T07:46:55Z received: pong (8 bytes) peer=0
+2020-06-22T07:46:55Z pong peer=0: Timing mishap, 5314d219bcaffa39 expected, 5314d219bcaffa39 received, 8 bytes
+2020-06-22T07:48:55Z sending ping (8 bytes) peer=0
+2020-06-22T07:48:55Z received: ping (8 bytes) peer=0
+2020-06-22T07:48:55Z sending pong (8 bytes) peer=0
+2020-06-22T07:48:55Z received: pong (8 bytes) peer=0
+2020-06-22T07:48:55Z pong peer=0: Timing mishap, f2f15d8a1b0f3686 expected, f2f15d8a1b0f3686 received, 8 bytes
+2020-06-22T07:50:55Z sending ping (8 bytes) peer=0
+2020-06-22T07:50:55Z received: ping (8 bytes) peer=0
+2020-06-22T07:50:55Z sending pong (8 bytes) peer=0
+2020-06-22T07:50:55Z received: pong (8 bytes) peer=0
+2020-06-22T07:50:55Z pong peer=0: Timing mishap, 80375d6bfe7b26be expected, 80375d6bfe7b26be received, 8 bytes
+2020-06-22T07:52:55Z sending ping (8 bytes) peer=0
+2020-06-22T07:52:55Z received: ping (8 bytes) peer=0
+2020-06-22T07:52:55Z sending pong (8 bytes) peer=0
+2020-06-22T07:52:55Z received: pong (8 bytes) peer=0
+2020-06-22T07:52:55Z pong peer=0: Timing mishap, e6946a0f568463f7 expected, e6946a0f568463f7 received, 8 bytes
+2020-06-22T07:53:27Z Potential stale tip detected, will try using extra outbound peer (last tip update: 17677 seconds ago)
+2020-06-22T07:53:27Z net: setting try another outbound peer=true
+2020-06-22T07:54:55Z sending ping (8 bytes) peer=0
+2020-06-22T07:54:55Z received: pong (8 bytes) peer=0
+2020-06-22T07:54:55Z pong peer=0: Timing mishap, 10679e4a0ac47e01 expected, 10679e4a0ac47e01 received, 8 bytes
+2020-06-22T07:54:55Z received: ping (8 bytes) peer=0
+2020-06-22T07:54:55Z sending pong (8 bytes) peer=0
+2020-06-22T07:56:55Z received: ping (8 bytes) peer=0
+2020-06-22T07:56:55Z sending pong (8 bytes) peer=0
+2020-06-22T07:56:55Z sending ping (8 bytes) peer=0
+2020-06-22T07:56:55Z received: pong (8 bytes) peer=0
+2020-06-22T07:56:55Z pong peer=0: Timing mishap, 6f34d12e00e145e5 expected, 6f34d12e00e145e5 received, 8 bytes
+2020-06-22T07:58:50Z Flushed 0 addresses to peers.dat  49ms
+2020-06-22T07:58:55Z sending ping (8 bytes) peer=0
+2020-06-22T07:58:55Z received: ping (8 bytes) peer=0
+2020-06-22T07:58:55Z sending pong (8 bytes) peer=0
+2020-06-22T07:58:55Z received: pong (8 bytes) peer=0
+2020-06-22T07:58:55Z pong peer=0: Timing mishap, 2401621319dfe1e9 expected, 2401621319dfe1e9 received, 8 bytes
+2020-06-22T08:00:55Z sending ping (8 bytes) peer=0
+2020-06-22T08:00:55Z received: ping (8 bytes) peer=0
+2020-06-22T08:00:55Z sending pong (8 bytes) peer=0
+2020-06-22T08:00:55Z received: pong (8 bytes) peer=0
+2020-06-22T08:00:55Z pong peer=0: Timing mishap, 8d7c9e3fdc98460d expected, 8d7c9e3fdc98460d received, 8 bytes
+2020-06-22T08:02:55Z sending ping (8 bytes) peer=0
+2020-06-22T08:02:55Z received: ping (8 bytes) peer=0
+2020-06-22T08:02:55Z sending pong (8 bytes) peer=0
+2020-06-22T08:02:55Z received: pong (8 bytes) peer=0
+2020-06-22T08:02:55Z pong peer=0: Timing mishap, 897453320c004cbe expected, 897453320c004cbe received, 8 bytes
+2020-06-22T08:03:57Z Potential stale tip detected, will try using extra outbound peer (last tip update: 18307 seconds ago)
+2020-06-22T08:03:57Z net: setting try another outbound peer=true
+2020-06-22T08:04:55Z sending ping (8 bytes) peer=0
+2020-06-22T08:04:55Z received: ping (8 bytes) peer=0
+2020-06-22T08:04:55Z sending pong (8 bytes) peer=0
+2020-06-22T08:04:55Z received: pong (8 bytes) peer=0
+2020-06-22T08:04:55Z pong peer=0: Timing mishap, f888b6c32b113dca expected, f888b6c32b113dca received, 8 bytes
+2020-06-22T08:06:55Z sending ping (8 bytes) peer=0
+2020-06-22T08:06:55Z received: ping (8 bytes) peer=0
+2020-06-22T08:06:55Z sending pong (8 bytes) peer=0
+2020-06-22T08:06:55Z received: pong (8 bytes) peer=0
+2020-06-22T08:06:55Z pong peer=0: Timing mishap, 598adf3a405ab358 expected, 598adf3a405ab358 received, 8 bytes
+2020-06-22T08:08:55Z sending ping (8 bytes) peer=0
+2020-06-22T08:08:55Z received: ping (8 bytes) peer=0
+2020-06-22T08:08:55Z sending pong (8 bytes) peer=0
+2020-06-22T08:08:55Z received: pong (8 bytes) peer=0
+2020-06-22T08:08:55Z pong peer=0: Timing mishap, 56f0a40cb90b6094 expected, 56f0a40cb90b6094 received, 8 bytes
+2020-06-22T08:10:55Z sending ping (8 bytes) peer=0
+2020-06-22T08:10:55Z received: ping (8 bytes) peer=0
+2020-06-22T08:10:55Z sending pong (8 bytes) peer=0
+2020-06-22T08:10:55Z received: pong (8 bytes) peer=0
+2020-06-22T08:10:55Z pong peer=0: Timing mishap, ab9acaba4eee1d43 expected, ab9acaba4eee1d43 received, 8 bytes
+2020-06-22T08:12:55Z sending ping (8 bytes) peer=0
+2020-06-22T08:12:55Z received: ping (8 bytes) peer=0
+2020-06-22T08:12:55Z sending pong (8 bytes) peer=0
+2020-06-22T08:12:55Z received: pong (8 bytes) peer=0
+2020-06-22T08:12:55Z pong peer=0: Timing mishap, b9903ba699579daf expected, b9903ba699579daf received, 8 bytes
+2020-06-22T08:13:51Z Flushed 0 addresses to peers.dat  86ms
+2020-06-22T08:14:27Z Potential stale tip detected, will try using extra outbound peer (last tip update: 18937 seconds ago)
+2020-06-22T08:14:27Z net: setting try another outbound peer=true
+2020-06-22T08:14:56Z sending ping (8 bytes) peer=0
+2020-06-22T08:14:56Z received: ping (8 bytes) peer=0
+2020-06-22T08:14:56Z sending pong (8 bytes) peer=0
+2020-06-22T08:14:56Z received: pong (8 bytes) peer=0
+2020-06-22T08:14:56Z pong peer=0: Timing mishap, a3ef791f971289a3 expected, a3ef791f971289a3 received, 8 bytes
+2020-06-22T08:16:56Z sending ping (8 bytes) peer=0
+2020-06-22T08:16:56Z received: ping (8 bytes) peer=0
+2020-06-22T08:16:56Z sending pong (8 bytes) peer=0
+2020-06-22T08:16:56Z received: pong (8 bytes) peer=0
+2020-06-22T08:16:56Z pong peer=0: Timing mishap, 38d5a5737208cd84 expected, 38d5a5737208cd84 received, 8 bytes
+2020-06-22T08:18:56Z sending ping (8 bytes) peer=0
+2020-06-22T08:18:56Z received: ping (8 bytes) peer=0
+2020-06-22T08:18:56Z sending pong (8 bytes) peer=0
+2020-06-22T08:18:56Z received: pong (8 bytes) peer=0
+2020-06-22T08:18:56Z pong peer=0: Timing mishap, cddf019bd79e591f expected, cddf019bd79e591f received, 8 bytes
+2020-06-22T08:20:56Z sending ping (8 bytes) peer=0
+2020-06-22T08:20:56Z received: ping (8 bytes) peer=0
+2020-06-22T08:20:56Z sending pong (8 bytes) peer=0
+2020-06-22T08:20:56Z received: pong (8 bytes) peer=0
+2020-06-22T08:20:56Z pong peer=0: Timing mishap, 4922c65cc2c2a461 expected, 4922c65cc2c2a461 received, 8 bytes
+2020-06-22T08:22:56Z sending ping (8 bytes) peer=0
+2020-06-22T08:22:56Z received: ping (8 bytes) peer=0
+2020-06-22T08:22:56Z sending pong (8 bytes) peer=0
+2020-06-22T08:22:56Z received: pong (8 bytes) peer=0
+2020-06-22T08:22:56Z pong peer=0: Timing mishap, c2f5c27d938b83e2 expected, c2f5c27d938b83e2 received, 8 bytes
+2020-06-22T08:24:56Z sending ping (8 bytes) peer=0
+2020-06-22T08:24:56Z received: ping (8 bytes) peer=0
+2020-06-22T08:24:56Z sending pong (8 bytes) peer=0
+2020-06-22T08:24:56Z received: pong (8 bytes) peer=0
+2020-06-22T08:24:56Z pong peer=0: Timing mishap, 3358ae492e155683 expected, 3358ae492e155683 received, 8 bytes
+2020-06-22T08:24:57Z Potential stale tip detected, will try using extra outbound peer (last tip update: 19567 seconds ago)
+2020-06-22T08:24:57Z net: setting try another outbound peer=true
+2020-06-22T08:26:56Z received: ping (8 bytes) peer=0
+2020-06-22T08:26:56Z sending pong (8 bytes) peer=0
+2020-06-22T08:26:56Z sending ping (8 bytes) peer=0
+2020-06-22T08:26:56Z received: pong (8 bytes) peer=0
+2020-06-22T08:26:56Z pong peer=0: Timing mishap, 98adebf0a72b245d expected, 98adebf0a72b245d received, 8 bytes
+2020-06-22T08:28:51Z Flushed 0 addresses to peers.dat  305ms
+2020-06-22T08:28:56Z sending ping (8 bytes) peer=0
+2020-06-22T08:28:56Z received: ping (8 bytes) peer=0
+2020-06-22T08:28:56Z sending pong (8 bytes) peer=0
+2020-06-22T08:28:56Z received: pong (8 bytes) peer=0
+2020-06-22T08:28:56Z pong peer=0: Timing mishap, d8704f93e42b9098 expected, d8704f93e42b9098 received, 8 bytes
+2020-06-22T08:30:56Z sending ping (8 bytes) peer=0
+2020-06-22T08:30:56Z received: ping (8 bytes) peer=0
+2020-06-22T08:30:56Z sending pong (8 bytes) peer=0
+2020-06-22T08:30:56Z received: pong (8 bytes) peer=0
+2020-06-22T08:30:56Z pong peer=0: Timing mishap, 513401517058e544 expected, 513401517058e544 received, 8 bytes
+2020-06-22T08:32:56Z sending ping (8 bytes) peer=0
+2020-06-22T08:32:56Z received: pong (8 bytes) peer=0
+2020-06-22T08:32:56Z pong peer=0: Timing mishap, 1b1ba9a84d741469 expected, 1b1ba9a84d741469 received, 8 bytes
+2020-06-22T08:32:56Z received: ping (8 bytes) peer=0
+2020-06-22T08:32:56Z sending pong (8 bytes) peer=0
+2020-06-22T08:34:56Z sending ping (8 bytes) peer=0
+2020-06-22T08:34:56Z received: ping (8 bytes) peer=0
+2020-06-22T08:34:56Z sending pong (8 bytes) peer=0
+2020-06-22T08:34:56Z received: pong (8 bytes) peer=0
+2020-06-22T08:34:56Z pong peer=0: Timing mishap, df5826aed079566d expected, df5826aed079566d received, 8 bytes
+2020-06-22T08:35:27Z Potential stale tip detected, will try using extra outbound peer (last tip update: 20197 seconds ago)
+2020-06-22T08:35:27Z net: setting try another outbound peer=true
+2020-06-22T08:36:56Z sending ping (8 bytes) peer=0
+2020-06-22T08:36:56Z received: ping (8 bytes) peer=0
+2020-06-22T08:36:56Z sending pong (8 bytes) peer=0
+2020-06-22T08:36:56Z received: pong (8 bytes) peer=0
+2020-06-22T08:36:56Z pong peer=0: Timing mishap, dfd32b09fa67d620 expected, dfd32b09fa67d620 received, 8 bytes
+2020-06-22T08:38:56Z sending ping (8 bytes) peer=0
+2020-06-22T08:38:56Z received: ping (8 bytes) peer=0
+2020-06-22T08:38:56Z sending pong (8 bytes) peer=0
+2020-06-22T08:38:56Z received: pong (8 bytes) peer=0
+2020-06-22T08:38:56Z pong peer=0: Timing mishap, d4afed14da1f902d expected, d4afed14da1f902d received, 8 bytes
+2020-06-22T08:40:56Z sending ping (8 bytes) peer=0
+2020-06-22T08:40:56Z received: pong (8 bytes) peer=0
+2020-06-22T08:40:56Z pong peer=0: Timing mishap, 738323292f51384d expected, 738323292f51384d received, 8 bytes
+2020-06-22T08:40:56Z received: ping (8 bytes) peer=0
+2020-06-22T08:40:56Z sending pong (8 bytes) peer=0
+2020-06-22T08:42:56Z sending ping (8 bytes) peer=0
+2020-06-22T08:42:56Z received: ping (8 bytes) peer=0
+2020-06-22T08:42:56Z sending pong (8 bytes) peer=0
+2020-06-22T08:42:56Z received: pong (8 bytes) peer=0
+2020-06-22T08:42:56Z pong peer=0: Timing mishap, 41bb8fc917052c9c expected, 41bb8fc917052c9c received, 8 bytes
+2020-06-22T08:43:51Z Flushed 0 addresses to peers.dat  125ms
+2020-06-22T08:44:56Z sending ping (8 bytes) peer=0
+2020-06-22T08:44:56Z received: ping (8 bytes) peer=0
+2020-06-22T08:44:56Z sending pong (8 bytes) peer=0
+2020-06-22T08:44:56Z received: pong (8 bytes) peer=0
+2020-06-22T08:44:56Z pong peer=0: Timing mishap, ff617e0cced05509 expected, ff617e0cced05509 received, 8 bytes
+2020-06-22T08:45:57Z Potential stale tip detected, will try using extra outbound peer (last tip update: 20827 seconds ago)
+2020-06-22T08:45:57Z net: setting try another outbound peer=true
+2020-06-22T08:46:56Z received: ping (8 bytes) peer=0
+2020-06-22T08:46:56Z sending pong (8 bytes) peer=0
+2020-06-22T08:46:56Z sending ping (8 bytes) peer=0
+2020-06-22T08:46:56Z received: pong (8 bytes) peer=0
+2020-06-22T08:46:56Z pong peer=0: Timing mishap, d73794822255f0dc expected, d73794822255f0dc received, 8 bytes
+2020-06-22T08:48:56Z sending ping (8 bytes) peer=0
+2020-06-22T08:48:56Z received: ping (8 bytes) peer=0
+2020-06-22T08:48:56Z sending pong (8 bytes) peer=0
+2020-06-22T08:48:56Z received: pong (8 bytes) peer=0
+2020-06-22T08:48:56Z pong peer=0: Timing mishap, 67ef866c39a2c3f6 expected, 67ef866c39a2c3f6 received, 8 bytes
+2020-06-22T08:50:56Z sending ping (8 bytes) peer=0
+2020-06-22T08:50:56Z received: ping (8 bytes) peer=0
+2020-06-22T08:50:56Z sending pong (8 bytes) peer=0
+2020-06-22T08:50:56Z received: pong (8 bytes) peer=0
+2020-06-22T08:50:56Z pong peer=0: Timing mishap, 1a3c4e12c5503c43 expected, 1a3c4e12c5503c43 received, 8 bytes
+2020-06-22T08:52:56Z sending ping (8 bytes) peer=0
+2020-06-22T08:52:56Z received: ping (8 bytes) peer=0
+2020-06-22T08:52:56Z sending pong (8 bytes) peer=0
+2020-06-22T08:52:56Z received: pong (8 bytes) peer=0
+2020-06-22T08:52:56Z pong peer=0: Timing mishap, 93bfcb2f1db2041a expected, 93bfcb2f1db2041a received, 8 bytes
+2020-06-22T08:54:56Z sending ping (8 bytes) peer=0
+2020-06-22T08:54:56Z received: ping (8 bytes) peer=0
+2020-06-22T08:54:56Z sending pong (8 bytes) peer=0
+2020-06-22T08:54:56Z received: pong (8 bytes) peer=0
+2020-06-22T08:54:56Z pong peer=0: Timing mishap, aac6351eca429971 expected, aac6351eca429971 received, 8 bytes
+2020-06-22T08:56:27Z Potential stale tip detected, will try using extra outbound peer (last tip update: 21457 seconds ago)
+2020-06-22T08:56:27Z net: setting try another outbound peer=true
+2020-06-22T08:56:57Z sending ping (8 bytes) peer=0
+2020-06-22T08:56:57Z received: pong (8 bytes) peer=0
+2020-06-22T08:56:57Z pong peer=0: Timing mishap, 950a17758f568f39 expected, 950a17758f568f39 received, 8 bytes
+2020-06-22T08:56:57Z received: ping (8 bytes) peer=0
+2020-06-22T08:56:57Z sending pong (8 bytes) peer=0
+2020-06-22T08:58:51Z Flushed 0 addresses to peers.dat  81ms
+2020-06-22T08:58:57Z sending ping (8 bytes) peer=0
+2020-06-22T08:58:57Z received: ping (8 bytes) peer=0
+2020-06-22T08:58:57Z sending pong (8 bytes) peer=0
+2020-06-22T08:58:57Z received: pong (8 bytes) peer=0
+2020-06-22T08:58:57Z pong peer=0: Timing mishap, 39fab81b873dcce5 expected, 39fab81b873dcce5 received, 8 bytes
+2020-06-22T09:00:57Z sending ping (8 bytes) peer=0
+2020-06-22T09:00:57Z received: pong (8 bytes) peer=0
+2020-06-22T09:00:57Z pong peer=0: Timing mishap, 744ae9c1d3d45518 expected, 744ae9c1d3d45518 received, 8 bytes
+2020-06-22T09:00:57Z received: ping (8 bytes) peer=0
+2020-06-22T09:00:57Z sending pong (8 bytes) peer=0
+2020-06-22T09:02:57Z sending ping (8 bytes) peer=0
+2020-06-22T09:02:57Z received: pong (8 bytes) peer=0
+2020-06-22T09:02:57Z pong peer=0: Timing mishap, aba39d4b83b97941 expected, aba39d4b83b97941 received, 8 bytes
+2020-06-22T09:02:57Z received: ping (8 bytes) peer=0
+2020-06-22T09:02:57Z sending pong (8 bytes) peer=0
+2020-06-22T09:04:57Z received: ping (8 bytes) peer=0
+2020-06-22T09:04:57Z sending pong (8 bytes) peer=0
+2020-06-22T09:04:57Z sending ping (8 bytes) peer=0
+2020-06-22T09:04:57Z received: pong (8 bytes) peer=0
+2020-06-22T09:04:57Z pong peer=0: Timing mishap, 269ea56600e39260 expected, 269ea56600e39260 received, 8 bytes
+2020-06-22T09:06:57Z sending ping (8 bytes) peer=0
+2020-06-22T09:06:57Z received: ping (8 bytes) peer=0
+2020-06-22T09:06:57Z sending pong (8 bytes) peer=0
+2020-06-22T09:06:57Z received: pong (8 bytes) peer=0
+2020-06-22T09:06:57Z pong peer=0: Timing mishap, 324437a869f7e0af expected, 324437a869f7e0af received, 8 bytes
+2020-06-22T09:06:57Z Potential stale tip detected, will try using extra outbound peer (last tip update: 22087 seconds ago)
+2020-06-22T09:06:57Z net: setting try another outbound peer=true
+2020-06-22T09:08:57Z sending ping (8 bytes) peer=0
+2020-06-22T09:08:57Z received: ping (8 bytes) peer=0
+2020-06-22T09:08:57Z sending pong (8 bytes) peer=0
+2020-06-22T09:08:57Z received: pong (8 bytes) peer=0
+2020-06-22T09:08:57Z pong peer=0: Timing mishap, 5318d29046c7599a expected, 5318d29046c7599a received, 8 bytes
+2020-06-22T09:10:57Z sending ping (8 bytes) peer=0
+2020-06-22T09:10:57Z received: ping (8 bytes) peer=0
+2020-06-22T09:10:57Z sending pong (8 bytes) peer=0
+2020-06-22T09:10:57Z received: pong (8 bytes) peer=0
+2020-06-22T09:10:57Z pong peer=0: Timing mishap, a163ff1abb6a592 expected, a163ff1abb6a592 received, 8 bytes
+2020-06-22T09:12:57Z sending ping (8 bytes) peer=0
+2020-06-22T09:12:57Z received: ping (8 bytes) peer=0
+2020-06-22T09:12:57Z sending pong (8 bytes) peer=0
+2020-06-22T09:12:57Z received: pong (8 bytes) peer=0
+2020-06-22T09:12:57Z pong peer=0: Timing mishap, 11aece143a15702b expected, 11aece143a15702b received, 8 bytes
+2020-06-22T09:13:51Z Flushed 0 addresses to peers.dat  49ms
+2020-06-22T09:14:57Z sending ping (8 bytes) peer=0
+2020-06-22T09:14:57Z received: ping (8 bytes) peer=0
+2020-06-22T09:14:57Z sending pong (8 bytes) peer=0
+2020-06-22T09:14:57Z received: pong (8 bytes) peer=0
+2020-06-22T09:14:57Z pong peer=0: Timing mishap, bd29d25d00991b21 expected, bd29d25d00991b21 received, 8 bytes
+2020-06-22T09:16:57Z sending ping (8 bytes) peer=0
+2020-06-22T09:16:57Z received: ping (8 bytes) peer=0
+2020-06-22T09:16:57Z sending pong (8 bytes) peer=0
+2020-06-22T09:16:57Z received: pong (8 bytes) peer=0
+2020-06-22T09:16:57Z pong peer=0: Timing mishap, 3640d305a65c1c7c expected, 3640d305a65c1c7c received, 8 bytes
+2020-06-22T09:17:27Z Potential stale tip detected, will try using extra outbound peer (last tip update: 22717 seconds ago)
+2020-06-22T09:17:27Z net: setting try another outbound peer=true
+2020-06-22T09:18:57Z sending ping (8 bytes) peer=0
+2020-06-22T09:18:57Z received: ping (8 bytes) peer=0
+2020-06-22T09:18:57Z sending pong (8 bytes) peer=0
+2020-06-22T09:18:57Z received: pong (8 bytes) peer=0
+2020-06-22T09:18:57Z pong peer=0: Timing mishap, a4defd0ba6b9b67a expected, a4defd0ba6b9b67a received, 8 bytes
+2020-06-22T09:20:57Z sending ping (8 bytes) peer=0
+2020-06-22T09:20:57Z received: ping (8 bytes) peer=0
+2020-06-22T09:20:57Z sending pong (8 bytes) peer=0
+2020-06-22T09:20:57Z received: pong (8 bytes) peer=0
+2020-06-22T09:20:57Z pong peer=0: Timing mishap, 3cb3dd85fe2de3af expected, 3cb3dd85fe2de3af received, 8 bytes
+2020-06-22T09:22:57Z sending ping (8 bytes) peer=0
+2020-06-22T09:22:57Z received: ping (8 bytes) peer=0
+2020-06-22T09:22:57Z sending pong (8 bytes) peer=0
+2020-06-22T09:22:57Z received: pong (8 bytes) peer=0
+2020-06-22T09:24:57Z received: ping (8 bytes) peer=0
+2020-06-22T09:24:57Z sending pong (8 bytes) peer=0
+2020-06-22T09:24:57Z sending ping (8 bytes) peer=0
+2020-06-22T09:24:57Z received: pong (8 bytes) peer=0
+2020-06-22T09:24:57Z pong peer=0: Timing mishap, 22cd79332a9b547e expected, 22cd79332a9b547e received, 8 bytes
+2020-06-22T09:26:57Z sending ping (8 bytes) peer=0
+2020-06-22T09:26:57Z received: pong (8 bytes) peer=0
+2020-06-22T09:26:57Z pong peer=0: Timing mishap, fce8298ff2ce7adc expected, fce8298ff2ce7adc received, 8 bytes
+2020-06-22T09:26:57Z received: ping (8 bytes) peer=0
+2020-06-22T09:26:57Z sending pong (8 bytes) peer=0
+2020-06-22T09:27:57Z Potential stale tip detected, will try using extra outbound peer (last tip update: 23347 seconds ago)
+2020-06-22T09:27:57Z net: setting try another outbound peer=true
+2020-06-22T09:28:51Z Flushed 0 addresses to peers.dat  58ms
+2020-06-22T09:28:57Z received: ping (8 bytes) peer=0
+2020-06-22T09:28:57Z sending pong (8 bytes) peer=0
+2020-06-22T09:28:57Z sending ping (8 bytes) peer=0
+2020-06-22T09:28:57Z received: pong (8 bytes) peer=0
+2020-06-22T09:28:57Z pong peer=0: Timing mishap, 9d6cfef02c9f351c expected, 9d6cfef02c9f351c received, 8 bytes
+2020-06-22T09:30:57Z sending ping (8 bytes) peer=0
+2020-06-22T09:30:57Z received: ping (8 bytes) peer=0
+2020-06-22T09:30:57Z sending pong (8 bytes) peer=0
+2020-06-22T09:30:57Z received: pong (8 bytes) peer=0
+2020-06-22T09:30:57Z pong peer=0: Timing mishap, 7c459b6212bc814c expected, 7c459b6212bc814c received, 8 bytes
+2020-06-22T09:32:57Z sending ping (8 bytes) peer=0
+2020-06-22T09:32:57Z received: ping (8 bytes) peer=0
+2020-06-22T09:32:57Z sending pong (8 bytes) peer=0
+2020-06-22T09:32:57Z received: pong (8 bytes) peer=0
+2020-06-22T09:32:57Z pong peer=0: Timing mishap, 96812cb08817dbe6 expected, 96812cb08817dbe6 received, 8 bytes
+2020-06-22T09:34:57Z sending ping (8 bytes) peer=0
+2020-06-22T09:34:57Z received: ping (8 bytes) peer=0
+2020-06-22T09:34:57Z sending pong (8 bytes) peer=0
+2020-06-22T09:34:57Z received: pong (8 bytes) peer=0
+2020-06-22T09:34:57Z pong peer=0: Timing mishap, f740f863eb526d31 expected, f740f863eb526d31 received, 8 bytes
+2020-06-22T09:36:57Z sending ping (8 bytes) peer=0
+2020-06-22T09:36:57Z received: ping (8 bytes) peer=0
+2020-06-22T09:36:57Z sending pong (8 bytes) peer=0
+2020-06-22T09:36:57Z received: pong (8 bytes) peer=0
+2020-06-22T09:36:57Z pong peer=0: Timing mishap, d6395e293f0abed4 expected, d6395e293f0abed4 received, 8 bytes
+2020-06-22T09:38:27Z Potential stale tip detected, will try using extra outbound peer (last tip update: 23977 seconds ago)
+2020-06-22T09:38:27Z net: setting try another outbound peer=true
+2020-06-22T09:38:57Z sending ping (8 bytes) peer=0
+2020-06-22T09:38:57Z received: pong (8 bytes) peer=0
+2020-06-22T09:38:57Z pong peer=0: Timing mishap, fa9a73cb379dc98f expected, fa9a73cb379dc98f received, 8 bytes
+2020-06-22T09:38:57Z received: ping (8 bytes) peer=0
+2020-06-22T09:38:57Z sending pong (8 bytes) peer=0
+2020-06-22T09:40:57Z sending ping (8 bytes) peer=0
+2020-06-22T09:40:57Z received: ping (8 bytes) peer=0
+2020-06-22T09:40:57Z sending pong (8 bytes) peer=0
+2020-06-22T09:40:57Z received: pong (8 bytes) peer=0
+2020-06-22T09:40:57Z pong peer=0: Timing mishap, ef9460accec5e390 expected, ef9460accec5e390 received, 8 bytes
+2020-06-22T09:42:57Z sending ping (8 bytes) peer=0
+2020-06-22T09:42:57Z received: ping (8 bytes) peer=0
+2020-06-22T09:42:57Z sending pong (8 bytes) peer=0
+2020-06-22T09:42:57Z received: pong (8 bytes) peer=0
+2020-06-22T09:42:57Z pong peer=0: Timing mishap, 14fa46f3e601376b expected, 14fa46f3e601376b received, 8 bytes
+2020-06-22T09:43:51Z Flushed 0 addresses to peers.dat  76ms
+2020-06-22T09:44:58Z sending ping (8 bytes) peer=0
+2020-06-22T09:44:58Z received: ping (8 bytes) peer=0
+2020-06-22T09:44:58Z sending pong (8 bytes) peer=0
+2020-06-22T09:44:58Z received: pong (8 bytes) peer=0
+2020-06-22T09:44:58Z pong peer=0: Timing mishap, dd95dc800be9d4a6 expected, dd95dc800be9d4a6 received, 8 bytes
+2020-06-22T09:46:58Z sending ping (8 bytes) peer=0
+2020-06-22T09:46:58Z received: pong (8 bytes) peer=0
+2020-06-22T09:46:58Z pong peer=0: Timing mishap, a015638abc7466d8 expected, a015638abc7466d8 received, 8 bytes
+2020-06-22T09:46:58Z received: ping (8 bytes) peer=0
+2020-06-22T09:46:58Z sending pong (8 bytes) peer=0
+2020-06-22T09:48:58Z Potential stale tip detected, will try using extra outbound peer (last tip update: 24608 seconds ago)
+2020-06-22T09:48:58Z net: setting try another outbound peer=true
+2020-06-22T09:48:58Z sending ping (8 bytes) peer=0
+2020-06-22T09:48:58Z received: ping (8 bytes) peer=0
+2020-06-22T09:48:58Z sending pong (8 bytes) peer=0
+2020-06-22T09:48:58Z received: pong (8 bytes) peer=0
+2020-06-22T09:48:58Z pong peer=0: Timing mishap, 10afb5eaea86d384 expected, 10afb5eaea86d384 received, 8 bytes
+2020-06-22T09:50:58Z received: ping (8 bytes) peer=0
+2020-06-22T09:50:58Z sending pong (8 bytes) peer=0
+2020-06-22T09:50:58Z sending ping (8 bytes) peer=0
+2020-06-22T09:50:58Z received: pong (8 bytes) peer=0
+2020-06-22T09:50:58Z pong peer=0: Timing mishap, 1837b50dccdcdded expected, 1837b50dccdcdded received, 8 bytes
+2020-06-22T09:52:58Z sending ping (8 bytes) peer=0
+2020-06-22T09:52:58Z received: ping (8 bytes) peer=0
+2020-06-22T09:52:58Z sending pong (8 bytes) peer=0
+2020-06-22T09:52:58Z received: pong (8 bytes) peer=0
+2020-06-22T09:52:58Z pong peer=0: Timing mishap, dc36a9d6277a5c83 expected, dc36a9d6277a5c83 received, 8 bytes
+2020-06-22T09:54:58Z sending ping (8 bytes) peer=0
+2020-06-22T09:54:58Z received: ping (8 bytes) peer=0
+2020-06-22T09:54:58Z sending pong (8 bytes) peer=0
+2020-06-22T09:54:58Z received: pong (8 bytes) peer=0
+2020-06-22T09:54:58Z pong peer=0: Timing mishap, 8812b4816b150933 expected, 8812b4816b150933 received, 8 bytes
+2020-06-22T09:56:58Z sending ping (8 bytes) peer=0
+2020-06-22T09:56:58Z received: pong (8 bytes) peer=0
+2020-06-22T09:56:58Z pong peer=0: Timing mishap, 93ceb95e29cfa15d expected, 93ceb95e29cfa15d received, 8 bytes
+2020-06-22T09:56:58Z received: ping (8 bytes) peer=0
+2020-06-22T09:56:58Z sending pong (8 bytes) peer=0
+2020-06-22T09:58:51Z Flushed 0 addresses to peers.dat  67ms
+2020-06-22T09:58:58Z received: ping (8 bytes) peer=0
+2020-06-22T09:58:58Z sending pong (8 bytes) peer=0
+2020-06-22T09:58:58Z sending ping (8 bytes) peer=0
+2020-06-22T09:58:58Z received: pong (8 bytes) peer=0
+2020-06-22T09:58:58Z pong peer=0: Timing mishap, 9c6f083e099ebcb expected, 9c6f083e099ebcb received, 8 bytes
+2020-06-22T09:59:28Z Potential stale tip detected, will try using extra outbound peer (last tip update: 25238 seconds ago)
+2020-06-22T09:59:28Z net: setting try another outbound peer=true
+2020-06-22T10:00:58Z sending ping (8 bytes) peer=0
+2020-06-22T10:00:58Z received: ping (8 bytes) peer=0
+2020-06-22T10:00:58Z sending pong (8 bytes) peer=0
+2020-06-22T10:00:58Z received: pong (8 bytes) peer=0
+2020-06-22T10:00:58Z pong peer=0: Timing mishap, b97725478f84d7eb expected, b97725478f84d7eb received, 8 bytes
+2020-06-22T10:02:58Z sending ping (8 bytes) peer=0
+2020-06-22T10:02:58Z received: ping (8 bytes) peer=0
+2020-06-22T10:02:58Z sending pong (8 bytes) peer=0
+2020-06-22T10:02:58Z received: pong (8 bytes) peer=0
+2020-06-22T10:02:58Z pong peer=0: Timing mishap, 26ed8d5bf987ea17 expected, 26ed8d5bf987ea17 received, 8 bytes
+2020-06-22T10:04:58Z sending ping (8 bytes) peer=0
+2020-06-22T10:04:58Z received: ping (8 bytes) peer=0
+2020-06-22T10:04:58Z sending pong (8 bytes) peer=0
+2020-06-22T10:04:58Z received: pong (8 bytes) peer=0
+2020-06-22T10:04:58Z pong peer=0: Timing mishap, ee663d05bb5665e6 expected, ee663d05bb5665e6 received, 8 bytes
+2020-06-22T10:06:58Z sending ping (8 bytes) peer=0
+2020-06-22T10:06:58Z received: ping (8 bytes) peer=0
+2020-06-22T10:06:58Z sending pong (8 bytes) peer=0
+2020-06-22T10:06:58Z received: pong (8 bytes) peer=0
+2020-06-22T10:06:58Z pong peer=0: Timing mishap, 6c8541c68421d6a7 expected, 6c8541c68421d6a7 received, 8 bytes
+2020-06-22T10:08:58Z sending ping (8 bytes) peer=0
+2020-06-22T10:08:58Z received: ping (8 bytes) peer=0
+2020-06-22T10:08:58Z sending pong (8 bytes) peer=0
+2020-06-22T10:08:58Z received: pong (8 bytes) peer=0
+2020-06-22T10:08:58Z pong peer=0: Timing mishap, abb0be8bcc3ac1b8 expected, abb0be8bcc3ac1b8 received, 8 bytes
+2020-06-22T10:09:58Z Potential stale tip detected, will try using extra outbound peer (last tip update: 25868 seconds ago)
+2020-06-22T10:09:58Z net: setting try another outbound peer=true
+2020-06-22T10:10:58Z sending ping (8 bytes) peer=0
+2020-06-22T10:10:58Z received: ping (8 bytes) peer=0
+2020-06-22T10:10:58Z sending pong (8 bytes) peer=0
+2020-06-22T10:10:58Z received: pong (8 bytes) peer=0
+2020-06-22T10:10:58Z pong peer=0: Timing mishap, da05b12a1ac0a2b0 expected, da05b12a1ac0a2b0 received, 8 bytes
+2020-06-22T10:12:58Z sending ping (8 bytes) peer=0
+2020-06-22T10:12:58Z received: ping (8 bytes) peer=0
+2020-06-22T10:12:58Z sending pong (8 bytes) peer=0
+2020-06-22T10:12:58Z received: pong (8 bytes) peer=0
+2020-06-22T10:12:58Z pong peer=0: Timing mishap, 64228273e6843e17 expected, 64228273e6843e17 received, 8 bytes
+2020-06-22T10:13:51Z Flushed 0 addresses to peers.dat  58ms
+2020-06-22T10:14:58Z sending ping (8 bytes) peer=0
+2020-06-22T10:14:58Z received: ping (8 bytes) peer=0
+2020-06-22T10:14:58Z sending pong (8 bytes) peer=0
+2020-06-22T10:14:58Z received: pong (8 bytes) peer=0
+2020-06-22T10:14:58Z pong peer=0: Timing mishap, b31175a10625a6c6 expected, b31175a10625a6c6 received, 8 bytes
+2020-06-22T10:16:58Z sending ping (8 bytes) peer=0
+2020-06-22T10:16:58Z received: pong (8 bytes) peer=0
+2020-06-22T10:16:58Z pong peer=0: Timing mishap, f6fefcf20d2b9449 expected, f6fefcf20d2b9449 received, 8 bytes
+2020-06-22T10:16:58Z received: ping (8 bytes) peer=0
+2020-06-22T10:16:58Z sending pong (8 bytes) peer=0
+2020-06-22T10:18:58Z sending ping (8 bytes) peer=0
+2020-06-22T10:18:58Z received: ping (8 bytes) peer=0
+2020-06-22T10:18:58Z sending pong (8 bytes) peer=0
+2020-06-22T10:18:58Z received: pong (8 bytes) peer=0
+2020-06-22T10:18:58Z pong peer=0: Timing mishap, cd6b4afaaaae717 expected, cd6b4afaaaae717 received, 8 bytes
+2020-06-22T10:20:28Z Potential stale tip detected, will try using extra outbound peer (last tip update: 26498 seconds ago)
+2020-06-22T10:20:28Z net: setting try another outbound peer=true
+2020-06-22T10:20:58Z sending ping (8 bytes) peer=0
+2020-06-22T10:20:58Z received: pong (8 bytes) peer=0
+2020-06-22T10:20:58Z pong peer=0: Timing mishap, 8032f6bc187d5f7a expected, 8032f6bc187d5f7a received, 8 bytes
+2020-06-22T10:20:58Z received: ping (8 bytes) peer=0
+2020-06-22T10:20:58Z sending pong (8 bytes) peer=0
+2020-06-22T10:22:58Z received: ping (8 bytes) peer=0
+2020-06-22T10:22:58Z sending pong (8 bytes) peer=0
+2020-06-22T10:22:58Z sending ping (8 bytes) peer=0
+2020-06-22T10:22:58Z received: pong (8 bytes) peer=0
+2020-06-22T10:22:58Z pong peer=0: Timing mishap, 7715d1fb5f9ac0b expected, 7715d1fb5f9ac0b received, 8 bytes
+2020-06-22T10:24:58Z received: ping (8 bytes) peer=0
+2020-06-22T10:24:58Z sending pong (8 bytes) peer=0
+2020-06-22T10:24:58Z sending ping (8 bytes) peer=0
+2020-06-22T10:24:58Z received: pong (8 bytes) peer=0
+2020-06-22T10:24:58Z pong peer=0: Timing mishap, 6d401f3a9ea2e022 expected, 6d401f3a9ea2e022 received, 8 bytes
+2020-06-22T10:26:58Z sending ping (8 bytes) peer=0
+2020-06-22T10:26:58Z received: ping (8 bytes) peer=0
+2020-06-22T10:26:58Z sending pong (8 bytes) peer=0
+2020-06-22T10:26:58Z received: pong (8 bytes) peer=0
+2020-06-22T10:26:58Z pong peer=0: Timing mishap, 3cdd16b51b5086a0 expected, 3cdd16b51b5086a0 received, 8 bytes
+2020-06-22T10:28:51Z Flushed 0 addresses to peers.dat  26ms
+2020-06-22T10:28:58Z sending ping (8 bytes) peer=0
+2020-06-22T10:28:58Z received: ping (8 bytes) peer=0
+2020-06-22T10:28:58Z sending pong (8 bytes) peer=0
+2020-06-22T10:28:58Z received: pong (8 bytes) peer=0
+2020-06-22T10:28:58Z pong peer=0: Timing mishap, d478971979ff3f04 expected, d478971979ff3f04 received, 8 bytes
+2020-06-22T10:30:58Z Potential stale tip detected, will try using extra outbound peer (last tip update: 27128 seconds ago)
+2020-06-22T10:30:58Z net: setting try another outbound peer=true
+2020-06-22T10:30:58Z sending ping (8 bytes) peer=0
+2020-06-22T10:30:58Z received: ping (8 bytes) peer=0
+2020-06-22T10:30:58Z sending pong (8 bytes) peer=0
+2020-06-22T10:30:58Z received: pong (8 bytes) peer=0
+2020-06-22T10:30:58Z pong peer=0: Timing mishap, c520c6f42a54fb42 expected, c520c6f42a54fb42 received, 8 bytes
+2020-06-22T10:32:58Z sending ping (8 bytes) peer=0
+2020-06-22T10:32:58Z received: ping (8 bytes) peer=0
+2020-06-22T10:32:58Z sending pong (8 bytes) peer=0
+2020-06-22T10:32:58Z received: pong (8 bytes) peer=0
+2020-06-22T10:32:58Z pong peer=0: Timing mishap, fa37d149209b58d3 expected, fa37d149209b58d3 received, 8 bytes
+2020-06-22T10:34:58Z sending ping (8 bytes) peer=0
+2020-06-22T10:34:58Z received: pong (8 bytes) peer=0
+2020-06-22T10:34:58Z pong peer=0: Timing mishap, 425bc4fe9210d274 expected, 425bc4fe9210d274 received, 8 bytes
+2020-06-22T10:34:58Z received: ping (8 bytes) peer=0
+2020-06-22T10:34:58Z sending pong (8 bytes) peer=0
+2020-06-22T10:36:59Z sending ping (8 bytes) peer=0
+2020-06-22T10:36:59Z received: ping (8 bytes) peer=0
+2020-06-22T10:36:59Z sending pong (8 bytes) peer=0
+2020-06-22T10:36:59Z received: pong (8 bytes) peer=0
+2020-06-22T10:36:59Z pong peer=0: Timing mishap, c181b3000227cfc4 expected, c181b3000227cfc4 received, 8 bytes
+2020-06-22T10:38:59Z sending ping (8 bytes) peer=0
+2020-06-22T10:38:59Z received: pong (8 bytes) peer=0
+2020-06-22T10:38:59Z pong peer=0: Timing mishap, 8f421aebc778bcb2 expected, 8f421aebc778bcb2 received, 8 bytes
+2020-06-22T10:38:59Z received: ping (8 bytes) peer=0
+2020-06-22T10:38:59Z sending pong (8 bytes) peer=0
+2020-06-22T10:40:59Z sending ping (8 bytes) peer=0
+2020-06-22T10:40:59Z received: ping (8 bytes) peer=0
+2020-06-22T10:40:59Z sending pong (8 bytes) peer=0
+2020-06-22T10:40:59Z received: pong (8 bytes) peer=0
+2020-06-22T10:40:59Z pong peer=0: Timing mishap, 1ff89fad7649bfc1 expected, 1ff89fad7649bfc1 received, 8 bytes
+2020-06-22T10:41:28Z Potential stale tip detected, will try using extra outbound peer (last tip update: 27758 seconds ago)
+2020-06-22T10:41:28Z net: setting try another outbound peer=true
+2020-06-22T10:42:59Z sending ping (8 bytes) peer=0
+2020-06-22T10:42:59Z received: ping (8 bytes) peer=0
+2020-06-22T10:42:59Z sending pong (8 bytes) peer=0
+2020-06-22T10:42:59Z received: pong (8 bytes) peer=0
+2020-06-22T10:42:59Z pong peer=0: Timing mishap, 937de50f7956877e expected, 937de50f7956877e received, 8 bytes
+2020-06-22T10:43:52Z Flushed 0 addresses to peers.dat  116ms
+2020-06-22T10:44:59Z sending ping (8 bytes) peer=0
+2020-06-22T10:44:59Z received: ping (8 bytes) peer=0
+2020-06-22T10:44:59Z sending pong (8 bytes) peer=0
+2020-06-22T10:44:59Z received: pong (8 bytes) peer=0
+2020-06-22T10:44:59Z pong peer=0: Timing mishap, dff77d761b281414 expected, dff77d761b281414 received, 8 bytes
+2020-06-22T10:46:59Z sending ping (8 bytes) peer=0
+2020-06-22T10:46:59Z received: ping (8 bytes) peer=0
+2020-06-22T10:46:59Z sending pong (8 bytes) peer=0
+2020-06-22T10:46:59Z received: pong (8 bytes) peer=0
+2020-06-22T10:46:59Z pong peer=0: Timing mishap, 53b32caf87a1feb5 expected, 53b32caf87a1feb5 received, 8 bytes
+2020-06-22T10:48:59Z sending ping (8 bytes) peer=0
+2020-06-22T10:48:59Z received: ping (8 bytes) peer=0
+2020-06-22T10:48:59Z sending pong (8 bytes) peer=0
+2020-06-22T10:48:59Z received: pong (8 bytes) peer=0
+2020-06-22T10:48:59Z pong peer=0: Timing mishap, 90b1f7695e899228 expected, 90b1f7695e899228 received, 8 bytes
+2020-06-22T10:50:59Z sending ping (8 bytes) peer=0
+2020-06-22T10:50:59Z received: ping (8 bytes) peer=0
+2020-06-22T10:50:59Z sending pong (8 bytes) peer=0
+2020-06-22T10:50:59Z received: pong (8 bytes) peer=0
+2020-06-22T10:50:59Z pong peer=0: Timing mishap, 346d94e7ba4c6ea7 expected, 346d94e7ba4c6ea7 received, 8 bytes
+2020-06-22T10:51:58Z Potential stale tip detected, will try using extra outbound peer (last tip update: 28388 seconds ago)
+2020-06-22T10:51:58Z net: setting try another outbound peer=true
+2020-06-22T10:52:59Z sending ping (8 bytes) peer=0
+2020-06-22T10:52:59Z received: ping (8 bytes) peer=0
+2020-06-22T10:52:59Z sending pong (8 bytes) peer=0
+2020-06-22T10:52:59Z received: pong (8 bytes) peer=0
+2020-06-22T10:52:59Z pong peer=0: Timing mishap, c565b6097f441f83 expected, c565b6097f441f83 received, 8 bytes
+2020-06-22T10:54:59Z sending ping (8 bytes) peer=0
+2020-06-22T10:54:59Z received: pong (8 bytes) peer=0
+2020-06-22T10:54:59Z pong peer=0: Timing mishap, 4c2b1dffdacbc63b expected, 4c2b1dffdacbc63b received, 8 bytes
+2020-06-22T10:54:59Z received: ping (8 bytes) peer=0
+2020-06-22T10:54:59Z sending pong (8 bytes) peer=0
+2020-06-22T10:56:59Z sending ping (8 bytes) peer=0
+2020-06-22T10:56:59Z received: ping (8 bytes) peer=0
+2020-06-22T10:56:59Z sending pong (8 bytes) peer=0
+2020-06-22T10:56:59Z received: pong (8 bytes) peer=0
+2020-06-22T10:56:59Z pong peer=0: Timing mishap, 58630a2a29ca8d32 expected, 58630a2a29ca8d32 received, 8 bytes
+2020-06-22T10:58:52Z Flushed 0 addresses to peers.dat  181ms
+2020-06-22T10:58:59Z sending ping (8 bytes) peer=0
+2020-06-22T10:58:59Z received: pong (8 bytes) peer=0
+2020-06-22T10:58:59Z pong peer=0: Timing mishap, 2a6ea75176c9392b expected, 2a6ea75176c9392b received, 8 bytes
+2020-06-22T10:58:59Z received: ping (8 bytes) peer=0
+2020-06-22T10:58:59Z sending pong (8 bytes) peer=0
+2020-06-22T11:00:59Z sending ping (8 bytes) peer=0
+2020-06-22T11:00:59Z received: ping (8 bytes) peer=0
+2020-06-22T11:00:59Z sending pong (8 bytes) peer=0
+2020-06-22T11:00:59Z received: pong (8 bytes) peer=0
+2020-06-22T11:00:59Z pong peer=0: Timing mishap, bb3104ba44d1ab7c expected, bb3104ba44d1ab7c received, 8 bytes
+2020-06-22T11:02:28Z Potential stale tip detected, will try using extra outbound peer (last tip update: 29018 seconds ago)
+2020-06-22T11:02:28Z net: setting try another outbound peer=true
+2020-06-22T11:02:59Z sending ping (8 bytes) peer=0
+2020-06-22T11:02:59Z received: ping (8 bytes) peer=0
+2020-06-22T11:02:59Z sending pong (8 bytes) peer=0
+2020-06-22T11:02:59Z received: pong (8 bytes) peer=0
+2020-06-22T11:02:59Z pong peer=0: Timing mishap, 775dcc2fa27e7d18 expected, 775dcc2fa27e7d18 received, 8 bytes
+2020-06-22T11:04:59Z sending ping (8 bytes) peer=0
+2020-06-22T11:04:59Z received: ping (8 bytes) peer=0
+2020-06-22T11:04:59Z sending pong (8 bytes) peer=0
+2020-06-22T11:04:59Z received: pong (8 bytes) peer=0
+2020-06-22T11:04:59Z pong peer=0: Timing mishap, 8f096d1cd2f30339 expected, 8f096d1cd2f30339 received, 8 bytes
+2020-06-22T11:06:59Z sending ping (8 bytes) peer=0
+2020-06-22T11:06:59Z received: ping (8 bytes) peer=0
+2020-06-22T11:06:59Z sending pong (8 bytes) peer=0
+2020-06-22T11:06:59Z received: pong (8 bytes) peer=0
+2020-06-22T11:06:59Z pong peer=0: Timing mishap, 7bf5aaaf2e4ce047 expected, 7bf5aaaf2e4ce047 received, 8 bytes
+2020-06-22T11:08:59Z sending ping (8 bytes) peer=0
+2020-06-22T11:08:59Z received: ping (8 bytes) peer=0
+2020-06-22T11:08:59Z sending pong (8 bytes) peer=0
+2020-06-22T11:08:59Z received: pong (8 bytes) peer=0
+2020-06-22T11:08:59Z pong peer=0: Timing mishap, 3424437eb8123f4c expected, 3424437eb8123f4c received, 8 bytes
+2020-06-22T11:10:59Z sending ping (8 bytes) peer=0
+2020-06-22T11:10:59Z received: ping (8 bytes) peer=0
+2020-06-22T11:10:59Z sending pong (8 bytes) peer=0
+2020-06-22T11:10:59Z received: pong (8 bytes) peer=0
+2020-06-22T11:10:59Z pong peer=0: Timing mishap, 22e9ce53d1d1ee49 expected, 22e9ce53d1d1ee49 received, 8 bytes
+2020-06-22T11:12:58Z Potential stale tip detected, will try using extra outbound peer (last tip update: 29648 seconds ago)
+2020-06-22T11:12:58Z net: setting try another outbound peer=true
+2020-06-22T11:12:59Z sending ping (8 bytes) peer=0
+2020-06-22T11:12:59Z received: ping (8 bytes) peer=0
+2020-06-22T11:12:59Z sending pong (8 bytes) peer=0
+2020-06-22T11:12:59Z received: pong (8 bytes) peer=0
+2020-06-22T11:12:59Z pong peer=0: Timing mishap, 3ef2ce76e93099c8 expected, 3ef2ce76e93099c8 received, 8 bytes
+2020-06-22T11:13:52Z Flushed 0 addresses to peers.dat  98ms
+2020-06-22T11:14:59Z sending ping (8 bytes) peer=0
+2020-06-22T11:14:59Z received: ping (8 bytes) peer=0
+2020-06-22T11:14:59Z sending pong (8 bytes) peer=0
+2020-06-22T11:14:59Z received: pong (8 bytes) peer=0
+2020-06-22T11:14:59Z pong peer=0: Timing mishap, 1df7706f0ef8d71a expected, 1df7706f0ef8d71a received, 8 bytes
+2020-06-22T11:17:00Z sending ping (8 bytes) peer=0
+2020-06-22T11:17:00Z received: ping (8 bytes) peer=0
+2020-06-22T11:17:00Z sending pong (8 bytes) peer=0
+2020-06-22T11:17:00Z received: pong (8 bytes) peer=0
+2020-06-22T11:17:00Z pong peer=0: Timing mishap, 5c09d00a9954ccdb expected, 5c09d00a9954ccdb received, 8 bytes
+2020-06-22T11:19:00Z sending ping (8 bytes) peer=0
+2020-06-22T11:19:00Z received: ping (8 bytes) peer=0
+2020-06-22T11:19:00Z sending pong (8 bytes) peer=0
+2020-06-22T11:19:00Z received: pong (8 bytes) peer=0
+2020-06-22T11:19:00Z pong peer=0: Timing mishap, 8fcf5cb958a005e expected, 8fcf5cb958a005e received, 8 bytes
+2020-06-22T11:21:00Z sending ping (8 bytes) peer=0
+2020-06-22T11:21:00Z received: ping (8 bytes) peer=0
+2020-06-22T11:21:00Z sending pong (8 bytes) peer=0
+2020-06-22T11:21:00Z received: pong (8 bytes) peer=0
+2020-06-22T11:21:00Z pong peer=0: Timing mishap, 65e8495243369911 expected, 65e8495243369911 received, 8 bytes
+2020-06-22T11:23:00Z sending ping (8 bytes) peer=0
+2020-06-22T11:23:00Z received: ping (8 bytes) peer=0
+2020-06-22T11:23:00Z sending pong (8 bytes) peer=0
+2020-06-22T11:23:00Z received: pong (8 bytes) peer=0
+2020-06-22T11:23:00Z pong peer=0: Timing mishap, 1fd2235d3291e1c4 expected, 1fd2235d3291e1c4 received, 8 bytes
+2020-06-22T11:23:28Z Potential stale tip detected, will try using extra outbound peer (last tip update: 30278 seconds ago)
+2020-06-22T11:23:28Z net: setting try another outbound peer=true
+2020-06-22T11:25:00Z sending ping (8 bytes) peer=0
+2020-06-22T11:25:00Z received: ping (8 bytes) peer=0
+2020-06-22T11:25:00Z sending pong (8 bytes) peer=0
+2020-06-22T11:25:00Z received: pong (8 bytes) peer=0
+2020-06-22T11:25:00Z pong peer=0: Timing mishap, fb59c3219b3ec539 expected, fb59c3219b3ec539 received, 8 bytes
+2020-06-22T11:27:00Z sending ping (8 bytes) peer=0
+2020-06-22T11:27:00Z received: ping (8 bytes) peer=0
+2020-06-22T11:27:00Z sending pong (8 bytes) peer=0
+2020-06-22T11:27:00Z received: pong (8 bytes) peer=0
+2020-06-22T11:27:00Z pong peer=0: Timing mishap, 31d13155a23a3c0 expected, 31d13155a23a3c0 received, 8 bytes
+2020-06-22T11:28:52Z Flushed 0 addresses to peers.dat  29ms
+2020-06-22T11:29:00Z sending ping (8 bytes) peer=0
+2020-06-22T11:29:00Z received: ping (8 bytes) peer=0
+2020-06-22T11:29:00Z sending pong (8 bytes) peer=0
+2020-06-22T11:29:00Z received: pong (8 bytes) peer=0
+2020-06-22T11:29:00Z pong peer=0: Timing mishap, a9722c9ff05ee418 expected, a9722c9ff05ee418 received, 8 bytes
+2020-06-22T11:31:00Z sending ping (8 bytes) peer=0
+2020-06-22T11:31:00Z received: ping (8 bytes) peer=0
+2020-06-22T11:31:00Z sending pong (8 bytes) peer=0
+2020-06-22T11:31:00Z received: pong (8 bytes) peer=0
+2020-06-22T11:31:00Z pong peer=0: Timing mishap, cf360caf32757438 expected, cf360caf32757438 received, 8 bytes
+2020-06-22T11:33:00Z sending ping (8 bytes) peer=0
+2020-06-22T11:33:00Z received: ping (8 bytes) peer=0
+2020-06-22T11:33:00Z sending pong (8 bytes) peer=0
+2020-06-22T11:33:00Z received: pong (8 bytes) peer=0
+2020-06-22T11:33:00Z pong peer=0: Timing mishap, b6b8f7e71b69d417 expected, b6b8f7e71b69d417 received, 8 bytes
+2020-06-22T11:33:58Z Potential stale tip detected, will try using extra outbound peer (last tip update: 30908 seconds ago)
+2020-06-22T11:33:58Z net: setting try another outbound peer=true
+2020-06-22T11:35:00Z sending ping (8 bytes) peer=0
+2020-06-22T11:35:00Z received: ping (8 bytes) peer=0
+2020-06-22T11:35:00Z sending pong (8 bytes) peer=0
+2020-06-22T11:35:00Z received: pong (8 bytes) peer=0
+2020-06-22T11:35:00Z pong peer=0: Timing mishap, a6ac0a94491368bd expected, a6ac0a94491368bd received, 8 bytes
+2020-06-22T11:37:00Z sending ping (8 bytes) peer=0
+2020-06-22T11:37:00Z received: ping (8 bytes) peer=0
+2020-06-22T11:37:00Z sending pong (8 bytes) peer=0
+2020-06-22T11:37:00Z received: pong (8 bytes) peer=0
+2020-06-22T11:37:00Z pong peer=0: Timing mishap, be3c3103a7a7a854 expected, be3c3103a7a7a854 received, 8 bytes
+2020-06-22T11:39:00Z sending ping (8 bytes) peer=0
+2020-06-22T11:39:00Z received: ping (8 bytes) peer=0
+2020-06-22T11:39:00Z sending pong (8 bytes) peer=0
+2020-06-22T11:39:00Z received: pong (8 bytes) peer=0
+2020-06-22T11:39:00Z pong peer=0: Timing mishap, 1d026a26d532e467 expected, 1d026a26d532e467 received, 8 bytes
+2020-06-22T11:41:00Z sending ping (8 bytes) peer=0
+2020-06-22T11:41:00Z received: ping (8 bytes) peer=0
+2020-06-22T11:41:00Z sending pong (8 bytes) peer=0
+2020-06-22T11:41:00Z received: pong (8 bytes) peer=0
+2020-06-22T11:41:00Z pong peer=0: Timing mishap, 450ff8cb618f33d5 expected, 450ff8cb618f33d5 received, 8 bytes
+2020-06-22T11:43:00Z sending ping (8 bytes) peer=0
+2020-06-22T11:43:00Z received: ping (8 bytes) peer=0
+2020-06-22T11:43:00Z sending pong (8 bytes) peer=0
+2020-06-22T11:43:00Z received: pong (8 bytes) peer=0
+2020-06-22T11:43:00Z pong peer=0: Timing mishap, 18a807835d483bb5 expected, 18a807835d483bb5 received, 8 bytes
+2020-06-22T11:43:52Z Flushed 0 addresses to peers.dat  52ms
+2020-06-22T11:44:28Z Potential stale tip detected, will try using extra outbound peer (last tip update: 31538 seconds ago)
+2020-06-22T11:44:28Z net: setting try another outbound peer=true
+2020-06-22T11:45:00Z sending ping (8 bytes) peer=0
+2020-06-22T11:45:00Z received: ping (8 bytes) peer=0
+2020-06-22T11:45:00Z sending pong (8 bytes) peer=0
+2020-06-22T11:45:00Z received: pong (8 bytes) peer=0
+2020-06-22T11:45:00Z pong peer=0: Timing mishap, 2c62963c592721cf expected, 2c62963c592721cf received, 8 bytes
+2020-06-22T11:47:00Z sending ping (8 bytes) peer=0
+2020-06-22T11:47:00Z received: ping (8 bytes) peer=0
+2020-06-22T11:47:00Z sending pong (8 bytes) peer=0
+2020-06-22T11:47:00Z received: pong (8 bytes) peer=0
+2020-06-22T11:47:00Z pong peer=0: Timing mishap, b4d798ccbf70d0f3 expected, b4d798ccbf70d0f3 received, 8 bytes
+2020-06-22T11:49:00Z sending ping (8 bytes) peer=0
+2020-06-22T11:49:00Z received: ping (8 bytes) peer=0
+2020-06-22T11:49:00Z sending pong (8 bytes) peer=0
+2020-06-22T11:49:00Z received: pong (8 bytes) peer=0
+2020-06-22T11:49:00Z pong peer=0: Timing mishap, d36d5736c625628d expected, d36d5736c625628d received, 8 bytes
+2020-06-22T11:51:01Z sending ping (8 bytes) peer=0
+2020-06-22T11:51:01Z received: ping (8 bytes) peer=0
+2020-06-22T11:51:01Z sending pong (8 bytes) peer=0
+2020-06-22T11:51:01Z received: pong (8 bytes) peer=0
+2020-06-22T11:51:01Z pong peer=0: Timing mishap, 8eabdc6ef7fb9f19 expected, 8eabdc6ef7fb9f19 received, 8 bytes
+2020-06-22T11:53:01Z sending ping (8 bytes) peer=0
+2020-06-22T11:53:01Z received: ping (8 bytes) peer=0
+2020-06-22T11:53:01Z sending pong (8 bytes) peer=0
+2020-06-22T11:53:01Z received: pong (8 bytes) peer=0
+2020-06-22T11:53:01Z pong peer=0: Timing mishap, e279c2b93bf8ebe7 expected, e279c2b93bf8ebe7 received, 8 bytes
+2020-06-22T11:54:58Z Potential stale tip detected, will try using extra outbound peer (last tip update: 32168 seconds ago)
+2020-06-22T11:54:58Z net: setting try another outbound peer=true
+2020-06-22T11:55:01Z sending ping (8 bytes) peer=0
+2020-06-22T11:55:01Z received: ping (8 bytes) peer=0
+2020-06-22T11:55:01Z sending pong (8 bytes) peer=0
+2020-06-22T11:55:01Z received: pong (8 bytes) peer=0
+2020-06-22T11:55:01Z pong peer=0: Timing mishap, e7ee1c8f19420271 expected, e7ee1c8f19420271 received, 8 bytes
+2020-06-22T11:57:01Z sending ping (8 bytes) peer=0
+2020-06-22T11:57:01Z received: ping (8 bytes) peer=0
+2020-06-22T11:57:01Z sending pong (8 bytes) peer=0
+2020-06-22T11:57:01Z received: pong (8 bytes) peer=0
+2020-06-22T11:57:01Z pong peer=0: Timing mishap, b2271c472d4cc5fc expected, b2271c472d4cc5fc received, 8 bytes
+2020-06-22T11:58:52Z Flushed 0 addresses to peers.dat  66ms
+2020-06-22T11:59:01Z sending ping (8 bytes) peer=0
+2020-06-22T11:59:01Z received: ping (8 bytes) peer=0
+2020-06-22T11:59:01Z sending pong (8 bytes) peer=0
+2020-06-22T11:59:01Z received: pong (8 bytes) peer=0
+2020-06-22T11:59:01Z pong peer=0: Timing mishap, a7f354744d7717f8 expected, a7f354744d7717f8 received, 8 bytes
+2020-06-22T12:01:01Z sending ping (8 bytes) peer=0
+2020-06-22T12:01:01Z received: ping (8 bytes) peer=0
+2020-06-22T12:01:01Z sending pong (8 bytes) peer=0
+2020-06-22T12:01:01Z received: pong (8 bytes) peer=0
+2020-06-22T12:01:01Z pong peer=0: Timing mishap, 353a5717f54be3c8 expected, 353a5717f54be3c8 received, 8 bytes
+2020-06-22T12:03:01Z sending ping (8 bytes) peer=0
+2020-06-22T12:03:01Z received: ping (8 bytes) peer=0
+2020-06-22T12:03:01Z sending pong (8 bytes) peer=0
+2020-06-22T12:03:01Z received: pong (8 bytes) peer=0
+2020-06-22T12:03:01Z pong peer=0: Timing mishap, eec21e0db1fd9466 expected, eec21e0db1fd9466 received, 8 bytes
+2020-06-22T12:05:01Z sending ping (8 bytes) peer=0
+2020-06-22T12:05:01Z received: ping (8 bytes) peer=0
+2020-06-22T12:05:01Z sending pong (8 bytes) peer=0
+2020-06-22T12:05:01Z received: pong (8 bytes) peer=0
+2020-06-22T12:05:01Z pong peer=0: Timing mishap, efee484d34cbed83 expected, efee484d34cbed83 received, 8 bytes
+2020-06-22T12:05:28Z Potential stale tip detected, will try using extra outbound peer (last tip update: 32798 seconds ago)
+2020-06-22T12:05:28Z net: setting try another outbound peer=true
+2020-06-22T12:07:01Z sending ping (8 bytes) peer=0
+2020-06-22T12:07:01Z received: pong (8 bytes) peer=0
+2020-06-22T12:07:01Z pong peer=0: Timing mishap, fe4ca41363e1d121 expected, fe4ca41363e1d121 received, 8 bytes
+2020-06-22T12:07:01Z received: ping (8 bytes) peer=0
+2020-06-22T12:07:01Z sending pong (8 bytes) peer=0
+2020-06-22T12:09:01Z sending ping (8 bytes) peer=0
+2020-06-22T12:09:01Z received: ping (8 bytes) peer=0
+2020-06-22T12:09:01Z sending pong (8 bytes) peer=0
+2020-06-22T12:09:01Z received: pong (8 bytes) peer=0
+2020-06-22T12:09:01Z pong peer=0: Timing mishap, 6da29251d89bf75a expected, 6da29251d89bf75a received, 8 bytes
+2020-06-22T12:11:01Z sending ping (8 bytes) peer=0
+2020-06-22T12:11:01Z received: ping (8 bytes) peer=0
+2020-06-22T12:11:01Z sending pong (8 bytes) peer=0
+2020-06-22T12:11:01Z received: pong (8 bytes) peer=0
+2020-06-22T12:11:01Z pong peer=0: Timing mishap, b9955855a3a7815c expected, b9955855a3a7815c received, 8 bytes
+2020-06-22T12:13:01Z sending ping (8 bytes) peer=0
+2020-06-22T12:13:01Z received: ping (8 bytes) peer=0
+2020-06-22T12:13:01Z sending pong (8 bytes) peer=0
+2020-06-22T12:13:01Z received: pong (8 bytes) peer=0
+2020-06-22T12:13:01Z pong peer=0: Timing mishap, 5dcfc4272945f02f expected, 5dcfc4272945f02f received, 8 bytes
+2020-06-22T12:13:52Z Flushed 0 addresses to peers.dat  341ms
+2020-06-22T12:15:01Z sending ping (8 bytes) peer=0
+2020-06-22T12:15:01Z received: ping (8 bytes) peer=0
+2020-06-22T12:15:01Z sending pong (8 bytes) peer=0
+2020-06-22T12:15:01Z received: pong (8 bytes) peer=0
+2020-06-22T12:15:01Z pong peer=0: Timing mishap, fac2ad8215e74a2 expected, fac2ad8215e74a2 received, 8 bytes
+2020-06-22T12:15:58Z Potential stale tip detected, will try using extra outbound peer (last tip update: 33428 seconds ago)
+2020-06-22T12:15:58Z net: setting try another outbound peer=true
+2020-06-22T12:17:01Z sending ping (8 bytes) peer=0
+2020-06-22T12:17:01Z received: ping (8 bytes) peer=0
+2020-06-22T12:17:01Z sending pong (8 bytes) peer=0
+2020-06-22T12:17:01Z received: pong (8 bytes) peer=0
+2020-06-22T12:17:01Z pong peer=0: Timing mishap, 9397733f992f3a98 expected, 9397733f992f3a98 received, 8 bytes
+2020-06-22T12:19:01Z sending ping (8 bytes) peer=0
+2020-06-22T12:19:01Z received: ping (8 bytes) peer=0
+2020-06-22T12:19:01Z sending pong (8 bytes) peer=0
+2020-06-22T12:19:01Z received: pong (8 bytes) peer=0
+2020-06-22T12:19:01Z pong peer=0: Timing mishap, a79d56c32054994e expected, a79d56c32054994e received, 8 bytes
+2020-06-22T12:21:01Z sending ping (8 bytes) peer=0
+2020-06-22T12:21:01Z received: ping (8 bytes) peer=0
+2020-06-22T12:21:01Z sending pong (8 bytes) peer=0
+2020-06-22T12:21:01Z received: pong (8 bytes) peer=0
+2020-06-22T12:21:01Z pong peer=0: Timing mishap, 92c1299cd076b952 expected, 92c1299cd076b952 received, 8 bytes
+2020-06-22T12:23:01Z sending ping (8 bytes) peer=0
+2020-06-22T12:23:01Z received: ping (8 bytes) peer=0
+2020-06-22T12:23:01Z sending pong (8 bytes) peer=0
+2020-06-22T12:23:01Z received: pong (8 bytes) peer=0
+2020-06-22T12:23:01Z pong peer=0: Timing mishap, 56ec16801daefd2f expected, 56ec16801daefd2f received, 8 bytes

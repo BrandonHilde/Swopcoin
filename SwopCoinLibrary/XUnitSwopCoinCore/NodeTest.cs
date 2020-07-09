@@ -31,12 +31,15 @@ namespace XUnitSwopCoinCore
             Assert.True(res.Success);
         }
 
-        [Fact]
-        public void CreateAddresses()
+        [Theory]
+        [InlineData("miner")]
+        [InlineData("alice")]
+        [InlineData("bob")]
+        public void NameNodes(string name)
         {
-            BtcNodeCreate.ActionStatus res = create.AddAddresses();
+            create.NameNextNode(name);
 
-            Assert.True(res.Success);
+            Assert.NotNull(create.GetByName(name));
         }
 
         [Fact]
@@ -56,17 +59,14 @@ namespace XUnitSwopCoinCore
             }
         }
 
-        [Theory]
-        [InlineData("miner")]
-        [InlineData("alice")]
-        [InlineData("bob")]
-        public void NameNodes(string name)
+        [Fact]
+        public void CreateAddresses()
         {
-            create.NameNextNode(name);
+            BtcNodeCreate.ActionStatus res = create.AddAddresses();
 
-            Assert.NotNull(create.GetByName(name));
+            Assert.True(res.Success);
         }
-
+       
         [Fact]
         public void SendBitcoin()
         {

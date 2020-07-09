@@ -1,0 +1,1 @@
+C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\SwopWallet\SwopWallet.UWP\SwopWallet.UWP.csproj;x86

@@ -1,0 +1,6 @@
+C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\SwopWallet\SwopWallet\obj\Debug\netstandard2.1\SwopWallet.csprojAssemblyReference.cache
+C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\SwopWallet\SwopWallet\obj\Debug\netstandard2.1\App.xaml.g.cs
+C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\SwopWallet\SwopWallet\obj\Debug\netstandard2.1\MainPage.xaml.g.cs
+C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\SwopWallet\SwopWallet\obj\Debug\netstandard2.1\SwopWallet.AssemblyInfoInputs.cache
+C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\SwopWallet\SwopWallet\obj\Debug\netstandard2.1\SwopWallet.AssemblyInfo.cs
+C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\SwopWallet\SwopWallet\obj\Debug\netstandard2.1\SwopWallet.csproj.CoreCompileInputs.cache

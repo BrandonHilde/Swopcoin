@@ -6,11 +6,91 @@
              mc:Ignorable="d"
              x:Class="SwopWallet.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+    <ContentPage.Resources>
+        <StyleSheet Source="/Assets/style.css" />
+    </ContentPage.Resources>
 
+    <!-- <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="BorderThickness" Value="5" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="BorderBrush" >
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                        <GradientStop Color="Yellow" Offset="0.0" />
+                        <GradientStop Color="Red" Offset="0.25" />
+                        <GradientStop Color="Blue" Offset="0.75" />
+                        <GradientStop Color="LimeGreen" Offset="1.0" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources> -->
+    <!-- Place new controls here -->
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="60" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+
+                <Label Grid.Row="0" Grid.Column="0" Text="Swop Exchange Wallet"  Margin="10"
+           HorizontalOptions="Start"
+           VerticalOptions="Start" />
+                <Label Grid.Row="1" Grid.Column="0" Text="Send And Exchange" TextColor="DarkSlateBlue" Margin="5" HorizontalOptions="Center" VerticalOptions="Start"></Label>
+                <StackLayout Grid.Row="2" Grid.Column="0" Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="Center" Spacing="40" Margin="10" >
+                    <BoxView WidthRequest="100" HeightRequest="100" Color="LightSeaGreen"></BoxView>
+                    <BoxView WidthRequest="100" HeightRequest="100" x:Name="boxView" Color="DarkSlateBlue" ></BoxView>
+                </StackLayout>
+            </Grid>
+            
+            <!--<ListView Margin="20" x:Name="curencyList" VerticalOptions="End" HorizontalOptions="Center" ItemsSource="{Binding Data}" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell StyleId="text" Text="{Binding Symbol}" DetailColor="Goldenrod"  Detail="{Binding Amount}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>-->
+
+            <StackLayout>
+                <ListView x:Name="curencyList" ItemsSource="{Binding Data}" VerticalOptions="FillAndExpand">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Padding="10">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="50" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition />
+                                            <ColumnDefinition />
+                                        </Grid.ColumnDefinitions>
+                                        
+                                        <Label VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="0" Grid.Column="0" Text="{Binding Symbol}"></Label>
+                                        <Label VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="0" Grid.Column="1" Text="{Binding Amount}"></Label>
+                                    </Grid>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+
+          
+
+        </StackLayout>
+
+
+
+    </ContentPage.Content>
 </ContentPage>

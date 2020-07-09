@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SwopCoinLibrary.OpenAssetFormat
+namespace SwopCoinLibrary.Wallet
 {
     public enum SupportedCryptocurrency { BTC }
     public class Wallet
@@ -13,6 +13,7 @@ namespace SwopCoinLibrary.OpenAssetFormat
 
     public class CryptoBalance
     {
+        public string Symbol { get; set; }
         public SupportedCryptocurrency CryptoType { get; set; }
         public double Balance = 0;
     }

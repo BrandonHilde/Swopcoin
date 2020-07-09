@@ -1,0 +1,15 @@
+C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\SwopWallet\SwopWallet\bin\Debug\netstandard2.0\SwopWallet.deps.json
+C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\SwopWallet\SwopWallet\bin\Debug\netstandard2.0\SwopWallet.dll
+C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\SwopWallet\SwopWallet\bin\Debug\netstandard2.0\ref\SwopWallet.dll
+C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\SwopWallet\SwopWallet\bin\Debug\netstandard2.0\SwopWallet.pdb
+C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\SwopWallet\SwopWallet\obj\Debug\netstandard2.0\SwopWallet.csprojAssemblyReference.cache
+C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\SwopWallet\SwopWallet\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\SwopWallet\SwopWallet\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\SwopWallet\SwopWallet\obj\Debug\netstandard2.0\SwopWallet.AssemblyInfoInputs.cache
+C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\SwopWallet\SwopWallet\obj\Debug\netstandard2.0\SwopWallet.AssemblyInfo.cs
+C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\SwopWallet\SwopWallet\obj\Debug\netstandard2.0\SwopWallet.csproj.CoreCompileInputs.cache
+C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\SwopWallet\SwopWallet\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\SwopWallet\SwopWallet\obj\Debug\netstandard2.0\SwopWallet.dll
+C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\SwopWallet\SwopWallet\obj\Debug\netstandard2.0\ref\SwopWallet.dll
+C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\SwopWallet\SwopWallet\obj\Debug\netstandard2.0\SwopWallet.pdb
+C:\Users\Brandon\Documents\Swop\Swopcoin\SwopCoinLibrary\SwopWallet\SwopWallet\obj\Debug\netstandard2.0\Assets\style.css.g.cs

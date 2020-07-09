@@ -8,27 +8,43 @@ using NBitcoin.RPC;
 using NBitcoin.Tests;
 using SwopCoinLibrary.OpenAssetFormat;
 
+
 namespace SwopCoinLibrary.Node
 {
     public class BtcNodeCreate
     {
         NodeBuilder builder { get; set; }
-        List<NodeIdentity> Nodes { get; set;}
+        List<NodeIdentity> Nodes { get; set; }
 
         public BtcNodeCreate()
         {
             Nodes = new List<NodeIdentity>();
         }
 
-        public void NameNextNode(string name)
+        public ActionStatus NameNextNode(string name)
         {
             if (Nodes != null)
             {
                 foreach (NodeIdentity ni in Nodes)
                 {
-                    if (ni.Name == string.Empty) ni.Name = name;
+                    if (ni.Name == string.Empty)
+                    {
+                        ni.Name = name;
+
+                        return new ActionStatus
+                        {
+                            Status = "Named " + name,
+                            Success = true
+                        };
+                    }
                 }
             }
+
+            return new ActionStatus
+            {
+                Status = "Failed: Unnamed Node Not Available",
+                Success = false
+            };
         }
 
         public ActionStatus SetUpBuilder(string root, string path)
@@ -112,15 +128,13 @@ namespace SwopCoinLibrary.Node
                         BitcoinAddress addr = ni.Client.GetNewAddress();
 
                         ni.Addresses.Add(addr);
-
-                        return new ActionStatus { Status = "Address: " + addr.ToString() };
                     }
                 }
             }
 
             return new ActionStatus
             {
-                Status = "Complete",
+                Status = "Complete Address Creation",
                 Success = true
             };
         }
@@ -173,7 +187,7 @@ namespace SwopCoinLibrary.Node
         {
             if (builder == null) SetUpBuilder(root, path);
 
-            if(Nodes == null) Nodes = new List<NodeIdentity>();
+            if (Nodes == null) Nodes = new List<NodeIdentity>();
 
             for (int x = 0; x < number; x++)
             {
@@ -183,8 +197,8 @@ namespace SwopCoinLibrary.Node
                 });
             }
 
-            return new ActionStatus 
-            { 
+            return new ActionStatus
+            {
                 Status = "Complete",
                 Success = true
             };
@@ -200,30 +214,30 @@ namespace SwopCoinLibrary.Node
             {
                 status += "Created Nodes\r\n";
 
-                if(AddAddresses().Success)
+                List<uint256> list = StartNetwork();
+
+                if (list != null)
                 {
-                    status += "Created Addresses\r\n";
-
-                    List<uint256> list = StartNetwork();
-
-                    if (list != null)
+                    if (list.Count > 1)
                     {
-                        if (list.Count > 1)
+                        for (int i = 1; i < list.Count; i++)
                         {
-                            for (int i = 1; i < list.Count; i++)
+                            if (list[i] != list[i - 1])
                             {
-                                if (list[i] != list[i - 1])
+                                return new ActionStatus
                                 {
-                                    return new ActionStatus
-                                    {
-                                        Status = "Network Failed To Start"
-                                    };
-                                }
+                                    Status = "Network Failed To Start"
+                                };
                             }
                         }
                     }
+                }
 
-                    status += "Network Started\r\n";
+                status += "Network Started\r\n";
+
+                if (AddAddresses().Success)
+                {
+                    status += "Created Addresses\r\n";
 
                     NameNextNode("miner");
                     NameNextNode("alice");
@@ -243,7 +257,7 @@ namespace SwopCoinLibrary.Node
                         };
                     }
 
-                    if(MineNetwork(GetByName("miner"), 1).Success)
+                    if (MineNetwork(GetByName("miner"), 1).Success)
                     {
                         status += "Bitcoin Mined\r\n";
                     }
@@ -255,7 +269,7 @@ namespace SwopCoinLibrary.Node
                         };
                     }
 
-                    if(SyncNodes(GetByName("alice"), GetByName("miner")).Success)
+                    if (SyncNodes(GetByName("alice"), GetByName("miner")).Success)
                     {
                         status += "Alice Balance: " + GetByName("alice").Client.GetBalance().ToString();
                     }
@@ -267,7 +281,7 @@ namespace SwopCoinLibrary.Node
                         };
                     }
 
-                    if(SendBitcoin(GetByName("alice"), Money.Coins(1m), GetByName("bob")).Success)
+                    if (SendBitcoin(GetByName("alice"), Money.Coins(1m), GetByName("bob")).Success)
                     {
                         status += "Bitcoin Sent From Alice\r\n";
                     }
@@ -303,6 +317,13 @@ namespace SwopCoinLibrary.Node
                             Status = "Failed To Sync BTC"
                         };
                     }
+                }
+                else
+                {
+                    return new ActionStatus
+                    {
+                        Status = "Failed To Create Addresses"
+                    };
                 }
 
                 return new ActionStatus
