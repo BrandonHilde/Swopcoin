@@ -7,30 +7,29 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Essentials;
 using Xamarin.Forms.StyleSheets;
+using SwopCoinLibrary.Wallet;
 
 namespace SwopWallet
 {
     // Learn more about making custom code visible in the Xamarin.Forms previewer
     // by visiting https://aka.ms/xamarinforms-previewer
-    [DesignTimeVisible(false)]
+   // [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
         public MainPage()
         {
             InitializeComponent();
 
-            List<Currency> cryptos = new List<Currency>();
-            cryptos.Add(new Currency { Amount = 0.314, Symbol = "BTC" });
-            cryptos.Add(new Currency { Amount = 2.14, Symbol = "ETH" });
-            cryptos.Add(new Currency { Amount = 1.3, Symbol = "LTC" });
-            cryptos.Add(new Currency { Amount = 3.54, Symbol = "SWOP" });
-            curencyList.ItemsSource = cryptos;
-        }
-    }
+            Wallet SimulatedWallet = new Wallet();
 
-    public class Currency
-    {
-        public string Symbol { get; set; }
-        public double Amount { get; set; }
+            SimulatedWallet.WalletName = "test wallet";
+
+            SimulatedWallet.Balances.Add(new CryptoBalance { Symbol = "BTC", Amount = 0.314 });
+            SimulatedWallet.Balances.Add(new CryptoBalance { Symbol = "ETH", Amount = 0.888 });
+            SimulatedWallet.Balances.Add(new CryptoBalance {Symbol = "LTC",  Amount = 4.55 });
+            SimulatedWallet.Balances.Add(new CryptoBalance {Symbol = "XMR",  Amount = 0.12 });
+
+            curencyList.ItemsSource = SimulatedWallet.GetDisplay();
+        }
     }
 }

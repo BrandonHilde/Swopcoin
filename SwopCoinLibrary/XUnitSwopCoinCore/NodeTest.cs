@@ -86,8 +86,8 @@ namespace XUnitSwopCoinCore
             Assert.True(res.Success);
         }
        
-        [Fact]
-        public void SendBitcoin()
+        /* [Fact]
+       public void SendBitcoin()
         {
             BtcNodeCreate create = new BtcNodeCreate();
 
@@ -203,7 +203,7 @@ namespace XUnitSwopCoinCore
             BtcNodeCreate.ActionStatus resSync = create.SyncNodes(create.GetByName("alice"), create.GetByName("miner"));
 
             Assert.True(resSync.Success);
-        }
+        }*/
     }
 
     [Collection("Sequential")]
