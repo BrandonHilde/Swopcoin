@@ -74,12 +74,16 @@ namespace XUnitSwopCoinCore
                 //Trace.WriteLine("Failed Setup");
             }
         }
+
         public void Dispose()
         {
+            create.EndNetwork();
+            create = null;
             // ... clean up test data ...
         }
     }
 
+    [Collection("Sequential")]
     public class TestCryptoFixture : IClassFixture<CryptoFixture>
     {
         CryptoFixture fixture;

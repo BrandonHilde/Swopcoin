@@ -8,12 +8,49 @@ using NBitcoin.Protocol;
 using NBitcoin.Tests;
 using NBitcoin;
 using Xunit.Sdk;
+using System.Diagnostics;
 
 namespace XUnitSwopCoinCore
 {
-    [Collection("Sequential")]
-    public class NodeTest
+
+    public class NodeFixture : IDisposable
     {
+        public BtcNodeCreate create = new BtcNodeCreate();
+        public NodeFixture()
+        {
+            BtcNodeCreate.ActionStatus res = create.SetUpBuilder(NodeDownloadData.Bitcoin.v0_18_0, Network.RegTest);
+        }
+        public void Dispose()
+        {
+            Process[] p = Process.GetProcessesByName("bitcoind.exe");
+
+            if (p != null)
+            {
+                if(p.Length > 0)
+                {
+                    foreach(Process pr in p)
+                    {
+                        pr.Kill();
+                    }
+                }
+            }
+
+            create.EndNetwork();
+            create = null;
+            // ... clean up test data ...
+        }
+    }
+
+    [Collection("Sequential")]
+    public class NodeTest : IClassFixture<NodeFixture>
+    {
+        NodeFixture fixture;
+
+        public NodeTest(NodeFixture fixture)
+        {
+            this.fixture = fixture;
+        }
+  
         [Fact]
         public void SetupNetwork()
         {
@@ -27,13 +64,8 @@ namespace XUnitSwopCoinCore
         [Fact] 
         public void CreateNodes()
         {
-            BtcNodeCreate create = new BtcNodeCreate();
+            BtcNodeCreate.ActionStatus resN = fixture.create.CreateNodeSet(3);
 
-            BtcNodeCreate.ActionStatus res = create.SetUpBuilder(NodeDownloadData.Bitcoin.v0_18_0, Network.RegTest);
-
-            BtcNodeCreate.ActionStatus resN = create.CreateNodeSet(3);
-
-            Assert.True(res.Success);
             Assert.True(resN.Success);
         }
 
@@ -43,34 +75,39 @@ namespace XUnitSwopCoinCore
         [InlineData("bob")]
         public void NameNodes(string name)
         {
-            BtcNodeCreate create = new BtcNodeCreate();
+            BtcNodeCreate.ActionStatus resN = fixture.create.CreateNodeSet(3);
 
-            BtcNodeCreate.ActionStatus res = create.SetUpBuilder(NodeDownloadData.Bitcoin.v0_18_0, Network.RegTest);
-
-            BtcNodeCreate.ActionStatus resN = create.CreateNodeSet(3);
-
-            Assert.True(res.Success);
             Assert.True(resN.Success);
 
-            create.NameNextNode(name);
+            fixture.create.NameNextNode(name);
 
-            Assert.NotNull(create.GetByName(name));
+            Assert.NotNull(fixture.create.GetByName(name));
         }
 
         [Fact]
         public void NetworkCreate()
         {
-            BtcNodeCreate create = new BtcNodeCreate();
 
-            List<uint256> list = create.StartNetwork();
 
-            if (list != null)
+            BtcNodeCreate.ActionStatus resN = fixture.create.CreateNodeSet(3);
+
+            if (resN.Success)
             {
-                if (list.Count > 1)
+                fixture.create.NameNextNode("miner");
+
+                if (fixture.create.GetByName("miner") != null)
                 {
-                    for (int i = 1; i < list.Count; i++)
+                    List<uint256> list = fixture.create.StartNetwork();
+
+                    if (list != null)
                     {
-                        Assert.True(list[i] != list[i - 1]);
+                        if (list.Count > 1)
+                        {
+                            for (int i = 1; i < list.Count; i++)
+                            {
+                                Assert.True(list[i] == list[i - 1]);
+                            }
+                        }
                     }
                 }
             }
@@ -79,9 +116,7 @@ namespace XUnitSwopCoinCore
         [Fact]
         public void CreateAddresses()
         {
-            BtcNodeCreate create = new BtcNodeCreate();
-
-            BtcNodeCreate.ActionStatus res = create.AddAddresses();
+            BtcNodeCreate.ActionStatus res = fixture.create.AddAddresses();
 
             Assert.True(res.Success);
         }

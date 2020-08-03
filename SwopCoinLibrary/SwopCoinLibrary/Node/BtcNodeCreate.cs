@@ -117,6 +117,18 @@ namespace SwopCoinLibrary.Node
             return outputs;
         }
 
+        public ActionStatus EndNetwork()
+        {
+            foreach(CoreNode n in builder.Nodes)
+            {
+                n.Kill();
+            }
+
+            builder.Dispose();
+
+            return new ActionStatus { Status = "end", Success = true };
+        }
+
         public ActionStatus AddAddresses()
         {
             if (Nodes != null)
