@@ -22,19 +22,6 @@ namespace XUnitSwopCoinCore
         }
         public void Dispose()
         {
-            Process[] p = Process.GetProcessesByName("bitcoind.exe");
-
-            if (p != null)
-            {
-                if(p.Length > 0)
-                {
-                    foreach(Process pr in p)
-                    {
-                        pr.Kill();
-                    }
-                }
-            }
-
             create.EndNetwork();
             create = null;
             // ... clean up test data ...

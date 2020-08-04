@@ -7,6 +7,7 @@ using NBitcoin;
 using NBitcoin.RPC;
 using NBitcoin.Tests;
 using SwopCoinLibrary.OpenAssetFormat;
+using System.Diagnostics;
 
 
 namespace SwopCoinLibrary.Node
@@ -15,6 +16,8 @@ namespace SwopCoinLibrary.Node
     {
         NodeBuilder builder { get; set; }
         List<NodeIdentity> Nodes { get; set; }
+
+        public string processName = "bitcoind.exe";
 
         public BtcNodeCreate()
         {
@@ -122,6 +125,19 @@ namespace SwopCoinLibrary.Node
             foreach(CoreNode n in builder.Nodes)
             {
                 n.Kill();
+            }
+
+            Process[] p = Process.GetProcessesByName(processName);
+
+            if (p != null)
+            {
+                if (p.Length > 0)
+                {
+                    foreach (Process pr in p)
+                    {
+                        pr.Kill();
+                    }
+                }
             }
 
             builder.Dispose();
