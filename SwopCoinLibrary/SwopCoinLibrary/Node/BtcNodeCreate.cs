@@ -367,13 +367,6 @@ namespace SwopCoinLibrary.Node
                 Success = false
             };
         }
-
-        public class ActionStatus
-        {
-            public string Status = string.Empty;
-            public bool Success = false;
-        }
-
         public class NodeIdentity
         {
             public string Name = string.Empty;
@@ -382,6 +375,12 @@ namespace SwopCoinLibrary.Node
             public List<BitcoinAddress> Addresses = new List<BitcoinAddress>();
             public BitcoinAddress MainAddress { get { return Addresses.First(); } }
         }
+    }
+
+    public class ActionStatus
+    {
+        public string Status = string.Empty;
+        public bool Success = false;
     }
 }
 

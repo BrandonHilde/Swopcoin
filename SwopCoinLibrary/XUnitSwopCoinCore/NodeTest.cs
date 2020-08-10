@@ -18,7 +18,7 @@ namespace XUnitSwopCoinCore
         public BtcNodeCreate create = new BtcNodeCreate();
         public NodeFixture()
         {
-            BtcNodeCreate.ActionStatus res = create.SetUpBuilder(NodeDownloadData.Bitcoin.v0_18_0, Network.RegTest);
+            ActionStatus res = create.SetUpBuilder(NodeDownloadData.Bitcoin.v0_18_0, Network.RegTest);
         }
         public void Dispose()
         {
@@ -43,7 +43,7 @@ namespace XUnitSwopCoinCore
         {
             BtcNodeCreate create = new BtcNodeCreate();
 
-            BtcNodeCreate.ActionStatus res = create.SetUpBuilder(NodeDownloadData.Bitcoin.v0_18_0, Network.RegTest);
+            ActionStatus res = create.SetUpBuilder(NodeDownloadData.Bitcoin.v0_18_0, Network.RegTest);
 
             Assert.True(res.Success);
         }
@@ -51,7 +51,7 @@ namespace XUnitSwopCoinCore
         [Fact] 
         public void CreateNodes()
         {
-            BtcNodeCreate.ActionStatus resN = fixture.create.CreateNodeSet(3);
+            ActionStatus resN = fixture.create.CreateNodeSet(3);
 
             Assert.True(resN.Success);
         }
@@ -62,7 +62,7 @@ namespace XUnitSwopCoinCore
         [InlineData("bob")]
         public void NameNodes(string name)
         {
-            BtcNodeCreate.ActionStatus resN = fixture.create.CreateNodeSet(3);
+            ActionStatus resN = fixture.create.CreateNodeSet(3);
 
             Assert.True(resN.Success);
 
@@ -76,7 +76,7 @@ namespace XUnitSwopCoinCore
         {
 
 
-            BtcNodeCreate.ActionStatus resN = fixture.create.CreateNodeSet(3);
+            ActionStatus resN = fixture.create.CreateNodeSet(3);
 
             if (resN.Success)
             {
@@ -103,7 +103,7 @@ namespace XUnitSwopCoinCore
         [Fact]
         public void CreateAddresses()
         {
-            BtcNodeCreate.ActionStatus res = fixture.create.AddAddresses();
+            ActionStatus res = fixture.create.AddAddresses();
 
             Assert.True(res.Success);
         }
