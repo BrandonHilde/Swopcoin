@@ -13,6 +13,7 @@ using SwopCoinLibrary;
 using SwopCoinLibrary.Node;
 using System.Net.Http.Headers;
 using System.Security.Cryptography.X509Certificates;
+using System.Linq;
 
 namespace SwopCoinLibrary.Node
 {
@@ -23,20 +24,57 @@ namespace SwopCoinLibrary.Node
 
         public void IssueSwopCoin()
         {
-            Transaction tx = Transaction.Create(Network.Main);
-            //tx.Inputs.Add(new OutPoint(tx.GetHash(), 0), scriptPubKey);
+			BtcNodeCreate btcTest = new BtcNodeCreate();
+			btcTest.SimulateNetwork();
 
-            // tact.CreatePayload();
-            ColoredTransaction ct = new ColoredTransaction();
-            IssuanceCoin coin = new IssuanceCoin();
+			Script scptM = btcTest.GetByName("miner").MainAddress.ScriptPubKey;
+			Script scptA = btcTest.GetByName("alice").MainAddress.ScriptPubKey;
+			Script scptB = btcTest.GetByName("bob").MainAddress.ScriptPubKey;
+
+			Transaction tx = Transaction.Create(Network.Main);
+            tx.Inputs.Add(new OutPoint(tx.GetHash(), 0), scptM);
+			tx.Inputs.Add(new OutPoint(tx.GetHash(), 1), scptA);
+			tx.Inputs.Add(new OutPoint(tx.GetHash(), 2), scptB);
+
+			IssuanceCoin[] issuanceCoins = tx.Outputs.Take(2)
+						.Select((o, i) => new Coin(new OutPoint(tx.GetHash(), i), o))
+						.Select(c => new IssuanceCoin(c))
+						.ToArray();
+
+			var goldIssuanceCoin = issuanceCoins[0];
+			var silverIssuanceCoin = issuanceCoins[1];
+			var SwopCoinIssue = new Coin(new OutPoint(tx, 2), tx.Outputs[2]);
+
+			var goldId = goldIssuanceCoin.AssetId;
+			var silverId = silverIssuanceCoin.AssetId;
+
+
+			var txRepo = new NoSqlTransactionRepository();
+			txRepo.Put(tx.GetHash(), tx);
+
+			TransactionBuilder builder = Network.Main.CreateTransactionBuilder();
+			txRepo.Put(tx.GetHash(), tx);
+
+			/*Transaction nTx = builder
+				.AddKeys(goldGuy.Key)
+				.AddCoins(goldIssuanceCoin)
+				.IssueAsset(satoshi.GetAddress(), new AssetMoney(goldId, 20))
+				.IssueAsset(nico.GetAddress(), new AssetMoney(goldId, 30))
+				.SetChange(goldGuy.Key.PubKey)
+				.BuildTransaction(true);
+			//Assert(builder.Verify(tx));
+			txRepo.Put(nTx.GetHash(), nTx);
+
+			var ctx = tx.GetColoredTransaction(ctxRepo);*/
 
 
 
-           // coin.
-            //t.
-            // ColoredCoin coin = new ColoredCoin();
-            //coin.
-        }
+
+			// coin.
+			//t.
+			// ColoredCoin coin = new ColoredCoin();
+			//coin.
+		}
     }
 }
 
