@@ -16,11 +16,11 @@ namespace XUnitSwopCoinCore
         public BtcNodeCreate create = new BtcNodeCreate();
         public CryptoFixture()
         {
-            BtcNodeCreate.ActionStatus res = create.SetUpBuilder(NodeDownloadData.Bitcoin.v0_18_0, Network.RegTest);
+            ActionStatus res = create.SetUpBuilder(NodeDownloadData.Bitcoin.v0_18_0, Network.RegTest);
 
             if (res.Success)
             {
-                BtcNodeCreate.ActionStatus resN = create.CreateNodeSet(3);
+                ActionStatus resN = create.CreateNodeSet(3);
 
                 if(resN.Success)
                 {
@@ -96,12 +96,12 @@ namespace XUnitSwopCoinCore
         [Fact]
         public void SendBitcoin()
         {
-            BtcNodeCreate.ActionStatus resM = 
+            ActionStatus resM = 
                 fixture.create.MineNetwork(fixture.create.GetByName("miner"), 50);
 
             Assert.True(resM.Success);
 
-            BtcNodeCreate.ActionStatus resS = fixture.create.SendBitcoin(
+            ActionStatus resS = fixture.create.SendBitcoin(
                 fixture.create.GetByName("miner"),
                 Money.Coins(10m),
                 fixture.create.GetByName("alice"));
@@ -112,7 +112,7 @@ namespace XUnitSwopCoinCore
         [Fact]
         public void MineBitcoin()
         {
-            BtcNodeCreate.ActionStatus resM = 
+            ActionStatus resM = 
                 fixture.create.MineNetwork(fixture.create.GetByName("miner"), 1);
 
             Assert.True(resM.Success);
@@ -121,12 +121,12 @@ namespace XUnitSwopCoinCore
         [Fact]
         public void SyncNetwork()
         {
-            BtcNodeCreate.ActionStatus resM = 
+            ActionStatus resM = 
                 fixture.create.MineNetwork(fixture.create.GetByName("miner"), 1);
 
             Assert.True(resM.Success);
 
-            BtcNodeCreate.ActionStatus resSync = 
+            ActionStatus resSync = 
                 fixture.create.SyncNodes(
                     fixture.create.GetByName("alice"), 
                     fixture.create.GetByName("miner"));

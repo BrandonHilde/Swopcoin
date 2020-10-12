@@ -34,9 +34,14 @@ namespace SwopCoinLibrary.Node
 			BitcoinSecret minerSecret = btcTest.GetByName("miner").Client.DumpPrivKey(btcTest.GetByName("miner").MainAddress);
 
 			Transaction txSwop = Transaction.Create(Network.Main);
-			txSwop.Inputs.Add(new OutPoint(txSwop.GetHash(), 0), scptM);
-			txSwop.Inputs.Add(new OutPoint(txSwop.GetHash(), 1), scptA);
-			txSwop.Inputs.Add(new OutPoint(txSwop.GetHash(), 2), scptB);
+
+			txSwop.Outputs.Add(new TxOut("1.0", scptM));
+			txSwop.Outputs.Add(new TxOut("1.0", scptA));
+			txSwop.Outputs.Add(new TxOut("1.0", scptB));
+
+			//txSwop.
+			//txSwop.Outputs.Add(new OutPoint(txSwop.GetHash(), 1), scptA);
+			//txSwop.Outputs.Add(new OutPoint(txSwop.GetHash(), 2), scptB);
 
 			IssuanceCoin[] issuanceCoins = txSwop.Outputs.Take(2)
 						.Select((o, i) => new Coin(new OutPoint(txSwop.GetHash(), i), o))
@@ -74,8 +79,6 @@ namespace SwopCoinLibrary.Node
 			var coloredCoins = ColoredCoin.Find(tx, ctx).ToArray();
 			var satoshiGold = coloredCoins[0];
 			var nicoGold = coloredCoins[1];
-
-			btcTest.GetByName("miner").Client.SendRawTransaction(tx);
 
 
 
