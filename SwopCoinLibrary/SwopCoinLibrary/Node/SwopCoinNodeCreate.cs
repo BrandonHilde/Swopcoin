@@ -22,6 +22,28 @@ namespace SwopCoinLibrary.Node
         // use to issue swopcoin
         // some of the code looks obsolete 
 
+		BitcoinSecret CoinIssuer { get; set; }
+
+		public SwopCoinNodeCreate(BitcoinSecret Issuer)
+        {
+			CoinIssuer = Issuer;
+		}
+
+		public void IssueSpecificCoin(Coins CoinType, decimal amount, List<BitcoinAddress> IssueToAddresses)
+        {
+			if (IssueToAddresses != null)
+			{
+				if (IssueToAddresses.Count > 0)
+				{
+					List<Script> scripts = IssueToAddresses.Select(x => x.ScriptPubKey).ToList();
+
+					Transaction txSwop = Transaction.Create(Network.Main);
+
+					foreach(Script scptM in scripts) txSwop.Outputs.Add(new TxOut("1.0", scptM));
+				}
+			}
+        }
+
         public void IssueSwopCoin()
         {
 			BtcNodeCreate btcTest = new BtcNodeCreate();
@@ -74,7 +96,6 @@ namespace SwopCoinLibrary.Node
 			txRepo.Put(tx.GetHash(), tx);
 
 			var ctx = tx.GetColoredTransaction(ctxRepo);
-
 
 			var coloredCoins = ColoredCoin.Find(tx, ctx).ToArray();
 			var satoshiGold = coloredCoins[0];

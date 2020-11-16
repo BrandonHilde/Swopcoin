@@ -7,15 +7,19 @@ namespace SwopCoinLibrary.Interface
     public interface IChainDealing : IDisposable
     {
         // Contribute the first half private issue SWOP coin
+        // authorize -> issue
         void Contribute(Coins coin);
 
         // Authorize the public offering in 4 phases the angel, pre-seed, seed and initial SWOP coin offerings 
+        // Generate colored coins in organization's control
         void Authorize(Coins coin);
 
         // Subscribions for the second half public issue SWOP coin 
+        // Record amount owed to person
         void Subscribe(Coins coin);
 
         // Issues SWOP coin into a crypto coin blockchain
+        // Sends colored coin to new address
         void Issue(Coins coin);
 
         // Remove SWOP coin from circulation
