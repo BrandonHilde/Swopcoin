@@ -18,7 +18,7 @@ namespace XUnitSwopCoinCore
         {
             //temp testing area
 
-            SwopCoinNodeCreate create = new SwopCoinNodeCreate();
+            SwopCoinNodeCreate create = new SwopCoinNodeCreate(null);
 
             create.IssueSwopCoin();
         }

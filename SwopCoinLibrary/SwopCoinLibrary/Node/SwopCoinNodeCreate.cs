@@ -24,22 +24,67 @@ namespace SwopCoinLibrary.Node
 
 		BitcoinSecret CoinIssuer { get; set; }
 
+		Network Net = Network.TestNet;
+
 		public SwopCoinNodeCreate(BitcoinSecret Issuer)
         {
 			CoinIssuer = Issuer;
 		}
 
-		public void IssueSpecificCoin(Coins CoinType, decimal amount, List<BitcoinAddress> IssueToAddresses)
+		public void IssueSpecificCoin(Coins CoinType, long amount, List<BitcoinAddress> IssueToAddresses)
         {
 			if (IssueToAddresses != null)
 			{
 				if (IssueToAddresses.Count > 0)
 				{
+					Script issuerScript = CoinIssuer.GetAddress(ScriptPubKeyType.Legacy).ScriptPubKey;
 					List<Script> scripts = IssueToAddresses.Select(x => x.ScriptPubKey).ToList();
 
-					Transaction txSwop = Transaction.Create(Network.Main);
+					Transaction txSwop = Transaction.Create(Net);
 
-					foreach(Script scptM in scripts) txSwop.Outputs.Add(new TxOut("1.0", scptM));
+					txSwop.Outputs.Add(new TxOut("1.0", issuerScript));
+
+					foreach (Script scptM in scripts) txSwop.Outputs.Add(new TxOut("1.0", scptM));
+
+					IssuanceCoin[] issuanceCoins = txSwop.Outputs.Take(1)
+						.Select((o, i) => new Coin(new OutPoint(txSwop.GetHash(), i), o))
+						.Select(c => new IssuanceCoin(c))
+						.ToArray();
+
+					var swopIssuanceCoin = issuanceCoins.First();
+
+					var swopID = swopIssuanceCoin.AssetId;
+
+					var txRepo = new NoSqlTransactionRepository();
+					txRepo.Put(txSwop.GetHash(), txSwop);
+
+					var ctxRepo = new NoSqlColoredTransactionRepository(txRepo);
+
+					TransactionBuilder builder = Net.CreateTransactionBuilder();
+					builder.AddKeys(CoinIssuer);
+					builder.AddCoins(swopIssuanceCoin);
+
+					foreach(BitcoinAddress add in IssueToAddresses)
+                    {
+						builder.IssueAsset(add, new AssetMoney(swopID, (long)amount));
+                    }
+
+					builder.SetChange(issuerScript);
+
+					Transaction tx = builder.BuildTransaction(true);
+					/*Transaction tx = builder
+					.AddKeys(CoinIssuer)
+					.AddCoins(goldIssuanceCoin)
+					.IssueAsset(btcTest.GetByName("bob").MainAddress, new AssetMoney(goldId, 20))
+					.IssueAsset(btcTest.GetByName("alice").MainAddress, new AssetMoney(goldId, 30))
+					.SetChange(scptM)
+					.BuildTransaction(true);*/
+
+					if (builder.Verify(tx)) { }
+
+					txRepo.Put(tx.GetHash(), tx);
+
+					var ctx = tx.GetColoredTransaction(ctxRepo);
 				}
 			}
         }
@@ -65,17 +110,16 @@ namespace SwopCoinLibrary.Node
 			//txSwop.Outputs.Add(new OutPoint(txSwop.GetHash(), 1), scptA);
 			//txSwop.Outputs.Add(new OutPoint(txSwop.GetHash(), 2), scptB);
 
-			IssuanceCoin[] issuanceCoins = txSwop.Outputs.Take(2)
+			IssuanceCoin[] issuanceCoins = txSwop.Outputs.Take(1)
 						.Select((o, i) => new Coin(new OutPoint(txSwop.GetHash(), i), o))
 						.Select(c => new IssuanceCoin(c))
 						.ToArray();
 
 			var goldIssuanceCoin = issuanceCoins[0];
-			var silverIssuanceCoin = issuanceCoins[1];
-			var SwopCoinIssue = new Coin(new OutPoint(txSwop, 2), txSwop.Outputs[2]);
+			//var SwopCoinIssue = new Coin(new OutPoint(txSwop, 1), txSwop.Outputs[1]);
+			//var SwopCoinIssueTwo = new Coin(new OutPoint(txSwop, 2), txSwop.Outputs[2]);
 
 			var goldId = goldIssuanceCoin.AssetId;
-			var silverId = silverIssuanceCoin.AssetId;
 
 
 			var txRepo = new NoSqlTransactionRepository();
@@ -95,11 +139,17 @@ namespace SwopCoinLibrary.Node
 			//Assert(builder.Verify(tx));
 			txRepo.Put(tx.GetHash(), tx);
 
+
 			var ctx = tx.GetColoredTransaction(ctxRepo);
 
 			var coloredCoins = ColoredCoin.Find(tx, ctx).ToArray();
 			var satoshiGold = coloredCoins[0];
 			var nicoGold = coloredCoins[1];
+
+			Console.WriteLine(ctx);
+			Console.WriteLine("-------------------------");
+			Console.WriteLine(satoshiGold);
+			Console.WriteLine(nicoGold);
 
 
 
