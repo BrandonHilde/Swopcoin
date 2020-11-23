@@ -38,7 +38,7 @@ namespace SwopCoinLibrary.Node
 				if (IssueToAddresses.Count > 0)
 				{
 					Script issuerScript = CoinIssuer.GetAddress(ScriptPubKeyType.Legacy).ScriptPubKey;
-					List<Script> scripts = IssueToAddresses.Select(x => x.ScriptPubKey).ToList();
+					List<Script> scripts = GetScriptList(IssueToAddresses);
 
 					Transaction txSwop = Transaction.Create(Net);
 
@@ -46,10 +46,7 @@ namespace SwopCoinLibrary.Node
 
 					foreach (Script scptM in scripts) txSwop.Outputs.Add(new TxOut("1.0", scptM));
 
-					IssuanceCoin[] issuanceCoins = txSwop.Outputs.Take(1)
-						.Select((o, i) => new Coin(new OutPoint(txSwop.GetHash(), i), o))
-						.Select(c => new IssuanceCoin(c))
-						.ToArray();
+					List<IssuanceCoin> issuanceCoins = GetIssuance(txSwop);
 
 					var swopIssuanceCoin = issuanceCoins.First();
 
@@ -60,27 +57,7 @@ namespace SwopCoinLibrary.Node
 
 					var ctxRepo = new NoSqlColoredTransactionRepository(txRepo);
 
-					TransactionBuilder builder = Net.CreateTransactionBuilder();
-					builder.AddKeys(CoinIssuer);
-					builder.AddCoins(swopIssuanceCoin);
-
-					foreach(BitcoinAddress add in IssueToAddresses)
-                    {
-						builder.IssueAsset(add, new AssetMoney(swopID, (long)amount));
-                    }
-
-					builder.SetChange(issuerScript);
-
-					Transaction tx = builder.BuildTransaction(true);
-					/*Transaction tx = builder
-					.AddKeys(CoinIssuer)
-					.AddCoins(goldIssuanceCoin)
-					.IssueAsset(btcTest.GetByName("bob").MainAddress, new AssetMoney(goldId, 20))
-					.IssueAsset(btcTest.GetByName("alice").MainAddress, new AssetMoney(goldId, 30))
-					.SetChange(scptM)
-					.BuildTransaction(true);*/
-
-					if (builder.Verify(tx)) { }
+					Transaction tx = CreateMultipleIssuanceTransaction(swopIssuanceCoin, issuerScript, scripts, amount, swopID);
 
 					txRepo.Put(tx.GetHash(), tx);
 
@@ -88,8 +65,96 @@ namespace SwopCoinLibrary.Node
 				}
 			}
         }
+		public void IssueSpecificCoin(Coins CoinType, long amount, BitcoinAddress IssueToAddress)
+		{
+			if (IssueToAddress != null)
+			{
+				Script issuerScript = CoinIssuer.GetAddress(ScriptPubKeyType.Legacy).ScriptPubKey;
+				Script script = IssueToAddress.ScriptPubKey;
 
-        public void IssueSwopCoin()
+				Transaction txSwop = Transaction.Create(Net);
+
+				txSwop.Outputs.Add(new TxOut("1.0", issuerScript));
+
+				txSwop.Outputs.Add(new TxOut("1.0", script));
+
+				IssuanceCoin[] issuanceCoins = txSwop.Outputs.Take(1)
+					.Select((o, i) => new Coin(new OutPoint(txSwop.GetHash(), i), o))
+					.Select(c => new IssuanceCoin(c))
+					.ToArray();
+
+				var swopIssuanceCoin = issuanceCoins.First();
+
+				var swopID = swopIssuanceCoin.AssetId;
+
+				var txRepo = new NoSqlTransactionRepository();
+				txRepo.Put(txSwop.GetHash(), txSwop);
+
+				var ctxRepo = new NoSqlColoredTransactionRepository(txRepo);
+
+				Transaction tx = CreateIssuanceTransaction(swopIssuanceCoin, issuerScript, script, amount, swopID);
+
+				txRepo.Put(tx.GetHash(), tx);
+
+				var ctx = tx.GetColoredTransaction(ctxRepo);
+			}	
+		}
+
+		private List<Script> GetScriptList(List<BitcoinAddress> addresses)
+        {
+			return addresses.Select(x => x.ScriptPubKey).ToList();
+		}
+
+		private List<IssuanceCoin> GetIssuance(Transaction tx)
+        {
+			List<IssuanceCoin> issuanceCoins = tx.Outputs.Take(1)
+					.Select((o, i) => new Coin(new OutPoint(tx.GetHash(), i), o))
+					.Select(c => new IssuanceCoin(c))
+					.ToList();
+
+			return issuanceCoins;
+		}
+
+		private Transaction CreateIssuanceTransaction(IssuanceCoin coin,Script IssueFrom, Script IssueTo, long amount, AssetId id)
+        {
+			TransactionBuilder builder = Net.CreateTransactionBuilder();
+
+			builder.AddKeys(CoinIssuer);
+			builder.AddCoins(coin);
+
+			builder.IssueAsset(IssueTo, new AssetMoney(id, (long)amount));
+
+			builder.SetChange(IssueFrom);
+
+			Transaction tx = builder.BuildTransaction(true);
+
+			if (builder.Verify(tx)) { }
+
+			return tx;
+		}
+
+		private Transaction CreateMultipleIssuanceTransaction(IssuanceCoin coin, Script IssueFrom, List<Script> IssueTo, long amount, AssetId id)
+		{
+			TransactionBuilder builder = Net.CreateTransactionBuilder();
+
+			builder.AddKeys(CoinIssuer);
+			builder.AddCoins(coin);
+
+			foreach (Script add in IssueTo)
+			{
+				builder.IssueAsset(add, new AssetMoney(id, (long)amount));
+			}
+
+			builder.SetChange(IssueFrom);
+
+			Transaction tx = builder.BuildTransaction(true);
+
+			if (builder.Verify(tx)) { }
+
+			return tx;
+		}
+
+		public void IssueSwopCoin()
         {
 			BtcNodeCreate btcTest = new BtcNodeCreate();
 			btcTest.SimulateNetwork();
