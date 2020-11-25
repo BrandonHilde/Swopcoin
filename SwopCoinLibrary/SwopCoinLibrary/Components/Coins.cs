@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using NBitcoin;
 
 namespace SwopCoinLibrary
 {
@@ -18,6 +19,12 @@ namespace SwopCoinLibrary
 
         public static List<Coins> GenericCoinList = new List<Coins>();
 
+        public IssuanceCoin ConvertToCoin()
+        {
+            throw new NotImplementedException();
+        }
+
+        public 
 
 
         public Coins(Decimal MarketValue)

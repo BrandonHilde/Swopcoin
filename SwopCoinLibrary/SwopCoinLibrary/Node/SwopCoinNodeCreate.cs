@@ -31,6 +31,21 @@ namespace SwopCoinLibrary.Node
 			CoinIssuer = Issuer;
 		}
 
+		public void TransferCoin(Coins CoinType, long amount, BitcoinSecret From, BitcoinAddress To)
+        {
+			IssuanceCoin ic = CoinType.ConvertToCoin();
+
+			TransactionBuilder txBuilder = Net.CreateTransactionBuilder();
+			Transaction tx = txBuilder
+					.AddCoins(ic)
+					.AddKeys(From)
+					.SendAsset(To, new AssetMoney(ic.AssetId, amount))
+					.SetChange(From.GetAddress(ScriptPubKeyType.Legacy))
+					.BuildTransaction(true);
+			//Assert(txBuilder.Verify(tx));
+			//txRepo.Put(tx.GetHash(), tx);
+		}
+
 		public void IssueSpecificCoin(Coins CoinType, long amount, List<BitcoinAddress> IssueToAddresses)
         {
 			if (IssueToAddresses != null)
