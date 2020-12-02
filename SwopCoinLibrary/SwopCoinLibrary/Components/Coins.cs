@@ -11,6 +11,8 @@ namespace SwopCoinLibrary
 
         public Decimal MarketValue;
 
+        public double TotalCoinQuantity = 256000;
+
 
 
         public static Decimal MarketValueSum;
@@ -23,8 +25,6 @@ namespace SwopCoinLibrary
         {
             throw new NotImplementedException();
         }
-
-        public 
 
 
         public Coins(Decimal MarketValue)

@@ -26,7 +26,7 @@ namespace SwopCoinLibrary.Dealers
         public void Authorize(Coins coin)
         {
             // two line example below used to call this method (copy to test code to call this method)
-            coin = new AuthorizedCoins(25600000);
+            coin = new AuthorizedCoins((decimal)coin.TotalCoinQuantity);
             Authorize(coin);
         }
 
