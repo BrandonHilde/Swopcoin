@@ -11,7 +11,7 @@ namespace SwopCoinLibrary
 
         public Decimal MarketValue;
 
-        public double TotalCoinQuantity = 256000;
+        public double TotalCoinQuantity = 25600000;
 
 
 

@@ -9,9 +9,21 @@ namespace SwopCoinLibrary.Node
     public class NodeConnect
     {
         public Network Net = Network.TestNet;
-        public ActionStatus SendMessageToNetwork(Transaction tx)
+        public ActionStatus SendMessageToNetwork(Transaction tx, NBitcoin.Protocol.Node node = null)
         {
-            using (NBitcoin.Protocol.Node node = NBitcoin.Protocol.Node.ConnectToLocal(Net)) //Connect to local if no node is set
+            if (node == null)
+            {
+                using (node = NBitcoin.Protocol.Node.ConnectToLocal(Net)) //Connect to local if no node is set
+                {
+                    node.VersionHandshake();
+
+                    node.SendMessage(new InvPayload(InventoryType.MSG_TX, tx.GetHash()));
+                    System.Threading.Thread.Sleep(1500); //Wait a bit
+                    node.SendMessage(tx.CreatePayload()); // broadcast message to send funds
+                    System.Threading.Thread.Sleep(1500); //Wait a bit
+                }
+            }
+            else
             {
                 node.VersionHandshake();
 
@@ -20,6 +32,7 @@ namespace SwopCoinLibrary.Node
                 node.SendMessage(tx.CreatePayload()); // broadcast message to send funds
                 System.Threading.Thread.Sleep(1500); //Wait a bit
             }
+
             return null;
         }
     }
