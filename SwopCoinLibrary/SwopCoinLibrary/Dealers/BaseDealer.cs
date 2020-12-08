@@ -69,6 +69,23 @@ namespace SwopCoinLibrary.Dealers
             sub.SaveSubscription();
         }
 
+		public void Redeem(string email)
+        {
+			List<Subscriber> LoadedSubs = LoadSubscribers();
+
+			Subscriber sub = (Subscriber)LoadedSubs.Select(x => x.Email == email);
+
+            if (sub.SendRedemptionEmail())
+            {
+				// confirm
+            }
+        }
+
+		private List<Subscriber> LoadSubscribers()
+        {
+			throw new NotImplementedException();
+        }
+
         public void Uncirculate(Coins coin) { throw new NotImplementedException(); }
 
         public void Circulate(Coins coin) { throw new NotImplementedException(); }

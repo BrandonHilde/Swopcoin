@@ -6,18 +6,12 @@ using NBitcoin;
 namespace SwopCoinLibrary
 {
     public class Coins
-
     {
-
         public Decimal MarketValue;
 
         public double TotalCoinQuantity = 25600000;
 
-
-
         public static Decimal MarketValueSum;
-
-
 
         public static List<Coins> GenericCoinList = new List<Coins>();
 
@@ -26,15 +20,12 @@ namespace SwopCoinLibrary
             throw new NotImplementedException();
         }
 
-
         public Coins(Decimal MarketValue)
         { 
             MarketValueSum += MarketValue;
             GenericCoinList.Add(this);
         }
     }
-
-
 
     public class SWOPCoins : Coins
     {

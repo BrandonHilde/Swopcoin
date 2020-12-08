@@ -23,6 +23,8 @@ namespace SwopCoinLibrary.Interface
         // Sends colored coin to new address
         void Issue(BitcoinAddress Address, Coins coin);
 
+        void Redeem(string Email);
+
         // Remove SWOP coin from circulation
         void Uncirculate(Coins coin);
 
