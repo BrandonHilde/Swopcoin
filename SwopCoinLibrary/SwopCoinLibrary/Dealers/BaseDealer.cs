@@ -12,7 +12,6 @@ using NBitcoin.DataEncoders;
 using NBitcoin.Policy;
 using NBitcoin.Stealth;
 using SwopCoinLibrary;
-using SwopCoinLibrary.Node;
 using System.Linq;
 
 namespace SwopCoinLibrary.Dealers
@@ -60,7 +59,9 @@ namespace SwopCoinLibrary.Dealers
 
         public void Issue(BitcoinAddress Address, Coins coin) 
         {
-			IssueSpecificCoin(coin, (long)coin.TotalCoinQuantity, Address);
+			Transaction tx = IssueSpecificCoin(coin, (long)coin.TotalCoinQuantity, Address);
+
+			SendTransaction(tx);
         }
 
         public void Subscribe(string email, Coins coin) 
@@ -137,8 +138,11 @@ namespace SwopCoinLibrary.Dealers
 		/// <param name="node">The node. Can be left null.</param>
 		/// <returns></returns>
 		public void SendTransaction(Transaction tx, NBitcoin.Protocol.Node node = null)
-		{
+		{ 
 			NodeConnect connect = new NodeConnect();
+
+			if (node == null) node = connect.GetActiveNode(Net);
+
 			connect.Net = Net;
 			connect.SendMessageToNetwork(tx, node);
 		}
@@ -232,7 +236,7 @@ namespace SwopCoinLibrary.Dealers
 		/// <param name="CoinType"></param>
 		/// <param name="amount"></param>
 		/// <param name="IssueToAddress"></param>
-		public void IssueSpecificCoin(Coins CoinType, long amount, BitcoinAddress IssueToAddress)
+		public Transaction IssueSpecificCoin(Coins CoinType, long amount, BitcoinAddress IssueToAddress)
 		{
 			if (IssueToAddress != null)
 			{
@@ -264,7 +268,11 @@ namespace SwopCoinLibrary.Dealers
 				txRepo.Put(tx.GetHash(), tx);
 
 				var ctx = tx.GetColoredTransaction(ctxRepo);
+
+				return tx;
 			}
+
+			return null;
 		}
 
 		/// <summary>

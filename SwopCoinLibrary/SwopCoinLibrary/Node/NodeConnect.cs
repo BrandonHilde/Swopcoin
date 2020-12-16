@@ -4,16 +4,16 @@ using System.Text;
 using NBitcoin;
 using NBitcoin.Protocol;
 
-namespace SwopCoinLibrary.Node
+namespace SwopCoinLibrary
 {
     public class NodeConnect
     {
         public Network Net = Network.TestNet;
-        public ActionStatus SendMessageToNetwork(Transaction tx, NBitcoin.Protocol.Node node = null)
+        public ActionStatus SendMessageToNetwork(Transaction tx, Node node = null)
         {
             if (node == null)
             {
-                using (node = NBitcoin.Protocol.Node.ConnectToLocal(Net)) //Connect to local if no node is set
+                using (node = Node.ConnectToLocal(Net)) //Connect to local if no node is set
                 {
                     node.VersionHandshake();
 
@@ -33,6 +33,12 @@ namespace SwopCoinLibrary.Node
                 System.Threading.Thread.Sleep(1500); //Wait a bit
             }
 
+            return null;
+        }
+
+        public Node GetActiveNode(Network Net)
+        {
+            //NBitcoin.Protocol.Node nd = NBitcoin.Protocol.Node.Connect(Net, )
             return null;
         }
     }

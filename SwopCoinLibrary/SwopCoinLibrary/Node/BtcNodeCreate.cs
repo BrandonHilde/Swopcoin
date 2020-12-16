@@ -10,7 +10,7 @@ using SwopCoinLibrary.OpenAssetFormat;
 using System.Diagnostics;
 
 
-namespace SwopCoinLibrary.Node
+namespace SwopCoinLibrary
 {
     public class BtcNodeCreate
     {

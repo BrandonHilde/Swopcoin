@@ -10,12 +10,11 @@ using NBitcoin.DataEncoders;
 using NBitcoin.Policy;
 using NBitcoin.Stealth;
 using SwopCoinLibrary;
-using SwopCoinLibrary.Node;
 using System.Net.Http.Headers;
 using System.Security.Cryptography.X509Certificates;
 using System.Linq;
 
-namespace SwopCoinLibrary.Node
+namespace SwopCoinLibrary
 {
     public class SwopCoinNodeCreate
     {
