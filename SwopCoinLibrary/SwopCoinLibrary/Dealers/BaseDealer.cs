@@ -12,6 +12,7 @@ using NBitcoin.DataEncoders;
 using NBitcoin.Policy;
 using NBitcoin.Stealth;
 using SwopCoinLibrary;
+using SwopCoinLibrary.Utility;
 using System.Linq;
 
 namespace SwopCoinLibrary.Dealers
@@ -36,6 +37,10 @@ namespace SwopCoinLibrary.Dealers
 
 		Network Net = Network.TestNet;
 
+		public BaseDealer()
+        {
+
+        }
 		public BaseDealer(Network Network, BitcoinSecret Issuer = null)
         {
 			CoinIssuer = Issuer;
@@ -137,7 +142,7 @@ namespace SwopCoinLibrary.Dealers
 		/// <param name="tx">The transaction</param>
 		/// <param name="node">The node. Can be left null.</param>
 		/// <returns></returns>
-		public void SendTransaction(Transaction tx, NBitcoin.Protocol.Node node = null)
+		public void SendTransaction(Transaction tx, Node node = null)
 		{ 
 			NodeConnect connect = new NodeConnect();
 
@@ -240,6 +245,8 @@ namespace SwopCoinLibrary.Dealers
 		{
 			if (IssueToAddress != null)
 			{
+				DataManager manger = new DataManager();
+				
 				Script issuerScript = CoinIssuer.GetAddress(ScriptPubKeyType.Legacy).ScriptPubKey;
 				Script script = IssueToAddress.ScriptPubKey;
 
@@ -255,6 +262,8 @@ namespace SwopCoinLibrary.Dealers
 					.ToArray();
 
 				var swopIssuanceCoin = issuanceCoins.First();
+
+				manger.SaveIssuanceCoin(swopIssuanceCoin, CoinType.GetCoinName()); // save issuance coin so you dont have to scan blockchain later
 
 				var swopID = swopIssuanceCoin.AssetId;
 

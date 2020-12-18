@@ -1,6 +1,6 @@
 using System;
 using Xunit;
-using SwopCoinLibrary.Node;
+using SwopCoinLibrary;
 
 namespace XUnitSwopCoinCore
 {

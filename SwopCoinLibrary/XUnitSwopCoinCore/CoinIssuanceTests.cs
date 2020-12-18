@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Text;
 using Xunit;
 using SwopCoinLibrary;
-using SwopCoinLibrary.Node;
 using NBitcoin.Protocol;
 using NBitcoin.Tests;
 using NBitcoin;
@@ -18,9 +17,9 @@ namespace XUnitSwopCoinCore
         {
             //temp testing area
 
-            SwopCoinNodeCreate create = new SwopCoinNodeCreate(null);
+            SwopCoinNodeCreate create = new SwopCoinNodeCreate();
 
-            create.IssueSwopCoin();
+            //create.IssueSwopCoin();
         }
     }
 }

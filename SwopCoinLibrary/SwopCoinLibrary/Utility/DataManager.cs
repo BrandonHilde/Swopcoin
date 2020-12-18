@@ -5,6 +5,7 @@ using System.IO;
 using SwopCoinLibrary.Components;
 using System.Xml;
 using NBitcoin;
+using System.Xml.Serialization;
 
 namespace SwopCoinLibrary.Utility
 {
@@ -20,7 +21,41 @@ namespace SwopCoinLibrary.Utility
         {
             throw new NotImplementedException();
         }
+        
+        public bool SaveIssuanceCoin(IssuanceCoin coin, string CoinName)
+        {
+            XmlIssuanceCoin xmlcoin = new XmlIssuanceCoin();
 
+            xmlcoin.Coin = coin;
+            xmlcoin.Name = CoinName;
+
+            string serial = xmlcoin.Serialize();
+
+            File.WriteAllText(CoinName + ".CoinID", serial);
+
+            return File.Exists(CoinName + ".CoinID");
+        }
+
+        public IssuanceCoin LoadCoin(string CoinName)
+        {
+            XmlSerializer serializer = new XmlSerializer(typeof(XmlIssuanceCoin));
+
+            XmlIssuanceCoin xmlcoin = null;
+
+            using (Stream reader = new FileStream(CoinName + ".CoinID", FileMode.Open))
+            {
+                xmlcoin = (XmlIssuanceCoin)serializer.Deserialize(reader);
+            }
+
+            if(xmlcoin != null)
+                return xmlcoin.Coin;
+            else
+            {
+                return null;
+            }
+        }
+
+        // public bool SaveXml()
         public BitcoinSecret LoadAdmin(Network net)
         {
             // replace with other load methods later
@@ -57,6 +92,12 @@ namespace SwopCoinLibrary.Utility
         public string FolderLocation { get; set; }
     }
 
+    public class XmlIssuanceCoin
+    {
+        public string Name { get; set; }
+        public IssuanceCoin Coin { get; set; }
+    }
+
     public class XmlDataFile
     {
         Account ActiveAccount { get; set; }
@@ -69,5 +110,32 @@ namespace SwopCoinLibrary.Utility
 
         public SubscriberType Type { get; set; }
         List<Subscriber> ActiveSubscribers { get; set; }
+    }
+
+    public static class ExtendUtility
+    {
+        public static string Serialize<T>(this T value)
+        {
+            if (value == null)
+            {
+                return string.Empty;
+            }
+            try
+            {
+                var xmlserializer = new XmlSerializer(typeof(T));
+                XmlWriterSettings wSet = new XmlWriterSettings { Indent = true };
+                var stringWriter = new StringWriter();
+                //xw.WriteDocType("profile", null, "criteria_profile.dtd", null);
+                using (var writer = XmlWriter.Create(stringWriter, wSet))
+                {
+                    xmlserializer.Serialize(writer, value);
+                    return stringWriter.ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred", ex);
+            }
+        }
     }
 }
