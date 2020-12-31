@@ -14,6 +14,7 @@ using NBitcoin.Stealth;
 using SwopCoinLibrary;
 using SwopCoinLibrary.Utility;
 using System.Linq;
+using QBitNinja.Client;
 
 namespace SwopCoinLibrary.Dealers
 {
@@ -193,6 +194,34 @@ namespace SwopCoinLibrary.Dealers
 			Transaction tx = txBuilder.BuildTransaction(true);
 
 			return tx;
+		}
+		/// <summary>
+		/// Gets the coins associated with the address
+		/// </summary>
+		/// <param name="Address"></param>
+		/// <param name="net"></param>
+		/// <param name="confirmations"></param>
+		/// <returns></returns>
+		public List<Coin> GetCoinsByAddress(BitcoinAddress Address, Network net = null, int confirmations = 6)
+		{
+			QBitNinjaClient cl = new QBitNinjaClient(net);
+			QBitNinja.Client.Models.BalanceModel bm = cl.GetBalance(Address.ScriptPubKey).Result;// cl.GetBalance(new BitcoinPubKeyAddress(Address.ToString())).Result;
+
+			List<Coin> txs = new List<Coin>();
+
+			foreach (var operation in bm.Operations)
+			{
+				foreach (var cn in operation.ReceivedCoins)
+				{
+					if (operation.Confirmations >= confirmations)
+					{
+						Coin C = (Coin)cn;
+						txs.Add(C);
+					}
+				}
+			}
+
+			return txs;
 		}
 
 		/// <summary>
